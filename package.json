@@ -5,10 +5,16 @@
     "dependencies": {
         "@material-ui/core": "latest",
         "clsx": "latest",
+        "lerp": "^1.0.3",
         "next": "latest",
         "prop-types": "latest",
         "react": "latest",
-        "react-dom": "latest"
+        "react-dom": "latest",
+        "react-scripts": "^3.4.3",
+        "react-three-fiber": "4.0.5",
+        "three": "0.112.1",
+        "three-obj-loader": "^1.1.3",
+        "threejs-meshline": "2.0.9"
     },
     "scripts": {
         "dev": "next",

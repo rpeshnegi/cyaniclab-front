@@ -9,7 +9,7 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Link from "next/link";
 import ListItemText from '@material-ui/core/ListItemText';
-
+// import Loading from "../Loading";
 
 // import { connect } from 'react-redux';
 
@@ -72,6 +72,7 @@ class Layout extends React.Component {
         const { classes, backdrop } = this.props;
         return (
             <>
+                {/* <Loading /> */}
                 <List >
                     <ListItem button>
                         <Link href="/">
@@ -80,8 +81,8 @@ class Layout extends React.Component {
                     </ListItem>
 
                     <ListItem button>
-                        <Link href="/auth/login">
-                            <a><ListItemText primary="Login" /></a>
+                        <Link href="/about">
+                            <a><ListItemText primary="About" /></a>
                         </Link>
 
                     </ListItem>
@@ -93,7 +94,7 @@ class Layout extends React.Component {
 }
 
 Layout.propTypes = {
-    classes: PropTypes.object.isRequired,
+    // classes: PropTypes.object.isRequired,
 };
 
 // export default withStyles(styles)(connect()(Layout))
