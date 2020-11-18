@@ -51,7 +51,7 @@ export default function Sparks({ mouse, count, colors, radius = 10 }) {
 
     return (
         <group ref={ref}>
-            <group position={[-radius * 2, -radius, -10]} scale={[1, 1.3, 1]}>
+            <group position={[-radius * 2, -radius, -10]} scale={[1, 1.2, 1]}>
                 {lines.map((props, index) => (
                     <Fatline key={index} {...props} />
                 ))}

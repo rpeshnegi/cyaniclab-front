@@ -57,7 +57,7 @@ export default function MyApp(props) {
                         <fog attach="fog" args={['white', 50, 190]} />
                         <pointLight distance={100} intensity={4} color="white" />
                         <Particles count={isMobile ? 5000 : 10000} mouse={mouse} />
-                        <Sparks count={50} mouse={mouse} colors={['yellow', 'black', 'white', '#e0feff', 'lightpink', 'lightblue']} />
+                        <Sparks count={50} mouse={mouse} colors={['yellow', 'black', 'white']} />
                         <Suspense fallback={null}>
                             <Effects down={down} />
                         </Suspense>
