@@ -6,7 +6,7 @@
         "@material-ui/core": "latest",
         "clsx": "latest",
         "lerp": "^1.0.3",
-        "next": "latest",
+        "next": "^10.0.2",
         "prop-types": "latest",
         "react": "latest",
         "react-dom": "latest",

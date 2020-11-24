@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-// import Header from "./header"
+import Header from "./header"
 import { withStyles } from '@material-ui/core/styles';
 import classNames from "classnames";
 import Backdrop from '@material-ui/core/Backdrop';
@@ -73,7 +73,7 @@ class Layout extends React.Component {
         return (
             <>
                 {/* <Loading /> */}
-                <List >
+                {/* <List >
                     <ListItem button>
                         <Link href="/">
                             <a><ListItemText primary="Home" /></a>
@@ -86,7 +86,8 @@ class Layout extends React.Component {
                         </Link>
 
                     </ListItem>
-                </List>
+                </List> */}
+                <Header/>
                 {this.props.children}
             </>
         )
