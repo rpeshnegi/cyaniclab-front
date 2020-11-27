@@ -11,7 +11,7 @@ import Sparks from './../src/components/background/Sparks'
 import Particles from './../src/components/background/Particles'
 import Cubes from "./../src/components/Cubes";
 import './../styles.css';
-import Box from '@material-ui/core/Box';;
+import Box from '@material-ui/core/Box';
 
 const Effects = lazy(() => import("./../src/components/background/Effects"));
 
@@ -55,9 +55,10 @@ export default function MyApp(props) {
                             gl.setClearColor(new THREE.Color('#020207'))
                         }}>
                         <fog attach="fog" args={['white', 50, 190]} />
-                        <pointLight distance={100} intensity={4} color="white" />
+                        {/* <pointLight distance={100} intensity={4} color="white" /> */}
+                        <ambientLight intensity={0.6} />
                         <Particles count={isMobile ? 5000 : 10000} mouse={mouse} />
-                        <Sparks count={50} mouse={mouse} colors={['yellow', 'black', 'white']} />
+                        <Sparks count={50} mouse={mouse} colors={['#FFC600', 'black', 'white']} />
                         <Suspense fallback={null}>
                             <Effects down={down} />
                         </Suspense>

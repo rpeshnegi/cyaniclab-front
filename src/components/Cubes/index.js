@@ -20,12 +20,12 @@ export default function Cubes() {
     // return <group ref={group}>{nodesCubes}</group>;
     return (
         <group ref={group}>
-            <Cube position={[-5, 10, -1]} zIndex="0.8" sizeArgs={[20, 2, 0]} />
-            <Cube position={[-5, -3, -1]} zIndex="-0.8" sizeArgs={[20, 2, 0]}/>
-            <Cube position={[5, -5.6, -1]} zIndex="0.8" sizeArgs={[12, 2, 0]} />
-            <Cube position={[6.1, 11.5, -1]} zIndex="-0.8" sizeArgs={[12, 2, 0]} />
-            <WhiteCube position={[-1, 6, -1]} zIndex="0.8" sizeArgs={[12, 5, 0]} />
-            <WhiteCube position={[-1.5, 0.8, -1]} zIndex="-0.8" sizeArgs={[12, 5, 0]} />
+            <Cube position={[-5, 10, 0]} zIndex="0.8" sizeArgs={[20, 2, 0]} />
+            <Cube position={[-5, -3, 0]} zIndex="-0.8" sizeArgs={[20, 2, 0]} />
+            <Cube position={[5, -5.6, 0]} zIndex="0.8" sizeArgs={[12, 2, 0]} />
+            <Cube position={[6.1, 11.5, 0]} zIndex="-0.8" sizeArgs={[12, 2, 0]} />
+            <WhiteCube position={[-1, 6, 0]} zIndex="0.8" sizeArgs={[12, 5, 0]} />
+            <WhiteCube position={[-1.5, 0.8, 0]} zIndex="-0.8" sizeArgs={[12, 5, 0]} />
         </group>
     )
 };
