@@ -54,7 +54,14 @@ const style = {
     logoImg: {
         cursor: 'pointer',
     },
-
+    background: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        width: '100%',
+        background: 'black'
+    },
 
 
 };
@@ -102,7 +109,7 @@ const Header = ({ props, dispatch }) => {
                 custom="400"
                 ref={containerRef}
             >
-                <motion.div className="background" variants={sidebar} />
+                <motion.div className={classes.background} variants={sidebar} />
                 <Navigation />
                 <MenuToggle toggle={() => toggleOpen()} />
                 {/* <Box className={classes.lefttogglemenu} position="absolute" top={45} > <img src="img/togglemenu.png" alt="" /> </Box> */}
