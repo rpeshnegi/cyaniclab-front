@@ -44,7 +44,7 @@ export default function MyApp(props) {
                 <CssBaseline/>
                 {hasMounted && (
                     <Canvas
-                    
+                     class="background-texture"
                         style={{ height: window.innerHeight }}
                         pixelRatio={Math.min(2, isMobile ? window.devicePixelRatio : 1)}
                         camera={{ fov: 100, position: [0, 0, 30] }}

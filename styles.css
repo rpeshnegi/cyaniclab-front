@@ -2,20 +2,23 @@ body {
     margin: 0;
     padding: 0;
     background: #0c0f13;
-    overflow: hidden;
+  
     font-family: 'Sulphur Point', sans-serif;
-    color:red;
+    color:#fff !important;
     font-size: 0.9rem;
 }
 
 .lefttogglemenu{ position: absolute; left: 0px;}
 
 
-.backgraphic{ 
-    z-index:5;
+.background-texture{ 
+    z-index:1;
     top:0px;
     bottom:0;
     left:0px;
     right:0px;
-    position: fixed;
+    position: fixed !important;
 }
+
+
+.background-texture ~ div{ position: relative; z-index: 2;}

@@ -48,7 +48,10 @@ topLogo:{
     top:'45px',
     margin:'0 100px',
 },
-
+headerSection:{ 
+    minHeight:'150px !important',
+  
+},
 logoImg:{  cursor:'pointer',
 },
 
@@ -66,7 +69,7 @@ const Header = ({ props, dispatch }) => {
     })
 
     return <>
-          <Container maxWidth="fluid">
+          <Container  className={classes.headerSection}  maxWidth="fluid">
              <Box  className={classes.lefttogglemenu} position="absolute" top={45} > <img   src="img/togglemenu.png" alt=""/> </Box> 
              <Box  className={classes.topLogo} > <img  className={classes.logoImg} src="img/logo.png" alt=""/> </Box>
               <Button  className={classes.ButtonRight} color="primary" variant="contained">Grow your business</Button> 
