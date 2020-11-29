@@ -17,6 +17,7 @@ export default function Cube(props) {
     const [isActive, setIsActive] = useState(false);
 
     const isActiveRef = useRef(isActive);
+    const [isMobile, setIsMobile] = useState(false)
 
     // position
     // const position = useMemo(() => {
@@ -33,6 +34,7 @@ export default function Cube(props) {
 
     //useEffect of the activeState
     useEffect(() => {
+        setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
         isActiveRef.current = isActive;
     }, [isActive]);
 

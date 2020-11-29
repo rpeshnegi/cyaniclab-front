@@ -10,6 +10,7 @@ import ListItem from "@material-ui/core/ListItem";
 import Link from "next/link";
 import ListItemText from '@material-ui/core/ListItemText';
 import Footer from "./Footer";
+import CyanicButton from "../Button";
 // import Loading from "../Loading";
 
 // import { connect } from 'react-redux';
@@ -87,8 +88,13 @@ class Layout extends React.Component {
                         </Link>
 
                     </ListItem>
+<<<<<<< HEAD
                 </List> */}
                 <Header/>
+=======
+                </List>
+                <CyanicButton/>
+>>>>>>> button_component
                 {this.props.children}
                 <Footer/>
             </>
