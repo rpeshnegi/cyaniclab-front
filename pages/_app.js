@@ -7,13 +7,13 @@ import theme from '../src/theme';
 import Layout from '../src/components/Layout/Layout';
 import { Canvas, useFrame, useLoader } from "react-three-fiber"
 import * as THREE from 'three'
-import Sparks from '../src/components/Background/Sparks'
-import Particles from '../src/components/Background/Particles'
+import Sparks from './../src/components/background/Sparks'
+import Particles from './../src/components/background/Particles'
 import Cubes from "./../src/components/Cubes";
 import './../styles.css';
 import Box from '@material-ui/core/Box';
 
-const Effects = lazy(() => import("../src/components/Background/Effects"));
+const Effects = lazy(() => import("./../src/components/background/Effects"));
 
 export default function MyApp(props) {
     const { Component, pageProps } = props;
