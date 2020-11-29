@@ -6,8 +6,8 @@ import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass'
 import { FilmPass } from 'three/examples/jsm/postprocessing/FilmPass'
-import { GlitchPass } from './post/Glitchpass'
-import { WaterPass } from './post/Waterpass'
+import { GlitchPass } from './Post/Glitchpass'
+import { WaterPass } from './Post/Waterpass'
 
 extend({ EffectComposer, ShaderPass, RenderPass, WaterPass, UnrealBloomPass, FilmPass, GlitchPass })
 
