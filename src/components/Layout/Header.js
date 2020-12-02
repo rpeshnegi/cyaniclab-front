@@ -47,7 +47,7 @@ const style = {
         zIndex: 5,
         left: '0px',
         right: '0px',
-        top: '45px',
+        top: '30px',
         margin: '0 100px',
     },
 
@@ -60,7 +60,7 @@ const style = {
         left: 0,
         bottom: 0,
         width: '100%',
-        background: 'black'
+        background: 'white'
     },
 
 
@@ -102,7 +102,7 @@ const Header = ({ props, dispatch }) => {
     }, [])
 
     return <>
-        <Container className="fluid">
+        <Container className="full-fluid">
             <motion.nav
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
