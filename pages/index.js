@@ -15,15 +15,28 @@ import LetsTalk from '../src/LetsTalk';
 export default function Index() {
     return (
 
-        <Container maxWidth="sm">
+        <Container maxWidth="fluid">
             <Box my={4}>
-                <Typography variant="h4" component="h1" gutterBottom>
-                    Next.js example
+                <div className="banner-caption">
+                    <div className="banner-caption-area">
+                <Typography variant="h1" component="h1" gutterBottom>
+                Developing Websites That <br/>
+Develop Your Business
                 </Typography>
-                <Link href="/about" color="secondary">
-                    Go to the about page
-                </Link>
-                <Service />
+
+                <ul>
+                   <li> <strong> 7+</strong> <p> Figures In Revenue Generated </p> </li> 
+                   <li> <strong> 7+</strong> <p> Projects Closed  </p> </li> 
+                   <li> <strong> 7+</strong> <p> US Cities, & Growing  </p> </li> 
+
+                </ul>
+                </div>
+                </div>
+
+
+               
+              
+               <Service />  
                 <Technology />
                 <Portfolio />
                 <ProTip />

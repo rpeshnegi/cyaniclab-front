@@ -88,13 +88,9 @@ class Layout extends React.Component {
                         </Link>
 
                     </ListItem>
-<<<<<<< HEAD
                 </List> */}
                 <Header/>
-=======
-                </List>
                 <CyanicButton/>
->>>>>>> button_component
                 {this.props.children}
                 <Footer/>
             </>
