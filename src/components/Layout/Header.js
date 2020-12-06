@@ -114,7 +114,7 @@ const Header = ({ props, dispatch }) => {
                 <MenuToggle toggle={() => toggleOpen()} />
                 {/* <Box className={classes.lefttogglemenu} position="absolute" top={45} > <img src="img/togglemenu.png" alt="" /> </Box> */}
             </motion.nav>
-            <Box className={classes.topLogo} > <img className={classes.logoImg} src="img/logo.png" alt="" /> </Box>
+            {/* <Box className={classes.topLogo} > <img className={classes.logoImg} src="img/logo.png" alt="" /> </Box> */}
             <Button className={classes.ButtonRight} color="primary" variant="contained">Grow your business</Button>
         </Container>
 

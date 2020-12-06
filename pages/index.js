@@ -15,7 +15,7 @@ import LetsTalk from '../src/LetsTalk';
 export default function Index() {
     return (
 
-        <Container maxWidth="fluid">
+        <Container maxWidth="lg">
             <Box my={4}>
                 <div className="banner-caption">
                     <div className="banner-caption-area">
