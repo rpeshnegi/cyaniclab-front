@@ -65,7 +65,7 @@ export default function MyApp(props) {
                         {/* <pointLight distance={100} intensity={4} color="white" /> */}
                         <ambientLight intensity={0.5} />
                         <Particles count={isMobile ? 5000 : 10000} mouse={mouse} />
-                        <Sparks count={50} mouse={mouse} colors={['#FFC600', 'black', 'white']} />
+                        {(YOffset == 0) && <Sparks count={50} mouse={mouse} colors={['#FFC600', 'black', 'white']} />}
                         <Suspense fallback={null}>
                             <Effects down={down} />
                         </Suspense>
