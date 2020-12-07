@@ -131,7 +131,7 @@ const Header = ({ props, dispatch }) => {
                 <Navigation />
                 <MenuToggle toggle={() => toggleOpen()} />
             </motion.nav>
-            <Box className={classes.topLogo} > <img className={classes.logoImg} src="img/logo.png" alt="" /> </Box>
+            {/* <Box className={classes.topLogo} > <img className={classes.logoImg} src="img/logo.png" alt="" /> </Box> */}
             <CyanicButton className={classes.ButtonRight} color="primary" variant="contained" text='Frow your Buisness' />
         </Container>
 

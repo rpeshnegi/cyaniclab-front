@@ -25,7 +25,7 @@ export default function Effects({ down }) {
     return (
         <effectComposer ref={composer} args={[gl]}>
             <renderPass attachArray="passes" scene={scene} camera={camera} />
-            <waterPass attachArray="passes" factor={1.2} />
+            <waterPass attachArray="passes" factor={1.0} />
             <unrealBloomPass color="black" attachArray="passes" args={[aspect, 1, 1, 0]} />
             {/* <glitchPass attachArray="passes" factor={down ? 1 : 0} /> */}
         </effectComposer>

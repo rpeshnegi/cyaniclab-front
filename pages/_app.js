@@ -16,11 +16,13 @@ import Box from '@material-ui/core/Box';
 const Effects = lazy(() => import("./../src/components/background/Effects"));
 
 export default function MyApp(props) {
+
     const { Component, pageProps } = props;
 
     const [hovered, hover] = useState(false)
     const [hasMounted, setHasMounted] = useState(false);
     const [down, set] = useState(false)
+    const [YOffset, setYOffset] = useState(0)
     const mouse = useRef([0, 0])
     const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), [])
 
@@ -29,6 +31,10 @@ export default function MyApp(props) {
     useEffect(() => {
         setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
         setHasMounted(true);
+        window.onscroll = () => {
+            console.log(window.pageYOffset)
+            setYOffset(window.pageYOffset)
+        }
         // document.body.style.cursor = hovered
         //     ? 'pointer'
         //     : "url('https://raw.githubusercontent.com/chenglou/react-motion/master/demos/demo8-draggable-list/cursor.png') 39 39, auto"
@@ -44,7 +50,7 @@ export default function MyApp(props) {
                 <CssBaseline />
                 {hasMounted && (
                     <Canvas
-                        class="background-texture"
+                        className="background-texture"
                         style={{ height: window.innerHeight }}
                         pixelRatio={Math.min(2, isMobile ? window.devicePixelRatio : 1)}
                         camera={{ fov: 100, position: [0, 0, 30] }}
@@ -57,13 +63,13 @@ export default function MyApp(props) {
                         }}>
                         <fog attach="fog" args={['white', 50, 190]} />
                         {/* <pointLight distance={100} intensity={4} color="white" /> */}
-                        <ambientLight intensity={0.6} />
-                        <Particles count={isMobile ? 5000 : 10000} mouse={mouse} />
-                        <Sparks count={50} mouse={mouse} colors={['#FFC600', 'black', 'white']} />
+                        <ambientLight intensity={0.5} />
+                        <Particles count={isMobile ? 500 : 2000} mouse={mouse} />
+                        {(YOffset == 0) && <Sparks count={50} mouse={mouse} colors={['#FFC600', 'black', 'white']} />}
                         <Suspense fallback={null}>
                             <Effects down={down} />
                         </Suspense>
-                        <Cubes />
+                        <Cubes YOffset={YOffset} />
                     </Canvas>
                 )}
                 <Layout >
