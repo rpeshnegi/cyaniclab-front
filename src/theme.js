@@ -3,20 +3,35 @@ import { red } from '@material-ui/core/colors';
 
 // Create a theme instance.
 const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: '#556cd6',
+    palette: {
+        primary: {
+            main: '#556cd6',
+        },
+        secondary: {
+            main: '#19857b',
+        },
+        error: {
+            main: red.A400,
+        },
+        background: {
+            default: '#fff',
+        },
     },
-    secondary: {
-      main: '#19857b',
+    overrides: {
+        MuiCssBaseline: {
+            '@global': {
+                a: {
+                    textDecoration: 'none',
+                    backgroundColor: 'transparent',
+                },
+                ul: {
+                    margin: 0,
+                    padding: 0,
+                }
+            },
+        },
     },
-    error: {
-      main: red.A400,
-    },
-    background: {
-      default: '#fff',
-    },
-  },
+
 });
 
 export default theme;

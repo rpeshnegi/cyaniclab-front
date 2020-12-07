@@ -14,6 +14,7 @@ import CyanicButton from "../Button";
 // import Loading from "../Loading";
 
 // import { connect } from 'react-redux';
+import Container from '@material-ui/core/Container';
 
 const styles = theme => ({
     container: {
@@ -89,10 +90,14 @@ class Layout extends React.Component {
 
                     </ListItem>
                 </List> */}
-                <Header/>
-                <CyanicButton/>
-                {this.props.children}
-                <Footer/>
+                <Container fixed>
+                    <Container fixed>
+                        <Header />
+                        <CyanicButton />
+                        {this.props.children}
+                        <Footer />
+                    </Container>
+                </Container>
             </>
         )
     }

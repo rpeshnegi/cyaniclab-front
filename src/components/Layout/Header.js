@@ -17,6 +17,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Navigation } from './Navigation';
 import { MenuToggle } from './MenuToggle';
+import CyanicButton from '../Button';
 // import { useSelector } from 'react-redux';
 
 const style = {
@@ -62,8 +63,25 @@ const style = {
         width: '100%',
         background: 'white'
     },
-
-
+    fullFluid: {
+        '& ul, li': {
+            margin: '0',
+            padding: '0',
+        },
+        '& ul': {
+            padding: '25px',
+            position: 'absolute',
+            top: '100px',
+            width: '230px'
+        },
+        '& li': {
+            listStyle: 'none',
+            marginBottom: '20px',
+            display: 'flex',
+            alignItems: 'center',
+            cursor: 'pointer',
+        }
+    },
 };
 
 const sidebar = {
@@ -102,7 +120,7 @@ const Header = ({ props, dispatch }) => {
     }, [])
 
     return <>
-        <Container className="full-fluid">
+        <Container className={classes.fullFluid}>
             <motion.nav
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
@@ -112,10 +130,9 @@ const Header = ({ props, dispatch }) => {
                 <motion.div className={classes.background} variants={sidebar} />
                 <Navigation />
                 <MenuToggle toggle={() => toggleOpen()} />
-                {/* <Box className={classes.lefttogglemenu} position="absolute" top={45} > <img src="img/togglemenu.png" alt="" /> </Box> */}
             </motion.nav>
             <Box className={classes.topLogo} > <img className={classes.logoImg} src="img/logo.png" alt="" /> </Box>
-            <Button className={classes.ButtonRight} color="primary" variant="contained">Grow your business</Button>
+            <CyanicButton className={classes.ButtonRight} color="primary" variant="contained" text='Frow your Buisness' />
         </Container>
 
     </>;

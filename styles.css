@@ -2,11 +2,19 @@ body {
     margin: 0;
     padding: 0;
     background: #0c0f13;
-  
     font-family: 'Sulphur Point', sans-serif;
     color: red;
     font-size: 0.9rem;
 }
+
+/* html {
+    overflow: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+} */
 
 nav {
     /* position: absolute; */
@@ -16,40 +24,20 @@ nav {
     width: 300px;
 }
 
-ul,
-li {
-    margin: 0;
-    padding: 0;
+body {
+    background: #000 !important
 }
 
-ul {
-    padding: 25px;
-    position: absolute;
-    top: 100px;
-    width: 230px;
-}
-
-li {
-    list-style: none;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-body{ background:#000 !important }
-
-.background-texture{ 
-    z-index:0;
-    top:0px;
-    bottom:0;
+.background-texture {
+    z-index: 0;
+    top: 0px;
+    bottom: 0;
     height: 100% !important;
-    left:0px;
-    right:0px;
+    left: 0px;
+    right: 0px;
     opacity: 0.9 !important;
     position: fixed !important;
-  
 }
-
 
 .icon-placeholder {
     width: 40px;
@@ -59,55 +47,190 @@ body{ background:#000 !important }
     margin-right: 20px;
 }
 
-nav div{ background: none !important;}
-nav button svg path { stroke:#fff ;}
-.full-fluid{ max-width: 98% !important; width: 100% !important;}
-.topLogo{ margin-top:15px;}
+nav div {
+    background: none !important;
+}
 
-.banner-caption{ min-height: 100vh; position: relative; z-index:1; display: flex; justify-content: center; align-items: center;}
-.banner-caption h1{font-weight:800; color: #fff; font-size:100px; text-align: center; }
+nav button svg path {
+    stroke: #fff;
+}
 
-nav ul{ z-index: 9;}
-.banner-caption ul{ margin: 100px 0 0 0; padding: 0px 2%; position: static; width: 100%; display: flex; justify-content: space-between;}
-.banner-caption ul li{ display: flex; flex-direction: column; }
-.banner-caption ul li strong{ font-size:70px; color: #ffcb15; line-height: 1;}
-.banner-caption ul li p{ font-size:20px; color: #fff; margin: 0px; padding: 0px;}
-.MuiButton-root{ background: none !important; box-shadow: none !important;}
-.MuiButton-root .MuiButton-label{ display: none;}
-.MuiButtonBase-root.MuiButton-root.MuiButton-contained.makeStyles-root-10.MuiButton-containedPrimary{ height: 0px;}
+.full-fluid {
+    max-width: 98% !important;
+    width: 100% !important;
+}
+
+.topLogo {
+    margin-top: 15px;
+}
+
+.banner-caption {
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-caption h1 {
+    font-weight: 800;
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+}
+
+nav ul {
+    z-index: 9;
+}
+
+.banner-caption ul {
+    margin: 100px 0 0 0;
+    padding: 0px 2%;
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner-caption ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-caption ul li strong {
+    font-size: 70px;
+    color: #ffcb15;
+    line-height: 1;
+}
+
+.banner-caption ul li p {
+    font-size: 20px;
+    color: #fff;
+    margin: 0px;
+    padding: 0px;
+}
+
+.MuiButton-root {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.MuiButton-root .MuiButton-label {
+    display: none;
+}
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained.makeStyles-root-10.MuiButton-containedPrimary {
+    height: 0px;
+}
+
 
 /*services section*/
-.service-section{ z-index: 3; position: relative; color: #fff; max-width:1200px; margin: 0 auto;}
-.service-section div{ position: relative; z-index: 4; color:#fff;}
-.row{ display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin-right: -15px; margin-left: -15px;}
 
-.col-sm-4{  -ms-flex: 0 0 25%; flex: 0 0 25%; max-width: 25%;}
-.col-sm-8{ -ms-flex: 0 0 75%;
+.service-section {
+    z-index: 3;
+    position: relative;
+    color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-section div {
+    position: relative;
+    z-index: 4;
+    color: #fff;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-sm-4 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.col-sm-8 {
+    -ms-flex: 0 0 75%;
     flex: 0 0 75%;
-    max-width: 75%;}
-.align-items-center {
-        -ms-flex-align: center !important;
-        align-items: center !important;
-    }
-   .service-details  ul{  width: 100%; padding: 0px; position: static;}
-   .service-section h2{ font-size: 40px;}
-.service-details h4{ font-size: 30px; margin: 0px;}
+    max-width: 75%;
+}
 
-.service-details .icon_img{ margin-right:10px;}
-.service-details p{font-size: 18px;}
-.service-details ul li:first-child, .service-details ul li:last-child {
+.align-items-center {
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+
+.service-details ul {
+    width: 100%;
+    padding: 0px;
+    position: static;
+}
+
+.service-section h2 {
+    font-size: 40px;
+}
+
+.service-details h4 {
+    font-size: 30px;
+    margin: 0px;
+}
+
+.service-details .icon_img {
+    margin-right: 10px;
+}
+
+.service-details p {
+    font-size: 18px;
+}
+
+.service-details ul li:first-child,
+.service-details ul li:last-child {
     margin-left: -100px;
 }
 
+
 /*technologies section*/
 
-.technologies-section{ position: relative; z-index: 5;max-width:1200px; margin: 0 auto;color: #fff; padding-top: 100px; padding-bottom: 100px; }
-.technologies-section h2{ text-align: center; font-size: 50px; color: #ffc600;}
-.coloumn-5 [class*="col-"]{ -ms-flex: 0 0 20%; flex: 0 0 20%;  max-width: 20%;}
-.technologies_box { text-align: center;}
-.technologies_box h5 { margin-top: 20px; font-size:20px;}
+.technologies-section {
+    position: relative;
+    z-index: 5;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
 
+.technologies-section h2 {
+    text-align: center;
+    font-size: 50px;
+    color: #ffc600;
+}
 
+.coloumn-5 [class*="col-"] {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
 
+.technologies_box {
+    text-align: center;
+}
 
+.technologies_box h5 {
+    margin-top: 20px;
+    font-size: 20px;
+}
 
+.social_link li {
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 13px;
+}

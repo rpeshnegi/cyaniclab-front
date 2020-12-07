@@ -15,11 +15,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const CyanicButton = ({ props, dispatch }) => {
+const CyanicButton = ({ props, text, dispatch }) => {
     const classes = useStyles();
     return <Button variant="contained" className={classes.root} color="primary" >
-        Theme Provider
-        </Button>;
+        {text}
+    </Button>;
 }
 
 export default CyanicButton
