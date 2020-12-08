@@ -3,7 +3,7 @@ body {
     padding: 0;
     background: #0c0f13;
     font-family: 'Sulphur Point', sans-serif;
-    color: red;
+    color: white;
     font-size: 0.9rem;
 }
 
@@ -47,10 +47,6 @@ body {
     margin-right: 20px;
 }
 
-nav div {
-    background: none !important;
-}
-
 nav button svg path {
     stroke: #fff;
 }
@@ -64,51 +60,8 @@ nav button svg path {
     margin-top: 15px;
 }
 
-.banner-caption {
-    min-height: 100vh;
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner-caption h1 {
-    font-weight: 800;
-    color: #fff;
-    font-size: 100px;
-    text-align: center;
-}
-
 nav ul {
     z-index: 9;
-}
-
-.banner-caption ul {
-    margin: 100px 0 0 0;
-    padding: 0px 2%;
-    position: static;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.banner-caption ul li {
-    display: flex;
-    flex-direction: column;
-}
-
-.banner-caption ul li strong {
-    font-size: 70px;
-    color: #ffcb15;
-    line-height: 1;
-}
-
-.banner-caption ul li p {
-    font-size: 20px;
-    color: #fff;
-    margin: 0px;
-    padding: 0px;
 }
 
 .MuiButton-root {

@@ -19,14 +19,14 @@ export default function Effects({ down }) {
         void composer.current.setSize(size.width, size.height)
     }, [size])
     useFrame(() => {
-        gl.setClearColor('black')
+        // gl.setClearColor('black')
         composer.current.render()
     }, 1)
     return (
         <effectComposer ref={composer} args={[gl]}>
             <renderPass attachArray="passes" scene={scene} camera={camera} />
             <waterPass attachArray="passes" factor={1.0} />
-            <unrealBloomPass color="black" attachArray="passes" args={[aspect, 1, 1, 0]} />
+            <unrealBloomPass color="black" attachArray="passes" args={[aspect, 0.6, 0.6, 0]} />
             {/* <glitchPass attachArray="passes" factor={down ? 1 : 0} /> */}
         </effectComposer>
     )

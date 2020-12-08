@@ -11,40 +11,83 @@ import Portfolio from './portfolio';
 import WorkGlobaly from '../src/WorkGlobaly';
 import About from './about';
 import LetsTalk from '../src/LetsTalk';
+import { Grid, makeStyles } from '@material-ui/core';
+
+const style = {
+    bannerCaption: {
+        minHeight: '100vh',
+        position: 'relative',
+        zIndex: '1',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        '& h2': {
+            fontWeight: '800',
+            color: '#fff',
+            // fontSize: '100px',
+            textAlign: 'center',
+        },
+        '& ul': {
+            margin: '50px 0 0 0',
+            padding: '0px 2%',
+            position: 'static',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'space-between',
+        },
+        '& ul li': {
+            display: 'flex',
+            flexDirection: 'column',
+        },
+        '& ul li strong': {
+            fontSize: '70px',
+            color: '#ffcb15',
+            lineHeight: 1,
+        },
+        '& ul li p': {
+            fontSize: '20px',
+            color: '#fff',
+            margin: '0px',
+            padding: '0px',
+        }
+    }
+};
+
+const useStyles = makeStyles(style);
 
 export default function Index() {
+    const classes = useStyles();
     return (
+        <>
+            <div className={classes.bannerCaption}>
+                <Grid container >
+                    <Grid item xs={7}>
+                        <Typography variant="h2" gutterBottom>
+                            Helping businesses and startups grow via Digital Solutions
+                        </Typography>
 
-        <Container maxWidth="lg">
-            <Box my={4}>
-                <div className="banner-caption">
-                    <div className="banner-caption-area">
-                <Typography variant="h1" component="h1" gutterBottom>
-                Developing Websites That <br/>
-Develop Your Business
-                </Typography>
+                    </Grid>
+                    <Grid item xs={5}>
+                        &nbsp;
+                    </Grid>
+                    <Grid item xs={12}>
+                        <ul>
+                            <li> <strong> 7+</strong> <p> Figures In Revenue Generated </p> </li>
+                            <li> <strong> 7+</strong> <p> Projects Closed  </p> </li>
+                            <li> <strong> 7+</strong> <p> US Cities, & Growing  </p> </li>
 
-                <ul>
-                   <li> <strong> 7+</strong> <p> Figures In Revenue Generated </p> </li> 
-                   <li> <strong> 7+</strong> <p> Projects Closed  </p> </li> 
-                   <li> <strong> 7+</strong> <p> US Cities, & Growing  </p> </li> 
-
-                </ul>
-                </div>
-                </div>
-
-
-               
-              
-               <Service />  
-                <Technology />
-                <Portfolio />
-                <ProTip />
-                <WorkGlobaly />
-                <About />
-                <LetsTalk />
-                <Copyright />
-            </Box>
-        </Container>
+                        </ul>
+                    </Grid>
+                </Grid>
+            </div>
+            <Service />
+            <Technology />
+            <Portfolio />
+            <ProTip />
+            <WorkGlobaly />
+            <About />
+            <LetsTalk />
+            <Copyright />
+        </>
     );
 }

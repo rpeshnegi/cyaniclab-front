@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import React, { useRef, useMemo } from 'react'
+import React, { useRef, useMemo, useEffect } from 'react'
 import { extend, useFrame, useThree } from 'react-three-fiber'
 import lerp from 'lerp'
 import * as meshline from 'threejs-meshline'
@@ -19,7 +19,7 @@ function Fatline({ curve, width, color, speed }) {
     )
 }
 
-export default function Sparks({ mouse, count, colors, radius = 10 }) {
+export default function Sparks({ mouse, count, colors, radius = 11 }) {
     const lines = useMemo(
         () =>
             new Array(count).fill().map((_, index) => {
@@ -42,6 +42,12 @@ export default function Sparks({ mouse, count, colors, radius = 10 }) {
     const ref = useRef()
     const { size, viewport } = useThree()
     const aspect = size.width / viewport.width
+
+    useEffect(() => {
+        ref.current.position.x = 25;
+        ref.current.position.y = -5
+    }, [])
+    
     useFrame(() => {
         if (ref.current) {
             ref.current.rotation.x = lerp(ref.current.rotation.x, 0 + mouse.current[1] / aspect / 200, 0.1)
@@ -51,7 +57,7 @@ export default function Sparks({ mouse, count, colors, radius = 10 }) {
 
     return (
         <group ref={ref}>
-            <group position={[-radius * 2, -radius, -10]} scale={[1, 1.2, 1]}>
+            <group position={[1,1, -10]} scale={[1, 1.2, 1]}>
                 {lines.map((props, index) => (
                     <Fatline key={index} {...props} />
                 ))}

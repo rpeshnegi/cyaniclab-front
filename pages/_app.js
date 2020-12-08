@@ -31,6 +31,8 @@ export default function MyApp(props) {
     useEffect(() => {
         setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
         setHasMounted(true);
+        
+        window.addEventListener("mousemove", onMouseMove);
         window.onscroll = () => {
             console.log(window.pageYOffset)
             setYOffset(window.pageYOffset)
@@ -61,15 +63,15 @@ export default function MyApp(props) {
                             gl.toneMapping = THREE.Uncharted2ToneMapping
                             gl.setClearColor(new THREE.Color('#020207'))
                         }}>
-                        <fog attach="fog" args={['white', 50, 190]} />
+                        <fog attach="fog" args={['blue', 10, 190]} />
                         {/* <pointLight distance={100} intensity={4} color="white" /> */}
                         <ambientLight intensity={0.5} />
-                        <Particles count={isMobile ? 500 : 2000} mouse={mouse} />
-                        {(YOffset == 0) && <Sparks count={50} mouse={mouse} colors={['#FFC600', 'black', 'white']} />}
+                        <Particles count={isMobile ? 300 : 1000} mouse={mouse} />
+                        <Sparks count={50} mouse={mouse} colors={['#FFC600', 'black', 'white']} />
                         <Suspense fallback={null}>
                             <Effects down={down} />
                         </Suspense>
-                        <Cubes YOffset={YOffset} />
+                        <Cubes mouse={mouse} YOffset={YOffset} />
                     </Canvas>
                 )}
                 <Layout >

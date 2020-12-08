@@ -20,6 +20,9 @@ const theme = createMuiTheme({
     overrides: {
         MuiCssBaseline: {
             '@global': {
+                body: {
+                    color: 'white',
+                },
                 a: {
                     textDecoration: 'none',
                     backgroundColor: 'transparent',

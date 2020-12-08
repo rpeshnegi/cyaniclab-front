@@ -77,7 +77,7 @@ export default function Cube(props) {
             <meshStandardMaterial
                 attach="material"
                 color={color}
-                roughness={0.6}
+                roughness={1.9}
                 metalness={-1.5}
             />
         </mesh>

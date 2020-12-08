@@ -10,54 +10,23 @@ import ListItem from "@material-ui/core/ListItem";
 import Link from "next/link";
 import ListItemText from '@material-ui/core/ListItemText';
 import Footer from "./Footer";
-import CyanicButton from "../Button";
 // import Loading from "../Loading";
 
 // import { connect } from 'react-redux';
 import Container from '@material-ui/core/Container';
+import {
+    motion,
+    useViewportScroll,
+    useSpring,
+    useTransform
+} from "framer-motion";
 
-const styles = theme => ({
-    container: {
-        zIndex: "12",
-        color: "black",
-        paddingTop: '70px',
-        ...container
-    },
-    title: {
-        ...title,
-        display: "inline-block",
-        position: "relative",
-        marginTop: "30px",
-        minHeight: "32px",
-        color: "#000000",
-        textDecoration: "none"
-    },
-    subtitle: {
-        fontSize: "1.313rem",
-        maxWidth: "500px",
-        margin: "10px auto 0"
-    },
+const styles = {
     main: {
-        background: "#FFFFFF",
-        position: "relative",
-        zIndex: "3",
-        paddingBottom: '70px'
+        paddingLeft: '0px',
+        paddingRight: '0px',
     },
-    mainRaised: {
-        margin: "100px 30px 0px",
-        borderRadius: "6px",
-        boxShadow:
-            "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
-    },
-    bannerTitle: {
-        ...bannerTitle
-    },
-    backdrop: {
-        zIndex: theme.zIndex.drawer + 1,
-        color: '#fff',
-    },
-});
-
+};
 
 class Layout extends React.Component {
 
@@ -90,13 +59,10 @@ class Layout extends React.Component {
 
                     </ListItem>
                 </List> */}
-                <Container fixed>
-                    <Container fixed>
-                        <Header />
-                        <CyanicButton />
-                        {this.props.children}
-                        <Footer />
-                    </Container>
+                <Container className={classes.main} maxWidth="md">
+                    <Header />
+                    {this.props.children}
+                    <Footer />
                 </Container>
             </>
         )
@@ -104,8 +70,8 @@ class Layout extends React.Component {
 }
 
 Layout.propTypes = {
-    // classes: PropTypes.object.isRequired,
+    classes: PropTypes.object.isRequired,
 };
 
-// export default withStyles(styles)(connect()(Layout))
-export default Layout
+export default withStyles(styles)(Layout)
+// export default Layout

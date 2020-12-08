@@ -48,7 +48,7 @@ const style = {
         zIndex: 5,
         left: '0px',
         right: '0px',
-        top: '30px',
+        top: '10px',
         margin: '0 100px',
     },
 
@@ -61,7 +61,7 @@ const style = {
         left: 0,
         bottom: 0,
         width: '100%',
-        background: 'white'
+        background: 'black'
     },
     fullFluid: {
         '& ul, li': {
@@ -131,7 +131,7 @@ const Header = ({ props, dispatch }) => {
                 <Navigation />
                 <MenuToggle toggle={() => toggleOpen()} />
             </motion.nav>
-            {/* <Box className={classes.topLogo} > <img className={classes.logoImg} src="img/logo.png" alt="" /> </Box> */}
+            <Box className={classes.topLogo} > <img className={classes.logoImg} src="img/logo.png" alt="" /> </Box>
             <CyanicButton className={classes.ButtonRight} color="primary" variant="contained" text='Frow your Buisness' />
         </Container>
 
