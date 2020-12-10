@@ -22,6 +22,9 @@ const theme = createMuiTheme({
             '@global': {
                 body: {
                     color: 'white',
+                    '&.disbaled-scroll': {
+                        overflow: 'hidden !important',
+                    },
                 },
                 a: {
                     textDecoration: 'none',

@@ -13,7 +13,6 @@ import PropTypes from "prop-types";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import { useRouter } from 'next/router';
-import Backdrop from '@material-ui/core/Backdrop';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Navigation } from './Navigation';
 import { MenuToggle } from './MenuToggle';
@@ -21,18 +20,6 @@ import CyanicButton from '../Button';
 // import { useSelector } from 'react-redux';
 
 const style = {
-    backdrop: {
-        zIndex: 5,
-        color: '#fff',
-    },
-    title: {
-        color: 'white',
-        fontFamily: 'Poppins,sans-serif',
-    },
-    lefttogglemenu: {
-        zIndex: 6,
-        cursor: 'pointer',
-    },
     ButtonRight: {
         position: 'absolute',
         right: '45px',
@@ -61,7 +48,8 @@ const style = {
         left: 0,
         bottom: 0,
         width: '100%',
-        background: 'black'
+        background: 'black',
+        zIndex: 5
     },
     fullFluid: {
         '& ul, li': {
@@ -94,7 +82,7 @@ const sidebar = {
         }
     }),
     closed: {
-        clipPath: "circle(30px at 40px 40px)",
+        clipPath: "circle(0px at 0px 0px)",
         transition: {
             delay: 0.5,
             type: "spring",
@@ -119,8 +107,14 @@ const Header = ({ props, dispatch }) => {
         router.events.on('routeChangeStart', handleRouteChange)
     }, [])
 
+    const toggleSideBar = () => {
+        toggleOpen()
+        setTimeout(() => isOpen ? document.body.classList.remove('disbaled-scroll') : document.body.classList.add('disbaled-scroll'), 500)
+
+    }
+
     return <>
-        <Container className={classes.fullFluid}>
+        <Box className={classes.fullFluid}>
             <motion.nav
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
@@ -129,11 +123,13 @@ const Header = ({ props, dispatch }) => {
             >
                 <motion.div className={classes.background} variants={sidebar} />
                 <Navigation />
-                <MenuToggle toggle={() => toggleOpen()} />
+                <MenuToggle toggle={() => toggleSideBar()} />
             </motion.nav>
-            <Box className={classes.topLogo} > <img className={classes.logoImg} src="img/logo.png" alt="" /> </Box>
+            <Box className={classes.topLogo} >
+                <img className={classes.logoImg} src="img/logo.png" alt="" />
+            </Box>
             <CyanicButton className={classes.ButtonRight} color="primary" variant="contained" text='Frow your Buisness' />
-        </Container>
+        </Box>
 
     </>;
 }

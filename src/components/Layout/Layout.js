@@ -59,10 +59,12 @@ class Layout extends React.Component {
 
                     </ListItem>
                 </List> */}
-                <Container className={classes.main} maxWidth="md">
+                <Container fixed>
                     <Header />
-                    {this.props.children}
-                    <Footer />
+                    <Container className={classes.main} maxWidth="md">
+                        {this.props.children}
+                        <Footer />
+                    </Container>
                 </Container>
             </>
         )

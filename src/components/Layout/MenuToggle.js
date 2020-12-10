@@ -13,6 +13,7 @@ const style = {
         height: '50px',
         borderRadius: '50%',
         background: 'transparent',
+        zIndex: 5,
     }
 }
 

@@ -1,72 +1,97 @@
 import React, { useEffect, useState } from 'react';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import { Box } from '@material-ui/core';
+import { Box, Grid, Typography } from '@material-ui/core';
 // import { useSelector } from 'react-redux';
+import { motion, useCycle } from "framer-motion";
 
 const style = {
-    backdrop: {
-        zIndex: 5,
+    serviceSection: {
+        zIndex: 3,
+        position: 'relative',
         color: '#fff',
-    },
+        maxWidth: '1200px',
+        margin: '0 auto',
+        '& div': {
+            position: 'relative',
+            zIndex: 4,
+            color: '#fff',
+        },
+        '& .service-details ul': {
+            width: '100%',
+            padding: '0px',
+            position: 'static',
+            '& li': {
+                display: 'flex',
+                '& img': {
+                    height: '72px',
+                    width: 'auto',
+                    marginRight: '10px'
+                },
+                '& p': {
+                    marginTop:'0px'
+                }
+            }
+        }
+    }
 };
 
 const useStyles = makeStyles(style);
 
 const Service = ({ props, dispatch }) => {
     const classes = useStyles();
+    const services = [
+        {
+            title: 'UX/UI Design',
+            img: 'img/uxui_design.png',
+            description: "Anything from a simple portfolio website to a fintech platform, you name it, we’ve done it. We can deliver what you need faster than you can say „Oachkatzalschwoaf“ (to save you the trouble of googling it:",
+            style: { display: 'block' }
+        },
+        {
+            title: 'Web Developmen',
+            img: 'img/web_evelopment.png',
+            description: "Anything from a simple portfolio website to a fintech platform, you name it, we’ve done it. We can deliver what you need faster than you can say „Oachkatzalschwoaf“ (to save you the trouble of googling it:",
+            style: { display: 'block' }
+        },
+        {
+            title: 'App Engineering',
+            img: 'img/app_engineering.png',
+            description: "Anything from a simple portfolio website to a fintech platform, you name it, we’ve done it. We can deliver what you need faster than you can say „Oachkatzalschwoaf“ (to save you the trouble of googling it:",
+            style: { display: 'block' }
+        },
+        {
+            title: 'Growth Marketing',
+            img: 'img/growth_marketing.png',
+            description: "Anything from a simple portfolio website to a fintech platform, you name it, we’ve done it. We can deliver what you need faster than you can say „Oachkatzalschwoaf“ (to save you the trouble of googling it:)",
+            style: { display: 'block' }
+        }
+    ]
+
     return <>
-        <Box>
-            
-        <div className="service-section container">  
-                 <div className="row align-items-center min ">
-<div className="col-sm-4 text-right"> <h2> Our
-Services </h2> </div>
-<div className="col-sm-8 service-details"> 
-<ul>
-<li>
-<span className="icon_img"><img src="img/uxui_design.png"/> </span>
-<span>
-<h4>UX/UI Design
-</h4>
-<p>Design is more than look and feel. It defines how users navigate and experience applications and if we make that a pleasant experience, they will come back. That’s why we analyse the data, make it interactive, test prototypes, and yes, we will make it pretty.
-</p>
-</span>
-</li>
-<li>
-<span className="icon_img"><img src="img/web_evelopment.png"/></span>
-<span>
-<h4>Web Development
+        <Grid container className={classes.serviceSection}>
+            <Grid item xs={12}>
+                <Typography variant="h2" gutterBottom> Our Services </Typography>
 
-</h4>
-<p>Anything from a simple portfolio website to a fintech platform, you name it, we’ve done it. We can deliver what you need faster than you can say „Oachkatzalschwoaf“ (to save you the trouble of googling it: it’s German for squirrel’s tail).
+            </Grid>
+            <Grid item xs={12}>
+                <div className="service-details">
+                    <ul>
+                        {services.map((item, index) => (
+                            <motion.div key={index} whileHover={{ scale: 1.2 }} >
+                                <li>
+                                    <img src={item.img} />
+                                    <div className="service-heading">
+                                        <h4>{item.title}</h4>
+                                        <p style={{ display: (item.style.display) }}>{item.description}</p>
+                                    </div>
 
-</p>
-</span>
-</li>
-<li>
-<span className="icon_img"><img src="img/app_engineering.png"/></span>
-<span>
-<h4>App Engineering
-</h4>
-<p>We love mobile. Doesn’t matter if on web or mobile devices. We are mobile first through and through. That’s why we claim to be the best mobile agency in Vienna.
-
-</p>
-</span>
-</li>
-<li>
-<span className="icon_img"><img src="img/growth_marketing.png"/></span>
-<span>
-<h4>Growth Marketing</h4>
-<p>Doing digital marketing only with gut feeling is so 2000. Business decisions based on data, benchmarks and studies is the way marketing is done in 2020. And it’s called Growth Marketing.
-
-</p>
-</span>
-</li>
-</ul></div>
-                 </div>
-                 </div>
-        </Box>
+                                </li>
+                            </motion.div>
+                        ))}
+                    </ul>
+                </div>
+            </Grid>
+        </Grid>
     </>;
 }
 

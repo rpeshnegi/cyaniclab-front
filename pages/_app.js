@@ -12,6 +12,11 @@ import Particles from './../src/components/background/Particles'
 import Cubes from "./../src/components/Cubes";
 import './../styles.css';
 import Box from '@material-ui/core/Box';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, faCheckSquare, faCoffee)
 
 const Effects = lazy(() => import("./../src/components/background/Effects"));
 
@@ -46,6 +51,7 @@ export default function MyApp(props) {
             <Head>
                 <title>My page</title>
                 <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+                <script src="https://kit.fontawesome.com/52917d73bf.js" crossorigin="anonymous"></script>
             </Head>
             <ThemeProvider theme={theme}>
                 {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
@@ -61,12 +67,13 @@ export default function MyApp(props) {
                         onMouseDown={() => set(true)}
                         onCreated={({ gl }) => {
                             gl.toneMapping = THREE.Uncharted2ToneMapping
-                            gl.setClearColor(new THREE.Color('#020207'))
+                            // gl.setClearColor(new THREE.Color('#020207'))
+                            gl.setClearColor(new THREE.Color('black'))
                         }}>
-                        <fog attach="fog" args={['blue', 10, 190]} />
+                        {/* <fog attach="fog" args={['blue', 10, 190]} /> */}
                         {/* <pointLight distance={100} intensity={4} color="white" /> */}
                         <ambientLight intensity={0.5} />
-                        <Particles count={isMobile ? 300 : 1000} mouse={mouse} />
+                        <Particles count={isMobile ? 200 : 500} mouse={mouse} />
                         <Sparks count={50} mouse={mouse} colors={['#FFC600', 'black', 'white']} />
                         <Suspense fallback={null}>
                             <Effects down={down} />

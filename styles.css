@@ -9,12 +9,12 @@ body {
 
 /* html {
     overflow: scroll;
-}
+} */
 
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
-} */
+}
 
 nav {
     /* position: absolute; */
@@ -80,20 +80,6 @@ nav ul {
 
 /*services section*/
 
-.service-section {
-    z-index: 3;
-    position: relative;
-    color: #fff;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.service-section div {
-    position: relative;
-    z-index: 4;
-    color: #fff;
-}
-
 .row {
     display: -ms-flexbox;
     display: flex;
@@ -114,16 +100,16 @@ nav ul {
     flex: 0 0 75%;
     max-width: 75%;
 }
+@supports (-webkit-text-stroke: 1px black) {
+    h5 {
+      -webkit-text-stroke: 1px black;
+      -webkit-text-fill-color: white;
+    }
+  }
 
 .align-items-center {
     -ms-flex-align: center !important;
     align-items: center !important;
-}
-
-.service-details ul {
-    width: 100%;
-    padding: 0px;
-    position: static;
 }
 
 .service-section h2 {
@@ -135,38 +121,17 @@ nav ul {
     margin: 0px;
 }
 
-.service-details .icon_img {
-    margin-right: 10px;
-}
-
 .service-details p {
     font-size: 18px;
 }
 
-.service-details ul li:first-child,
+/* .service-details ul li:first-child,
 .service-details ul li:last-child {
     margin-left: -100px;
-}
+} */
 
 
 /*technologies section*/
-
-.technologies-section {
-    position: relative;
-    z-index: 5;
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #fff;
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-.technologies-section h2 {
-    text-align: center;
-    font-size: 50px;
-    color: #ffc600;
-}
-
 .coloumn-5 [class*="col-"] {
     -ms-flex: 0 0 20%;
     flex: 0 0 20%;

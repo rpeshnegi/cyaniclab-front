@@ -22,6 +22,12 @@ export default function Cubes({ YOffset = 0, mouse }) {
     useFrame(() => {
         // group.current.rotation.x = lerp(group.current.rotation.x, 0 + mouse.current[1] / aspect / 200, 0.1)
         // group.current.rotation.y = lerp(group.current.rotation.y, 0 + mouse.current[0] / aspect / 400, 0.1)
+        // console.log(YOffset);
+        // console.log(0 + YOffset / aspect / 400);
+        // console.log(lerp(group.current.position.x, 0 + YOffset / aspect / 400, 0.1));
+        // group.current.position.x = lerp(group.current.position.x, 0 + YOffset / aspect / 400, 0.1)
+        // group.current.position.y = lerp(group.current.position.y, 0 + YOffset / 400, 0.1)
+        // console.log(group);
 
         let scrollDown = false;
         if (YOffset > 0) {

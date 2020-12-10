@@ -25,11 +25,11 @@ const style = {
             fontWeight: '800',
             color: '#fff',
             // fontSize: '100px',
-            textAlign: 'center',
+            textAlign: 'left',
         },
         '& ul': {
             margin: '50px 0 0 0',
-            padding: '0px 2%',
+            padding: '0px 0px',
             position: 'static',
             width: '100%',
             display: 'flex',

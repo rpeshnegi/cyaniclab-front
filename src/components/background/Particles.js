@@ -43,7 +43,7 @@ export default function Particles({ count, mouse }) {
                 (particle.my / 10) * b + yFactor + Math.sin((t / 10) * factor) + (Math.cos(t * 2) * factor) / 10,
                 (particle.my / 10) * b + zFactor + Math.cos((t / 10) * factor) + (Math.sin(t * 3) * factor) / 10
             )
-            dummy.scale.set(s, s, s)
+            dummy.scale.set(s + 0.5, s + 0.5, s)
             dummy.rotation.set(s * 5, s * 5, s * 5)
             dummy.updateMatrix()
             // And apply the matrix to the instanced item
