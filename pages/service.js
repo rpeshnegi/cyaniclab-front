@@ -7,8 +7,12 @@ import { motion, useCycle } from "framer-motion";
 
 const style = {
     serviceSection: {
-        zIndex: 3,
+        minHeight: '100vh',
         position: 'relative',
+        zIndex: '1',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         color: '#fff',
         maxWidth: '1200px',
         margin: '0 auto',
@@ -71,13 +75,12 @@ const Service = ({ props, dispatch }) => {
         <Grid container className={classes.serviceSection}>
             <Grid item xs={12}>
                 <Typography variant="h2" gutterBottom> Our Services </Typography>
-
             </Grid>
             <Grid item xs={12}>
                 <div className="service-details">
                     <ul>
                         {services.map((item, index) => (
-                            <motion.div key={index} whileHover={{ scale: 1.2 }} >
+                            <motion.div key={index}>
                                 <li>
                                     <img src={item.img} />
                                     <div className="service-heading">

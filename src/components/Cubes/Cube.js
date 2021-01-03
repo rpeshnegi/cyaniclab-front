@@ -79,6 +79,7 @@ export default function Cube(props) {
                 color={color}
                 roughness={1.9}
                 metalness={-1.5}
+                opacity={0.0}
             />
         </mesh>
     );

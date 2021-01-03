@@ -6,28 +6,31 @@ import lerp from 'lerp'
 import Cube from "./Cube";
 import WhiteCube from "./WhiteCube";
 import TriAngles from "./TriAngles";
+import useYScroll from './../../helpers/useYScroll'
 
-export default function Cubes({ YOffset = 0, mouse }) {
-
+export default function Cubes({ YOffset = 0, mouse, yRange }) {
+    // const [y] = useYScroll([-100, 2400], { domTarget: window.document.body })
     const group = useRef();
     const { size, viewport } = useThree()
     const aspect = size.width / viewport.width
+    const [prevYOffset, setPrevYOffset] = useState(0)
 
     useEffect(() => {
-        group.current.position.x = 35;
-        group.current.position.y = -1.5
+        group.current.position.x = 45;
+        group.current.position.y = 1.5
         group.current.scale.z = 0.005;
     }, [])
 
+    // useEffect(() => {
+    //     yRange.onChange(v => {
+    //         group.current.position.y = (v - 2.5)
+    //         console.log(group.current.position.y);
+    //     })
+    // }, [yRange])
+
     useFrame(() => {
-        // group.current.rotation.x = lerp(group.current.rotation.x, 0 + mouse.current[1] / aspect / 200, 0.1)
-        // group.current.rotation.y = lerp(group.current.rotation.y, 0 + mouse.current[0] / aspect / 400, 0.1)
-        // console.log(YOffset);
-        // console.log(0 + YOffset / aspect / 400);
-        // console.log(lerp(group.current.position.x, 0 + YOffset / aspect / 400, 0.1));
-        // group.current.position.x = lerp(group.current.position.x, 0 + YOffset / aspect / 400, 0.1)
-        // group.current.position.y = lerp(group.current.position.y, 0 + YOffset / 400, 0.1)
-        // console.log(group);
+       
+        group.current.position.y -= ((yRange.prev - yRange.current) * 400)
 
         let scrollDown = false;
         if (YOffset > 0) {
@@ -35,18 +38,7 @@ export default function Cubes({ YOffset = 0, mouse }) {
         } else {
             scrollDown = false;
         }
-        // if (scrollDown) {
-        //     group.current.scale.y = (group.current.scale.y > 0.2) ? (group.current.scale.y - 0.01) : group.current.scale.y;
-        //     group.current.scale.x = (group.current.scale.x > 0.2) ? (group.current.scale.x - 0.01) : group.current.scale.x;
-        //     // group.current.position.x = (group.current.position.x > -68) ? (group.current.position.x - 0.36) : group.current.position.x;
-        //     group.current.position.y = (group.current.position.y < 30) ? (group.current.position.y + 0.36) : group.current.position.y;
-        // } else {
-        //     group.current.scale.y = (group.current.scale.y < 1) ? (group.current.scale.y + 0.01) : group.current.scale.y;
-        //     group.current.scale.x = (group.current.scale.x < 1) ? (group.current.scale.x + 0.01) : group.current.scale.x;
-        //     // group.current.position.x = (group.current.position.x < 1) ? (group.current.position.x + 0.36) : group.current.position.x;
-        //     group.current.position.y = (group.current.position.y > 1) ? (group.current.position.y - 0.36) : group.current.position.y;
-        // }
-    });
+    }, [yRange]);
 
     return (
         <group ref={group}>

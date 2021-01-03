@@ -9,7 +9,7 @@ import Service from './service';
 import Technology from './technology';
 import Portfolio from './portfolio';
 import WorkGlobaly from '../src/WorkGlobaly';
-import About from './about';
+import Testimonials from './../src/Testimonials';
 import LetsTalk from '../src/LetsTalk';
 import { Grid, makeStyles } from '@material-ui/core';
 
@@ -21,7 +21,7 @@ const style = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        '& h2': {
+        '& h1': {
             fontWeight: '800',
             color: '#fff',
             // fontSize: '100px',
@@ -61,13 +61,13 @@ export default function Index() {
         <>
             <div className={classes.bannerCaption}>
                 <Grid container >
-                    <Grid item xs={7}>
-                        <Typography variant="h2" gutterBottom>
+                    <Grid item xs={9}>
+                        <Typography variant="h1">
                             Helping businesses and startups grow via Digital Solutions
                         </Typography>
 
                     </Grid>
-                    <Grid item xs={5}>
+                    <Grid item xs={3}>
                         &nbsp;
                     </Grid>
                     <Grid item xs={12}>
@@ -85,7 +85,7 @@ export default function Index() {
             <Portfolio />
             <ProTip />
             <WorkGlobaly />
-            <About />
+            <Testimonials />
             <LetsTalk />
             <Copyright />
         </>

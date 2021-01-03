@@ -19,7 +19,7 @@ function Fatline({ curve, width, color, speed }) {
     )
 }
 
-export default function Sparks({ mouse, count, colors, radius = 11 }) {
+export default function Sparks({ mouse, count, colors, radius = 11, yRange }) {
     const lines = useMemo(
         () =>
             new Array(count).fill().map((_, index) => {
@@ -44,16 +44,17 @@ export default function Sparks({ mouse, count, colors, radius = 11 }) {
     const aspect = size.width / viewport.width
 
     useEffect(() => {
-        ref.current.position.x = 25;
-        ref.current.position.y = -5
+        ref.current.position.x = 37;
+        ref.current.position.y = -4
     }, [])
     
     useFrame(() => {
+        ref.current.position.y -= ((yRange.prev - yRange.current) * 400)
         if (ref.current) {
             ref.current.rotation.x = lerp(ref.current.rotation.x, 0 + mouse.current[1] / aspect / 200, 0.1)
             ref.current.rotation.y = lerp(ref.current.rotation.y, 0 + mouse.current[0] / aspect / 400, 0.1)
         }
-    })
+    }, [yRange])
 
     return (
         <group ref={ref}>

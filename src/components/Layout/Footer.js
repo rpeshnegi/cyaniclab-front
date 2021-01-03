@@ -40,23 +40,6 @@ const style = {
             textAlign: 'right'
         }
     },
-    tc: {
-        textAlign: 'center',
-        '& a': {
-            color: '#000',
-            background: '#ffc600',
-            fontSize: '17px',
-            padding: '12px 35px',
-            borderRadius: '25px',
-            textTransform: 'uppercase',
-            fontWeight: '500',
-            display: 'inline-block',
-            margin: '50px 0 120px',
-        }
-    },
-    tch5: {
-        fontSize: '90px'
-    },
     social_linkLi: {
         display: 'inlineBlock',
         marginRight: '30px',
@@ -70,12 +53,8 @@ const Footer = ({ props, dispatch }) => {
     const classes = useStyles();
     return <>
         <Grid className={classes.footer}>
-            <div className={classes.tc}>
-                <h5 className={classes.tch5}>Lets talk about<br /> business</h5>
-                <a href="#">Send message</a>
-            </div>
             <div className="row">
-                <Grid item xs={7}>
+                <Grid item xs={6}>
 
                     <img className="mb-4 " src="img/logo.png" alt="logo" />
                     <ul className="social_link">
@@ -105,7 +84,7 @@ const Footer = ({ props, dispatch }) => {
                     </div>
                 </Grid>
 
-                <Grid item xs={5}>
+                <Grid item xs={6}>
 
                     <ul className="footer_link">
 

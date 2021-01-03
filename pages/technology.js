@@ -38,31 +38,67 @@ const Technology = ({ props, dispatch }) => {
                 </Grid>
                 <Grid item xs={2}>
                     <div className="technologies_box">
-                    <FontAwesomeIcon icon={["fab", "laravel"]} size="6x" />
+                        <FontAwesomeIcon icon={["fab", "laravel"]} size="6x" />
                         <h5>Laravel</h5>
                     </div>
                 </Grid>
                 <Grid item xs={2}>
                     <div className="technologies_box">
-                    <FontAwesomeIcon icon={["fab", "node"]} size="6x" />
+                        <FontAwesomeIcon icon={["fab", "node"]} size="6x" />
                         <h5>Node Js</h5>
                     </div>
                 </Grid>
                 <Grid item xs={2}>
                     <div className="technologies_box">
-                    <FontAwesomeIcon icon={["fab", "react"]} size="6x" />
+                        <FontAwesomeIcon icon={["fab", "react"]} size="6x" />
                         <h5>React Js</h5>
                     </div>
                 </Grid>
                 <Grid item xs={2}>
                     <div className="technologies_box">
-                    <FontAwesomeIcon icon={["fab", "angular"]} size="6x" />
+                        <FontAwesomeIcon icon={["fab", "angular"]} size="6x" />
                         <h5 >React Native</h5>
                     </div>
                 </Grid>
                 <Grid item xs={2}>
                     <div className="technologies_box">
-                    <FontAwesomeIcon icon={["fab", "php"]} size="6x" />
+                        <FontAwesomeIcon icon={["fab", "php"]} size="6x" />
+                        <h5 >PHP</h5>
+                    </div>
+                </Grid>
+                <Grid item xs={2}>
+                    <div className="technologies_box">
+                        <FontAwesomeIcon icon={["fab", "angular"]} size="6x" />
+                        <h5>Angular</h5>
+                    </div>
+                </Grid>
+                <Grid item xs={2}>
+                    <div className="technologies_box">
+                        <FontAwesomeIcon icon={["fab", "laravel"]} size="6x" />
+                        <h5>Laravel</h5>
+                    </div>
+                </Grid>
+                <Grid item xs={2}>
+                    <div className="technologies_box">
+                        <FontAwesomeIcon icon={["fab", "node"]} size="6x" />
+                        <h5>Node Js</h5>
+                    </div>
+                </Grid>
+                <Grid item xs={2}>
+                    <div className="technologies_box">
+                        <FontAwesomeIcon icon={["fab", "react"]} size="6x" />
+                        <h5>React Js</h5>
+                    </div>
+                </Grid>
+                <Grid item xs={2}>
+                    <div className="technologies_box">
+                        <FontAwesomeIcon icon={["fab", "angular"]} size="6x" />
+                        <h5 >React Native</h5>
+                    </div>
+                </Grid>
+                <Grid item xs={2}>
+                    <div className="technologies_box">
+                        <FontAwesomeIcon icon={["fab", "php"]} size="6x" />
                         <h5 >PHP</h5>
                     </div>
                 </Grid>

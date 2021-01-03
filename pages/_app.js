@@ -15,6 +15,12 @@ import Box from '@material-ui/core/Box';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import {
+    motion,
+    useViewportScroll,
+    useSpring,
+    useTransform
+} from "framer-motion";
 
 library.add(fab, faCheckSquare, faCoffee)
 
@@ -33,15 +39,24 @@ export default function MyApp(props) {
 
     const [isMobile, setIsMobile] = useState(false)
 
+    const { scrollYProgress } = useViewportScroll();
+    const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
+
     useEffect(() => {
         setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
         setHasMounted(true);
-        
+        window.setTimeout(() => {
+            window.scroll({
+                top: 0,
+                left: 0
+            });
+        }, 100)
+
         window.addEventListener("mousemove", onMouseMove);
-        window.onscroll = () => {
-            console.log(window.pageYOffset)
-            setYOffset(window.pageYOffset)
-        }
+        // window.onscroll = () => {
+        //     console.log(window.pageYOffset)
+        //     setYOffset(window.pageYOffset)
+        // }
         // document.body.style.cursor = hovered
         //     ? 'pointer'
         //     : "url('https://raw.githubusercontent.com/chenglou/react-motion/master/demos/demo8-draggable-list/cursor.png') 39 39, auto"
@@ -51,7 +66,7 @@ export default function MyApp(props) {
             <Head>
                 <title>My page</title>
                 <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-                <script src="https://kit.fontawesome.com/52917d73bf.js" crossorigin="anonymous"></script>
+                <script src="https://kit.fontawesome.com/52917d73bf.js" crossOrigin="anonymous"></script>
             </Head>
             <ThemeProvider theme={theme}>
                 {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
@@ -74,13 +89,19 @@ export default function MyApp(props) {
                         {/* <pointLight distance={100} intensity={4} color="white" /> */}
                         <ambientLight intensity={0.5} />
                         <Particles count={isMobile ? 200 : 500} mouse={mouse} />
-                        <Sparks count={50} mouse={mouse} colors={['#FFC600', 'black', 'white']} />
+                        <Sparks yRange={yRange} count={50} mouse={mouse} colors={['#FFC600', 'black', 'white']} />
                         <Suspense fallback={null}>
                             <Effects down={down} />
                         </Suspense>
-                        <Cubes mouse={mouse} YOffset={YOffset} />
+                        <Cubes yRange={yRange} mouse={mouse} YOffset={YOffset} />
                     </Canvas>
                 )}
+                {/* <div className="background-texture" style={{
+                    height: '100%',
+                    width: '100%',
+                    backgroundColor: 'rgb(255 255 255 / 25%)',
+                    backdropFilter: 'blur(1px)'
+                }}></div> */}
                 <Layout >
                     <Component {...pageProps} />
                 </Layout>

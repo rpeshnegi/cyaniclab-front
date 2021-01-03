@@ -22,10 +22,9 @@ import {
 } from "framer-motion";
 
 const styles = {
-    main: {
-        paddingLeft: '0px',
-        paddingRight: '0px',
-    },
+    root:{
+        position: 'relative',
+    }
 };
 
 class Layout extends React.Component {
@@ -59,9 +58,9 @@ class Layout extends React.Component {
 
                     </ListItem>
                 </List> */}
-                <Container fixed>
+                <Container fixed className={classes.root}>
                     <Header />
-                    <Container className={classes.main} maxWidth="md">
+                    <Container className="container-main">
                         {this.props.children}
                         <Footer />
                     </Container>
