@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Box, Grid, Typography } from '@material-ui/core';
 // import { useSelector } from 'react-redux';
 import { motion, useCycle } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const style = {
 };
@@ -152,11 +153,12 @@ const Service = ({ props, home }) => {
                             <div className="col-lg-7">
                                 <div className="solutions-content">
                                     <div className="heading-block">
-                                        <h2 className="text-left">Digital and <span>Marketing Agencies</span></h2>
+                                        <h2 className="text-left">Startups <span></span></h2>
                                     </div>
-                                    <p>We work with digital and marketing agencies to help them in different types of projects like Web Design, Web Development, Mobile App Development, and Custom Solutions. When we build these programs, we ensure that they strike a chord with your customers and become a reason behind your success.
+                                    <p>We help startups across the globe bring their products to life. We closely work with them to understand their business, problem, target audience, and based on that we design and develop the solutions that help them grow digitally. Our motto is to provide all the productive means that the budding businesses can use to become a frontrunner in their domains.
                                     <br /><br />
-                                    If you are looking for help with your ongoing or upcoming projects then we can help you and provide you high quality and white-label services. We have experience in working with digital and marketing agencies in the USA, Europe, and Australia.</p>
+Do you have an idea for your startups and looking for a team to convert your idea into reality then you are at the right place. We have a team of experienced designers and developers who will work with you to convert your idea into digital solutions.
+</p>
                                 </div>
                             </div>
                         </div>
@@ -167,11 +169,13 @@ const Service = ({ props, home }) => {
                                 </div>
                             </div>
                             <div className="col-lg-7">
-                                <div className="solutions-content"><div className="heading-block"><h2 className="text-left">Startups <span></span></h2></div>
-                                    <p>We help startups across the globe bring their products to life. We closely work with them to understand their business, problem, target audience, and based on that we design and develop the solutions that help them grow digitally. Our motto is to provide all the productive means that the budding businesses can use to become a frontrunner in their domains.
+                                <div className="solutions-content"><div className="heading-block">
+
+                                    <h2 className="text-left">Digital and <span>Marketing Agencies</span></h2>
+                                </div>
+                                    <p>We work with digital and marketing agencies to help them in different types of projects like Web Design, Web Development, Mobile App Development, and Custom Solutions. When we build these programs, we ensure that they strike a chord with your customers and become a reason behind your success.
                                     <br /><br />
-Do you have an idea for your startups and looking for a team to convert your idea into reality then you are at the right place. We have a team of experienced designers and developers who will work with you to convert your idea into digital solutions.
-</p>
+                                    If you are looking for help with your ongoing or upcoming projects then we can help you and provide you high quality and white-label services. We have experience in working with digital and marketing agencies in the USA, Europe, and Australia.</p>
                                 </div>
                             </div>
                         </div>
@@ -212,7 +216,7 @@ Are you looking to build an online presence for your business? Let’s connect w
                                 <li>
                                     <div className="contetn-div-prcess">
                                         <div className="icon-div">
-                                            <i className="fad fa-lightbulb"></i>
+                                            <FontAwesomeIcon icon={["fas", "lightbulb"]} height="50px" />
                                         </div>
                                         <div className="inner-content">
                                             <span>01</span>
@@ -226,7 +230,7 @@ Are you looking to build an online presence for your business? Let’s connect w
                                 <li>
                                     <div className="contetn-div-prcess">
                                         <div className="icon-div">
-                                            <i className="fad fa-bezier-curve"></i>
+                                            <FontAwesomeIcon icon={["fas", "bezier-curve"]} height="50px" />
                                         </div>
                                         <div className="inner-content">
                                             <span>02</span>
@@ -240,7 +244,7 @@ Are you looking to build an online presence for your business? Let’s connect w
                                 <li>
                                     <div className="contetn-div-prcess">
                                         <div className="icon-div">
-                                            <i className="fad fa-file-code"></i>
+                                            <FontAwesomeIcon icon={["fas", "file-code"]} height="50px" />
                                         </div>
                                         <div className="inner-content">
                                             <span>03</span>
@@ -254,7 +258,7 @@ Are you looking to build an online presence for your business? Let’s connect w
                                 <li>
                                     <div className="contetn-div-prcess">
                                         <div className="icon-div">
-                                            <i className="fad fa-rocket-launch"></i>
+                                            <FontAwesomeIcon icon={["fas", "rocket"]} height="50px" />
                                         </div>
                                         <div className="inner-content">
                                             <span>04</span>

@@ -110,12 +110,13 @@ export const MotionSlider = ({ content }) => {
                         }
                     }}
                 >
-                    <Box className="content">
-                        {content[i].text}
-                        <Box mt={6} fontWeight={2}>
-                            {content[i].name}
-                        </Box>
-                    </Box>
+                    <div className="carousel-item active">
+                        <div className="kc_tab_content">
+                            <div className="usr-img"><img src={content[i].img} /></div>
+                            <p>{content[i].text}</p>
+                            <h6>{content[i].name}</h6>
+                        </div>
+                    </div>
                 </motion.div>
             </AnimatePresence>
             <Box

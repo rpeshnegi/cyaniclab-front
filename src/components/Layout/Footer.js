@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Grid } from '@material-ui/core';
 // import { useSelector } from 'react-redux';
+import Link from 'next/link'
 
 const style = {
     footer: {
@@ -64,19 +65,16 @@ const Footer = ({ props, dispatch }) => {
                             <img className="mb-4 " src="img/logo.png" alt="logo" />
                             <ul className="social_link">
                                 <li>
-                                    <a href="#" target="_blank">Facebook.</a>
+                                    <a target="_blank" href="https://www.facebook.com/CyanicLab-310488926246347/">Facebook.</a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank">Twitter.</a>
+                                    <a href="https://twitter.com/CyanicLab" target="_blank">Twitter.</a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank">Instagram.</a>
+                                    <a href="https://www.instagram.com/cyanic_lab" target="_blank">Instagram.</a>
                                 </li>
                                 <li>
-                                    <a href="#" target="_blank">LinkedIn.</a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">Dribbble.</a>
+                                    <a href="https://www.linkedin.com/company/cyaniclab/" target="_blank">LinkedIn.</a>
                                 </li>
                             </ul>
                             <div className="additional_links display-block ">
@@ -85,11 +83,10 @@ const Footer = ({ props, dispatch }) => {
                         </div>
                         <div className="col-md-5 col-xs-12 ">
                             <ul className="footer_link">
-                                <li><a href="#">About </a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">Technologies </a></li>
-                                <li><a href="#">Contacts</a></li>
+                                <li><Link href="/about"><a >About </a></Link></li>
+                                <li><Link href="/service"><a >Services</a></Link></li>
+                                <li><a target="_blank" href="https://calendly.com/jaskhatri/15min">Consultation</a></li>
+                                <li><Link href="/contact-us"><a >Contacts</a></Link></li>
                             </ul>
                             <ul className="footer_address">
                                 <li>Address:- Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>

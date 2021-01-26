@@ -17,20 +17,16 @@ const reviews = [
     {
         id: 0,
         text:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dignissimos, et repudiandae quas hic inventore quisquam quis vitae, excepturi labore laudantium laboriosam veritatis optio illo minima voluptatum pariatur iure esse, voluptatibus ut explicabo est similique molestias.",
-        name: "Elsa Porter"
+            "They were very professional, willing to listen, good command of English, and committed to completing the job.",
+        name: "Martin Peet",
+        img: "img/mpeet.jfif"
     },
     {
         id: 1,
         text:
-            "Fugit quibusdam veniam illum iure sunt quisquam necessitatibus sequi excepturi minima harum qui aliquid, modi voluptatibus expedita quasi illo! Numquam provident, vero saepe soluta officia beatae ducimus est ut dolorem atque aperiam non suscipit voluptatem?",
-        name: "John Smith"
-    },
-    {
-        id: 2,
-        text:
-            "Ut eius omnis rerum harum beatae ullam commodi quam quasi aperiam veniam quae esse corporis, fuga quis, animi asperiores similique nobis maiores molestias dolore ipsam. Omnis sunt iusto quasi.",
-        name: "Scarlett Light"
+            "They are professional, good listeners, and offer good comments about requests, and committed to finishing the project.",
+        name: "Robinson Nunez",
+        img: "img/rnunz.jfif"
     }
 ];
 
@@ -51,31 +47,10 @@ const Testimonials = ({ props, dispatch }) => {
                                     </ul> --> */}
                     {/* <!-- The slideshow --> */}
                     <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <div className="kc_tab_content">
-                                <div className="usr-img"><img src="img/mpeet.jfif" /></div>
-                                <p>They were very professional, willing to listen, good command of English, and committed to completing the job.</p>
-                                <h6>Martin Peet</h6>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <div className="kc_tab_content">
-                                <div className="usr-img"><img src="img/rnunz.jfif" /></div>
-                                <p>They are professional, good listeners, and offer good comments about requests, and committed to finishing the project.</p>
-                                <h6>Robinson Nunez</h6>
-                            </div>
-                        </div>
-                        {/* <div className="carousel-item">
-                            <div className="kc_tab_content">
-                                <div className="usr-img"><img src="img/user1.jpg" /></div>
-                                <p>Can say about these guys only good words! Well tested product was provided as well as 24/7 support and maintenance. After 2 months of designing on this theme, my rating could not be less than 5 stars.</p>
-                                <h6>client Name</h6>
-                            </div>
-                        </div> */}
+                        <MotionSlider content={reviews} />
                     </div>
                 </div>
             </div>
-            {/* <MotionSlider content={reviews} /> */}
         </section>
     </>;
 }

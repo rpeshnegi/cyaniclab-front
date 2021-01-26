@@ -2,6 +2,7 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
+import { ContactForm } from "../ContactForm";
 
 // const variants = {
 //     open: {
@@ -30,28 +31,22 @@ export const Navigation = ({ isOpen, toggle }) => (
                         <div className="heading-block">
                             <p>Do you have a project you want to share and discuss with us? Let us help you figure out your digital strategy, web development project or creative ideas.</p>
                         </div>
-                        <form className="contact-form">
-                            <span>*All fields are required.</span>
-                            <div className="form-group">
-                                <input type="text" className="form-control" placeholder="Name" />
-                            </div>
-                            <div className="form-group">
-                                <input type="email" className="form-control" placeholder="Email" />
-                            </div>
-                            <div className="form-group">
-                                <textarea className="form-control" placeholder="Message"></textarea>
-                            </div>
-                            <button type="submit" className="btn">Submit</button>
-                        </form>
+                        <ContactForm/>
                     </div>
                     <ul className="mt-0">
                         <li className="social-links">
-                            <a href="#" className="social">
+                            <a target="_blank" href="https://www.facebook.com/CyanicLab-310488926246347/" className="social">
                                 <FontAwesomeIcon icon={["fab", "facebook-f"]} height="25px" />
                             </a>
-                            <a href="#" className="social"><FontAwesomeIcon icon={["fab", "instagram"]} height="25px" /></a>
-                            <a href="#" className="social"><FontAwesomeIcon icon={["fab", "linkedin-in"]} height="25px" /></a>
-                            <a href="#" className="social"><FontAwesomeIcon icon={["fab", "twitter"]} height="25px" /></a>
+                            <a href="https://twitter.com/CyanicLab" target="_blank" className="social">
+                                <FontAwesomeIcon icon={["fab", "twitter"]} height="25px" />
+                            </a>
+                            <a href="https://www.instagram.com/cyanic_lab" target="_blank" className="social">
+                                <FontAwesomeIcon icon={["fab", "instagram"]} height="25px" />
+                            </a>
+                            <a href="https://www.linkedin.com/company/cyaniclab/" target="_blank" className="social">
+                                <FontAwesomeIcon icon={["fab", "linkedin-in"]} height="25px" />
+                            </a>
                         </li>
                     </ul>
                 </div>
