@@ -10,24 +10,6 @@ import Typography from '@material-ui/core/Typography';
 import { MotionSlider } from './components/MotionSlider';
 
 const style = {
-    root: {
-        // backgroundColor: 'rgb(255 255 255 / 25%)',
-        // backdropFilter: 'blur(1px)',
-        '& h2': {
-            textAlign: 'center'
-        }
-    },
-    bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
-    },
-    title: {
-        fontSize: 14,
-    },
-    pos: {
-        marginBottom: 12,
-    },
 };
 
 const useStyles = makeStyles(style);
@@ -57,12 +39,44 @@ const Testimonials = ({ props, dispatch }) => {
     const classes = useStyles();
     const bull = <span className={classes.bullet}>•</span>;
     return <>
-        <Grid container className={classes.root}>
-            <Grid item xs={12}>
-                <Typography variant="h2" gutterBottom> Testimonials</Typography>
-                <MotionSlider content={reviews} />
-            </Grid>
-        </Grid>
+        <section className="clients pb-5" >
+            <div className="container-fluid">
+                <h2 className="heading mb-5 color_man tc wow fadeInUp animated" data-wow-duration="2s" data-wow-delay="0.6s">What our <span> client says</span></h2>
+                <div id="demo" className="carousel slide" data-ride="carousel">
+                    {/* <!-- Indicators --> */}
+                    {/* <!-- <ul className="carousel-indicators">
+                                        <li data-target="#demo" data-slide-to="0" className="active"></li>
+                                        <li data-target="#demo" data-slide-to="1"><img src="img/user2.jpg" /></li>
+                                        <li data-target="#demo" data-slide-to="2"><img src="img/user3.jpg" /></li>
+                                    </ul> --> */}
+                    {/* <!-- The slideshow --> */}
+                    <div className="carousel-inner">
+                        <div className="carousel-item active">
+                            <div className="kc_tab_content">
+                                <div className="usr-img"><img src="img/mpeet.jfif" /></div>
+                                <p>They were very professional, willing to listen, good command of English, and committed to completing the job.</p>
+                                <h6>Martin Peet</h6>
+                            </div>
+                        </div>
+                        <div className="carousel-item">
+                            <div className="kc_tab_content">
+                                <div className="usr-img"><img src="img/rnunz.jfif" /></div>
+                                <p>They are professional, good listeners, and offer good comments about requests, and committed to finishing the project.</p>
+                                <h6>Robinson Nunez</h6>
+                            </div>
+                        </div>
+                        {/* <div className="carousel-item">
+                            <div className="kc_tab_content">
+                                <div className="usr-img"><img src="img/user1.jpg" /></div>
+                                <p>Can say about these guys only good words! Well tested product was provided as well as 24/7 support and maintenance. After 2 months of designing on this theme, my rating could not be less than 5 stars.</p>
+                                <h6>client Name</h6>
+                            </div>
+                        </div> */}
+                    </div>
+                </div>
+            </div>
+            {/* <MotionSlider content={reviews} /> */}
+        </section>
     </>;
 }
 

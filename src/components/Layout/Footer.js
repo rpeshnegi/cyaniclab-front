@@ -52,61 +52,63 @@ const useStyles = makeStyles(style);
 const Footer = ({ props, dispatch }) => {
     const classes = useStyles();
     return <>
-        <Grid className={classes.footer}>
-            <div className="row">
-                <Grid item xs={6}>
-
-                    <img className="mb-4 " src="img/logo.png" alt="logo" />
-                    <ul className="social_link">
-                        <li>
-                            <a href="#" target="_blank">Facebook.</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">Twitter.</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">Instagram.</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">LinkedIn.</a>
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">Dribbble.</a>
-                        </li>
-
-                    </ul>
-                    <div className="additional_links ">
-                        <span className="wow fadeInUp animated" data-wow-duration="2s" data-wow-delay="0.6s">© 2020 Cyaniclab </span>
+        <footer>
+            <div className="container-fluid">
+                <div className="lets_talk tc">
+                    <h5>Let's talk <br /> <span>about business</span></h5>
+                    <a className="btn" href="#">Send message</a>
+                </div>
+                <div className="contact_form" id="footer_fotm">
+                    <div className="row">
+                        <div className="col-md-7 col-xs-12 ">
+                            <img className="mb-4 " src="img/logo.png" alt="logo" />
+                            <ul className="social_link">
+                                <li>
+                                    <a href="#" target="_blank">Facebook.</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">Twitter.</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">Instagram.</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">LinkedIn.</a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank">Dribbble.</a>
+                                </li>
+                            </ul>
+                            <div className="additional_links display-block ">
+                                <span>© 2020 Cyaniclab </span>
+                            </div>
+                        </div>
+                        <div className="col-md-5 col-xs-12 ">
+                            <ul className="footer_link">
+                                <li><a href="#">About </a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="#">Technologies </a></li>
+                                <li><a href="#">Contacts</a></li>
+                            </ul>
+                            <ul className="footer_address">
+                                <li>Address:- Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+                                <li>Email:- info@cyaniclab.com</li>
+                                <li>Call:- +91-987654321</li>
+                            </ul>
+                            <div className="additional_links display-none ">
+                                <span>© 2021 Cyaniclab </span>
+                            </div>
+                        </div>
+                        <div className="col-md-7 col-xs-12 ">
+                            <div className="tr margin-top">
+                                <img className=" " src="img/clutch.png" alt="clutch" />
+                            </div>
+                        </div>
                     </div>
-
-                    <div className="tr ">
-                        <img className=" " src="img/clutch.png" alt="clutch" />
-                    </div>
-                </Grid>
-
-                <Grid item xs={6}>
-
-                    <ul className="footer_link">
-
-                        <li><a href="#">About      </a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Technologies </a></li>
-                        <li><a href="#">Contacts</a></li>
-                    </ul>
-
-
-
-                    <ul className="footer_address">
-                        <li>Address:- Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                        <li>Email:- info@cyaniclab.com</li>
-                        <li>Call:- +91-987654321</li>
-
-                    </ul>
-                </Grid>
+                </div>
             </div>
-
-        </Grid>
+        </footer>
     </>;
 }
 

@@ -15,61 +15,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import { useRouter } from 'next/router';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { Navigation } from './Navigation';
-import { MenuToggle } from './MenuToggle';
-import CyanicButton from '../Button';
 // import { useSelector } from 'react-redux';
+import Link from 'next/link'
 
 const style = {
-    ButtonRight: {
-        position: 'absolute',
-        right: '45px',
-        top: '45px',
-        borderRadius: '45px',
-        background: '#ffc600',
-        zIndex: 6,
-
-    },
-    topLogo: {
-        textAlign: 'center',
-        position: 'absolute',
-        zIndex: 5,
-        left: '0px',
-        right: '0px',
-        top: '10px',
-        margin: '0 100px',
-    },
-
-    logoImg: {
-        cursor: 'pointer',
-    },
-    background: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        bottom: 0,
-        width: '100%',
-        background: 'black',
-        zIndex: 5
-    },
-    fullFluid: {
-        '& ul, li': {
-            margin: '0',
-            padding: '0',
-        },
-        '& ul': {
-            padding: '25px',
-            position: 'absolute',
-            top: '100px',
-            width: '230px'
-        },
-        '& li': {
-            listStyle: 'none',
-            marginBottom: '20px',
-            display: 'flex',
-            alignItems: 'center',
-            cursor: 'pointer',
-        }
-    },
 };
 
 const sidebar = {
@@ -109,12 +58,33 @@ const Header = ({ props, dispatch }) => {
 
     const toggleSideBar = () => {
         toggleOpen()
+        
         setTimeout(() => isOpen ? document.body.classList.remove('disbaled-scroll') : document.body.classList.add('disbaled-scroll'), 500)
 
     }
 
     return <>
-        <Box className={classes.fullFluid}>
+        <motion.div
+            initial={false}
+            animate={isOpen ? "open" : "closed"}
+            custom="400"
+            ref={containerRef}
+        >
+            <motion.div className={classes.background} variants={sidebar} />
+            <Navigation isOpen={isOpen} toggle={() => toggleSideBar()} />
+        </motion.div>
+        <header >
+            <div className="top_bar">
+                <div className="container-fluid">
+                    <div className="top-menu text-center">
+                        <span className="float-left menu_btn" onClick={toggleSideBar}><span></span><span></span><span></span></span>
+                        <Link href="/"><img className="logo" src="img/logo.png" alt="logo" /></Link>
+                        <a className="float-right btn" href="#contact">Grow your business.</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {/* <Box className={classes.fullFluid}>
             <motion.nav
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
@@ -129,7 +99,7 @@ const Header = ({ props, dispatch }) => {
                 <img className={classes.logoImg} src="img/logo.png" alt="" />
             </Box>
             <CyanicButton className={classes.ButtonRight} color="primary" variant="contained" text='Frow your Buisness' />
-        </Box>
+        </Box> */}
 
     </>;
 }

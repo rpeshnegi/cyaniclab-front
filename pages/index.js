@@ -4,7 +4,6 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import ProTip from '../src/ProTip';
 import Link from '../src/Link';
-import Copyright from '../src/Copyright';
 import Service from './service';
 import Technology from './technology';
 import Portfolio from './portfolio';
@@ -14,43 +13,7 @@ import LetsTalk from '../src/LetsTalk';
 import { Grid, makeStyles } from '@material-ui/core';
 
 const style = {
-    bannerCaption: {
-        minHeight: '100vh',
-        position: 'relative',
-        zIndex: '1',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        '& h1': {
-            fontWeight: '800',
-            color: '#fff',
-            // fontSize: '100px',
-            textAlign: 'left',
-        },
-        '& ul': {
-            margin: '50px 0 0 0',
-            padding: '0px 0px',
-            position: 'static',
-            width: '100%',
-            display: 'flex',
-            justifyContent: 'space-between',
-        },
-        '& ul li': {
-            display: 'flex',
-            flexDirection: 'column',
-        },
-        '& ul li strong': {
-            fontSize: '70px',
-            color: '#ffcb15',
-            lineHeight: 1,
-        },
-        '& ul li p': {
-            fontSize: '20px',
-            color: '#fff',
-            margin: '0px',
-            padding: '0px',
-        }
-    }
+
 };
 
 const useStyles = makeStyles(style);
@@ -59,35 +22,43 @@ export default function Index() {
     const classes = useStyles();
     return (
         <>
-            <div className={classes.bannerCaption}>
-                <Grid container >
-                    <Grid item xs={9}>
-                        <Typography variant="h1">
-                            Helping businesses and startups grow via Digital Solutions
-                        </Typography>
-
-                    </Grid>
-                    <Grid item xs={3}>
-                        &nbsp;
-                    </Grid>
-                    <Grid item xs={12}>
-                        <ul>
-                            <li> <strong> 7+</strong> <p> Figures In Revenue Generated </p> </li>
-                            <li> <strong> 7+</strong> <p> Projects Closed  </p> </li>
-                            <li> <strong> 7+</strong> <p> US Cities, & Growing  </p> </li>
-
-                        </ul>
-                    </Grid>
-                </Grid>
-            </div>
-            <Service />
+            <section className="banner_home">
+                <div className="container-fluid">
+                    <h1 >Helping businesses and startups grow via Digital Solutions
+                        {/* <br /> That Develop Your<br /> Business */}
+                    </h1>
+                </div>
+            </section>
+            <Service home={true} />
             <Technology />
             <Portfolio />
-            <ProTip />
-            <WorkGlobaly />
+            {/* <WorkGlobaly /> */}
             <Testimonials />
-            <LetsTalk />
-            <Copyright />
+            <section className="customers p50" >
+                <div className="container-fluid">
+                    <h2 className="heading color_man mb-5 tc wow fadeInUp animated" data-wow-duration="2s" data-wow-delay="0.6s">Customers</h2>
+                    <div className="row justify-content-center">
+                        <div className="col-md-2 col-sm-3 col-6">
+                            <img className="img-fluid" src="img/customers.png" />
+                        </div>
+                        <div className="col-md-2 col-sm-3 col-6">
+                            <img className="img-fluid" src="img/customers2.png" />
+                        </div>
+                        <div className="col-md-2 col-sm-3 col-6">
+                            <img className="img-fluid" src="img/customers.png" />
+                        </div>
+                        <div className="col-md-2 col-sm-3 col-6">
+                            <img className="img-fluid" src="img/customers2.png" />
+                        </div>
+                        <div className="col-md-2 col-sm-3 col-6">
+                            <img className="img-fluid" src="img/customers.png" />
+                        </div>
+                        <div className="col-md-2 col-sm-3 col-6">
+                            <img className="img-fluid" src="img/customers2.png" />
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     );
 }
