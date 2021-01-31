@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { wrap } from "@popmotion/popcorn";
 import { Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import { useEffect } from "react";
 
 const style = {
     motionDiv: {
@@ -76,6 +77,10 @@ export const MotionSlider = ({ content }) => {
             setActiveBullet(content.length - 1);
         }
     };
+
+    useEffect(() => {
+        
+    }, [])
 
     return (
         <>

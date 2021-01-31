@@ -57,17 +57,17 @@ export const Navigation = ({ isOpen, toggle }) => (
                             <div className="col-md-4">
                                 <p className="get-content  text-left">
                                     <i ><FontAwesomeIcon icon={["fas", "map-marker-alt"]} height="20px" /></i>
-                                    <span>Address</span> <a href="#" className="p-0">Lorem Ipsum is simply dummy text of<br /> the printing and typesetting industry.</a></p>
+                                    <span>Address</span> <a href="javascript:;" className="p-0">Central spine, Vidhyadhar Nagar, jaipur</a></p>
                             </div>
                             <div className="col-md-4">
                                 <p className="get-content  text-left">
                                     <i ><FontAwesomeIcon icon={["fas", "phone-alt"]} height="20px" /></i>
-                                    <span>Phone</span><a href="#" className="p-0">+91-987654321</a></p>
+                                    <span>Phone</span><a href="tel:918387969879" className="p-0">+91-8387969879</a></p>
                             </div>
                             <div className="col-md-4">
                                 <p className="get-content  text-left">
                                     <i ><FontAwesomeIcon icon={["fas", "envelope"]} height="20px" /></i>
-                                    <span>Email</span><a href="#" className="p-0">info@cyaniclab.com</a></p>
+                                    <span>Email</span><a href="mailto: cyaniclab@gmail.com" className="p-0">cyaniclab@gmail.com</a></p>
                             </div>
                         </div>
                     </div>

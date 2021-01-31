@@ -69,8 +69,8 @@ export default function MyApp(props) {
     return (
         <React.Fragment>
             <Head>
-                <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta httpEquiv="Content-Type" content="text/html;charset=utf-8" />
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>Cyaniclab</title>
                 <link rel="shortcut icon" href="img/favicon.ico" type="image/ico" />

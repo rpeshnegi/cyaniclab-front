@@ -89,9 +89,9 @@ const Footer = ({ props, dispatch }) => {
                                 <li><Link href="/contact-us"><a >Contacts</a></Link></li>
                             </ul>
                             <ul className="footer_address">
-                                <li>Address:- Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-                                <li>Email:- info@cyaniclab.com</li>
-                                <li>Call:- +91-987654321</li>
+                                <li>Address:- Central spine, Vidhyadhar Nagar, jaipur.</li>
+                                <li><a href="mailto: cyaniclab@gmail.com" >Email:- cyaniclab@gmail.com</a></li>
+                                <li><a href="tel:918387969879">Call:- +91-8387969879</a></li>
                             </ul>
                             <div className="additional_links display-none ">
                                 <span>© 2021 Cyaniclab </span>
