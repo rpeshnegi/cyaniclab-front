@@ -1,3 +1,8 @@
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -20,9 +25,21 @@ body.disbaled-scroll::-webkit-scrollbar,
 @font-face {
     font-family: 'GrandSlang Roman';
     src: url('fonts/GrandSlang-Roman.woff2') format('woff2'), url('fonts/GrandSlang-Roman.woff') format('woff');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: none;
+}
+
+.background-texture {
+    position: fixed !important;
+    z-index: -1;
+    top: 0;
+    left: 0;
 }
 
 .container-fluid {
@@ -36,8 +53,9 @@ body.disbaled-scroll::-webkit-scrollbar,
 
 .banner_home h1 {
     font-size: 80px;
-    text-align: center;
+    text-align: left;
     font-weight: 600;
+    width: 70%;
 }
 
 .banner_plus {
@@ -56,32 +74,36 @@ body.disbaled-scroll::-webkit-scrollbar,
 }
 
 .top_bar {
-    position: fixed;
-    top: 0;
     width: 100%;
     padding: 10px 0;
-    background: rgb(0 0 0 / 0.65);
-    z-index: 99;
+    background: rgb(0 0 0/.65);
+    z-index: 99
+}
+
+.sidenav,
+.top_bar {
+    position: fixed;
+    top: 0
 }
 
 .sidenav {
     text-align: center;
     height: 100%;
     width: 0;
-    position: fixed;
     z-index: 999;
-    top: 0;
     left: 0;
     background-color: #000;
     overflow-x: hidden;
-    transition: 0.7s;
-    padding-top: 70px;
+    -webkit-transition: .7s;
+    transition: .7s;
+    padding-top: 70px
 }
 
 .sidenav a {
     color: #fff;
     display: block;
-    transition: 0.3s;
+    -webkit-transition: .3s;
+    transition: .3s
 }
 
 .sidenav a:hover {
@@ -94,6 +116,11 @@ body.disbaled-scroll::-webkit-scrollbar,
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    background: #ffc600;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    line-height: 42px;
 }
 
 .menu_btn {
@@ -122,22 +149,9 @@ body.disbaled-scroll::-webkit-scrollbar,
     text-align: right
 }
 
-
-/*.get_btn,
-.lets_talk a{ background: transparent;
-    border-radius: 50px;
-    padding: 10px 20px;
-    color: #ffc600;
-    font-weight: 300;
-    display: inline-block;
-    margin-top: 0px; border:1px solid; transition: all 0.3s ease-in-out; }
-.get_btn:hover,
-.lets_talk a:hover{     background: #ffc600;
-    color: #000;
-    text-decoration: none; }*/
-
 .our_services ul li {
-    display: flex;
+    display: -moz-box;
+    display: flex
 }
 
 .our_services ul li+li {
@@ -154,11 +168,11 @@ body.disbaled-scroll::-webkit-scrollbar,
 }
 
 .our_ser_h {
-    display: flex;
+    display: -moz-box;
+    display: flex
 }
 
 .our_ser_h h2 {
-    margin: auto 0;
     font-size: 50px;
     text-align: center;
     width: 350px;
@@ -167,14 +181,14 @@ body.disbaled-scroll::-webkit-scrollbar,
     min-height: 350px;
     position: relative;
     z-index: 1;
-    margin-left: 50px
+    margin: auto 0 auto 50px
 }
 
 @media (min-width: 768px) {
     .technologies .col-md-3 {
-        -ms-flex: 0 0 20%;
+        -moz-box-flex: 0;
         flex: 0 0 20%;
-        max-width: 20%;
+        max-width: 20%
     }
 }
 
@@ -217,43 +231,14 @@ body.disbaled-scroll::-webkit-scrollbar,
 
 .work_box .work_box_in span {
     padding: 1px 5px;
-    background: rgba(255, 255, 255, 0.1);
+    background: hsla(0, 0%, 100%, .1);
     width: auto;
     display: inline-block;
     position: relative;
     margin-right: 15px;
     margin-bottom: 5px;
-    border-radius: 5px;
+    border-radius: 5px
 }
-
-
-/*.work_box:after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-        background: rgb(255 198 0 / 0.7);
-    overflow: hidden;
-    width: 0;
-    height: 100%;
-    content: '';
-    transition: all 0.4s ease-out;
-    -moz-transition: all 0.4s ease-out;
-    -webkit-transition: all 0.4s ease-out;
-    -o-transition: all 0.4s ease-out;
-}*/
-
-
-/*.work_box:hover:after {
-    width: 100%;
-}	
-.work_box:hover img{    transform: scale(1.1) rotate(2deg);
-    -moz-transform: scale(1.1) rotate(2deg);
-    -webkit-transform: scale(1.1) rotate(2deg);
-    -ms-transform: scale(1.1) rotate(2deg);
-    -o-transform: scale(1.1) rotate(2deg);
-    -webkit-transition: all 0.4s ease-out;
-    transition: all 0.4s ease-out;}*/
 
 .work_box img {
     -webkit-transition: all 0.4s ease-out;
@@ -271,10 +256,13 @@ body.disbaled-scroll::-webkit-scrollbar,
 .wok-images-box .plus-div {
     width: 100px;
     height: 100px;
+    display: -moz-box;
     display: flex;
+    -moz-box-pack: center;
     justify-content: center;
+    -moz-box-align: center;
     align-items: center;
-    background: rgba(00, 00, 00, 0.6);
+    background: rgba(0, 0, 0, .6);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -282,9 +270,10 @@ body.disbaled-scroll::-webkit-scrollbar,
     -webkit-transform: translate(-50%, -50%);
     border-radius: 50%;
     opacity: 0;
-    transition: all 0.2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
     font-size: 30px;
-    color: #ffc600;
+    color: #ffc600
 }
 
 .work_box:hover .plus-div {
@@ -292,6 +281,30 @@ body.disbaled-scroll::-webkit-scrollbar,
     height: 100%;
     opacity: 1;
     border-radius: 0;
+}
+
+.clients .MuiBox-root.jss4.jss3 {
+    width: auto;
+    position: absolute;
+    bottom: 0px;
+    height: 20px;
+    top: auto;
+    left: 0;
+    right: 0;
+    margin: auto;
+    justify-content: center;
+}
+
+.clients .MuiBox-root.jss4.jss3>div {
+    color: #ffc600;
+}
+
+.clients .MuiBox-root.jss4.jss3>div.dot {
+    background-color: #ffc600;
+}
+
+.clients .carousel-inner {
+    padding-bottom: 30px
 }
 
 .clients .carousel-indicators li {
@@ -391,18 +404,18 @@ footer h4 {
 }
 
 section {
-    width: 100%;
     overflow: hidden;
 }
 
-.services-listing {
-    width: 100%;
+.services-listing,
+section {
+    width: 100%
 }
 
 .about-us,
-.team-section,
+.contact-us-section,
 .services-section,
-.contact-us-section {
+.team-section {
     padding: 0 0 150px
 }
 
@@ -479,12 +492,15 @@ section {
     margin-right: 30px;
     border-radius: 50%;
     border: 1px solid;
+    display: -moz-box;
     display: flex;
+    -moz-box-pack: center;
     justify-content: center;
+    -moz-box-align: center;
     align-items: center;
     position: relative;
     font-size: 30px;
-    float: left;
+    float: left
 }
 
 .our-values-section .over-values-icon:after {
@@ -515,10 +531,12 @@ section {
 }
 
 .our-values-section .over-values-item {
+    display: -moz-box;
     display: flex;
+    -moz-box-align: center;
     align-items: center;
     margin-bottom: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 20px
 }
 
 .usr-img {
@@ -564,7 +582,6 @@ h2.heading span,
 }
 
 .services-section ul li {
-    /*border-radius: 10px; border:solid #ffc600; border-width: 1px 1px 1px 5px;*/
     overflow: hidden;
     padding: 0px 0 20px
 }
@@ -593,6 +610,8 @@ h2.heading span,
 .btn:hover {
     background: #ffc600;
     color: #000;
+    box-shadow: none;
+    border-color: transparent;
 }
 
 .contact-us-section {
@@ -651,6 +670,7 @@ h2.heading span,
     display: block;
     font-size: 16px;
     font-weight: 400;
+    text-decoration: none;
 }
 
 .contact-us-section p.get-content a:hover {
@@ -687,15 +707,17 @@ h2.heading span,
     height: 150px;
     border-radius: 50%;
     font-size: 50px;
+    display: -moz-box;
     display: flex;
+    -moz-box-pack: center;
     justify-content: center;
+    -moz-box-align: center;
     align-items: center;
     margin: 0 auto;
-    background-image: -moz-linear-gradient( 90deg, rgb(16, 16, 16) 0%, rgb(0, 0, 0) 100%);
-    background-image: -webkit-linear-gradient( 90deg, rgb(16, 16, 16) 0%, rgb(0, 0, 0) 100%);
-    background-image: -ms-linear-gradient( 90deg, rgb(16, 16, 16) 0%, rgb(0, 0, 0) 100%);
-    box-shadow: 0px 30px 28px 0px rgba(0, 0, 0, 0.6);
-    color: #fff;
+    background-image: -webkit-linear-gradient(90deg, #101010, #000);
+    background-image: -ms-linear-gradient(90deg, #101010 0, #000 100%);
+    box-shadow: 0 30px 28px 0 rgba(0, 0, 0, .6);
+    color: #fff
 }
 
 .process .contetn-div-prcess {
@@ -757,7 +779,7 @@ h2.heading span,
 }
 
 .process .contetn-div-prcess .inner-content:after {
-    content: '';
+    content: "";
     position: absolute;
     top: -34px;
     left: -34px;
@@ -766,9 +788,9 @@ h2.heading span,
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     background: transparent;
-    border: 8px solid #fff;
     height: calc(50% + 33px);
-    border-bottom-color: transparent;
+    border: 8px solid;
+    border-color: #fff #fff transparent;
     float: left;
     z-index: -1
 }
@@ -779,8 +801,7 @@ h2.heading span,
     -webkit-transform: rotate(-180deg);
     top: auto;
     bottom: -33px;
-    border-color: #ffc600;
-    border-bottom-color: transparent;
+    border-color: #ffc600 #ffc600 transparent
 }
 
 .statement {
@@ -821,16 +842,19 @@ h2.heading span,
     padding-left: 0;
     font-size: 50px;
     font-weight: 900;
+    display: -moz-box;
     display: flex;
-    align-items: center;
+    -moz-box-align: center;
+    align-items: center
 }
 
 .my-menu ul li a.nav-link span {
     font-size: 20px;
-    opacity: 0.4;
+    opacity: .4;
     color: #ffc600;
     margin-right: 10px;
-    transition: all 0.4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
 }
 
 .my-menu .my-menu-div {
@@ -914,17 +938,6 @@ h2.heading span,
 .margin-top {
     margin-top: -50px;
 }
-
-
-/*@media (max-width: 1199px){
-  .our_services{overflow: hidden; width: 100%;}
-  .our_ser_h{ display: block;}
-  .our_ser_h h2{margin: 0; text-align: left; margin-bottom: 40px; width: 100%; height: auto; min-width: 100%; min-height: 100%; display: block;}
-  .our_ser_h h2 br{display: none;}
-  .services-listing{float: left; display: block;}
-  .services-listing li{display: block; margin-left: 0 !important;}
-
-}*/
 
 @media (max-width: 991px) {
     .banner_home {

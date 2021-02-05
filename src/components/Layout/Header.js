@@ -58,7 +58,7 @@ const Header = ({ props, dispatch }) => {
 
     const toggleSideBar = () => {
         toggleOpen()
-        
+
         setTimeout(() => isOpen ? document.body.classList.remove('disbaled-scroll') : document.body.classList.add('disbaled-scroll'), 500)
 
     }
@@ -79,7 +79,7 @@ const Header = ({ props, dispatch }) => {
                     <div className="top-menu text-center">
                         <span className="float-left menu_btn" onClick={toggleSideBar}><span></span><span></span><span></span></span>
                         <Link href="/"><img className="logo" src="img/logo.png" alt="logo" /></Link>
-                        <a className="float-right btn" href="#contact">Grow your business.</a>
+                        <Link href="/contact-us"><a className="float-right btn">Grow your business.</a></Link>
                     </div>
                 </div>
             </div>
