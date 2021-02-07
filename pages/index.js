@@ -11,6 +11,7 @@ import WorkGlobaly from '../src/WorkGlobaly';
 import Testimonials from './../src/Testimonials';
 import LetsTalk from '../src/LetsTalk';
 import { Grid, makeStyles } from '@material-ui/core';
+import { DragSlider } from '../src/components/motions/DragSlider';
 
 const style = {
 
@@ -24,11 +25,12 @@ export default function Index() {
         <>
             <section className="banner_home">
                 <div className="container-fluid">
-                    <h1 >Helping businesses and startups grow via Digital Solutions
+                    <h1 className="mymove " >Helping businesses and startups grow via Digital Solutions
                         {/* <br /> That Develop Your<br /> Business */}
                     </h1>
                 </div>
             </section>
+            {/* <DragSlider/> */}
             <Service home={true} />
             <Technology />
             <Portfolio />

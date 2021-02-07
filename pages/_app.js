@@ -49,10 +49,13 @@ export default function MyApp(props) {
 
     useEffect(() => {
         setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
-        setHasMounted(true);
-
+        setTimeout(() => {
+            window.scrollTo({ top: 0 })
+            setHasMounted(true);
+        }, 50)
+    
         window.addEventListener("mousemove", onMouseMove);
-        
+
         // document.body.style.cursor = hovered
         //     ? 'pointer'
         //     : "url('https://raw.githubusercontent.com/chenglou/react-motion/master/demos/demo8-draggable-list/cursor.png') 39 39, auto"

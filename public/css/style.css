@@ -58,6 +58,13 @@ textarea:focus {
     width: 70%;
 }
 
+@keyframes mymove {
+    0%   {top: 0px;}
+    25%  {top: 200px;}
+    75%  {top: 50px}
+    100% {top: 100px;}
+  }
+
 .banner_plus {
     margin-top: 80px
 }
