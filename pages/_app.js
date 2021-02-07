@@ -50,18 +50,9 @@ export default function MyApp(props) {
     useEffect(() => {
         setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
         setHasMounted(true);
-        // window.setTimeout(() => {
-        //     window.scroll({
-        //         top: 0,
-        //         left: 0
-        //     });
-        // }, 100)
 
         window.addEventListener("mousemove", onMouseMove);
-        // window.onscroll = () => {
-        //     console.log(window.pageYOffset)
-        //     setYOffset(window.pageYOffset)
-        // }
+        
         // document.body.style.cursor = hovered
         //     ? 'pointer'
         //     : "url('https://raw.githubusercontent.com/chenglou/react-motion/master/demos/demo8-draggable-list/cursor.png') 39 39, auto"
@@ -99,11 +90,11 @@ export default function MyApp(props) {
                     {/* <pointLight distance={100} intensity={4} color="white" /> */}
                     <ambientLight intensity={0.5} />
                     <Particles count={isMobile ? 200 : 500} mouse={mouse} />
-                    <Sparks yRange={yRange} count={50} mouse={mouse} colors={['#FFC600', 'black', 'white']} />
+                    {(!isMobile && YOffset < 500 && location.pathname != '/contact-us') && <Sparks yRange={yRange} count={50} mouse={mouse} colors={['#FFC600', 'black', 'white']} />}
                     <Suspense fallback={null}>
                         <Effects down={down} />
                     </Suspense>
-                    <Cubes yRange={yRange} mouse={mouse} YOffset={YOffset} />
+                    {(!isMobile && YOffset < 500 && location.pathname != '/contact-us') && <Cubes yRange={yRange} mouse={mouse} />}
                 </Canvas>
             )}
             {/* <div className="background-texture" style={{

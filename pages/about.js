@@ -37,19 +37,19 @@ export default function About() {
                         </div>
                         <div className="col-lg-3 col-md-6">
                             <div className="team-item">
-                                <div className="team-images"><img src="img/team-1.png" /></div>
+                                <div className="team-images"><img src="img/team-1.jpg" /></div>
                                 <div className="team-content"><span>Jas Khatri</span><span>Chief visionary officer</span></div>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6">
                             <div className="team-item">
-                                <div className="team-images"><img src="img/team-1.png" /></div>
+                                <div className="team-images"><img src="img/team-1.jpg" /></div>
                                 <div className="team-content"><span>Jas Khatri</span><span>Chief visionary officer</span></div>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6">
                             <div className="team-item">
-                                <div className="team-images"><img src="img/team-1.png" /></div>
+                                <div className="team-images"><img src="img/team-1.jpg" /></div>
                                 <div className="team-content"><span>Jas Khatri</span><span>Chief visionary officer</span></div>
                             </div>
                         </div>

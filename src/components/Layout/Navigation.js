@@ -20,6 +20,9 @@ export const Navigation = ({ isOpen, toggle }) => (
             <div className="row justify-content-between">
                 <div className="col-md-4">
                     <ul>
+                        <li> <Link href="/"><a className="nav-link" >
+                            <img className="logo" src="img/logo.png" alt="logo" />
+                        </a></Link></li>
                         <li> <Link href="/about"><a className="nav-link" ><span>01</span> About</a></Link></li>
                         <li> <Link href="/service"><a className="nav-link" ><span>02</span> Services</a></Link></li>
                         <li> <a className="nav-link" target="_blank" href="https://calendly.com/jaskhatri/15min"><span>03</span> Consultation</a></li>
@@ -31,7 +34,7 @@ export const Navigation = ({ isOpen, toggle }) => (
                         <div className="heading-block">
                             <p>Do you have a project you want to share and discuss with us? Let us help you figure out your digital strategy, web development project or creative ideas.</p>
                         </div>
-                        <ContactForm/>
+                        <ContactForm />
                     </div>
                     <ul className="mt-0">
                         <li className="social-links">

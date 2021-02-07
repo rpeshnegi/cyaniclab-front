@@ -8,17 +8,24 @@ import WhiteCube from "./WhiteCube";
 import TriAngles from "./TriAngles";
 import useYScroll from './../../helpers/useYScroll'
 
-export default function Cubes({ YOffset = 0, mouse, yRange }) {
+export default function Cubes({ mouse, yRange }) {
     // const [y] = useYScroll([-100, 2400], { domTarget: window.document.body })
     const group = useRef();
     const { size, viewport } = useThree()
     const aspect = size.width / viewport.width
-    const [prevYOffset, setPrevYOffset] = useState(0)
 
     useEffect(() => {
+        console.log(window.innerWidth);
+        // if (window.innerWidth <= 1100) {
+        //     group.current.position.x = 35;
+        //     group.current.position.y = -6.5
+        //     group.current.scale.z = 0.004;
+        // } else {
         group.current.position.x = 45;
-        group.current.position.y = 1.5
+        group.current.position.y = -6.5
         group.current.scale.z = 0.005;
+        // }
+
     }, [])
 
     // useEffect(() => {
@@ -32,12 +39,12 @@ export default function Cubes({ YOffset = 0, mouse, yRange }) {
        
         group.current.position.y -= ((yRange.prev - yRange.current) * 400)
 
-        let scrollDown = false;
-        if (YOffset > 0) {
-            scrollDown = true;
-        } else {
-            scrollDown = false;
-        }
+        // let scrollDown = false;
+        // if (YOffset > 0) {
+        //     scrollDown = true;
+        // } else {
+        //     scrollDown = false;
+        // }
     }, [yRange]);
 
     return (

@@ -45,7 +45,7 @@ export default function Sparks({ mouse, count, colors, radius = 11, yRange }) {
 
     useEffect(() => {
         ref.current.position.x = 37;
-        ref.current.position.y = -4
+        ref.current.position.y = -6
     }, [])
     
     useFrame(() => {
