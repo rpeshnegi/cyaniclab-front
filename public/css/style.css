@@ -58,13 +58,6 @@ textarea:focus {
     width: 70%;
 }
 
-@keyframes mymove {
-    0%   {top: 0px;}
-    25%  {top: 200px;}
-    75%  {top: 50px}
-    100% {top: 100px;}
-  }
-
 .banner_plus {
     margin-top: 80px
 }
@@ -123,15 +116,11 @@ textarea:focus {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-    background: #ffc600;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    line-height: 42px;
+    text-decoration: none;
 }
 
 .menu_btn {
-    width: 35px;
+    width: 28px;
     cursor: pointer;
     display: block;
     margin-top: 10px;
@@ -140,12 +129,13 @@ textarea:focus {
 .menu_btn span {
     display: block;
     background: #fff;
-    height: 1px;
+    height: 4px;
+    border-radius: 5px;
 }
 
 .menu_btn span:nth-child(2) {
-    width: 25px;
-    margin: 10px 0;
+    width: 20px;
+    margin: 5px 0;
 }
 
 .tc {
@@ -290,7 +280,7 @@ textarea:focus {
     border-radius: 0;
 }
 
-.clients .MuiBox-root.jss4.jss3 {
+.clients .controller {
     width: auto;
     position: absolute;
     bottom: 0px;
@@ -302,11 +292,14 @@ textarea:focus {
     justify-content: center;
 }
 
-.clients .MuiBox-root.jss4.jss3>div {
+.clients .controller>div {
     color: #ffc600;
 }
+.clients .controller>div.arrow {
+    color: #fff;
+}
 
-.clients .MuiBox-root.jss4.jss3>div.dot {
+.clients .controller>div.dot {
     background-color: #ffc600;
 }
 
@@ -633,6 +626,9 @@ h2.heading span,
     color: #fff;
     border: 2px solid #ced4da;
 }
+.contact-us-se .form-control{
+    box-shadow: none;
+}
 
 .contact-us-section form span {
     margin-bottom: 10px;
@@ -658,7 +654,7 @@ h2.heading span,
     width: 50px;
     height: 50px;
     text-align: center;
-    line-height: 50px;
+    line-height: 40px;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     border: 2px solid #ffc600;
     color: #ffc600;
@@ -683,6 +679,11 @@ h2.heading span,
 .contact-us-section p.get-content a:hover {
     color: #ffc600;
 }
+.contact-page.contact-us-section p.get-content{
+    padding-right: 70px; padding-left: 0; text-align: right;
+}
+.contact-page.contact-us-section p.get-content > i{float: right; margin-right: -70px; left: 0}
+
 
 .process-section {
     padding-top: 150px;
@@ -834,6 +835,7 @@ h2.heading span,
     margin-top: 100px;
 }
 
+.my-menu{height: 100%; overflow: hidden;}
 .my-menu ul {
     list-style: none;
     padding: 0;
@@ -870,13 +872,12 @@ h2.heading span,
 
 .my-menu .contact-us-section {
     padding: 0;
-    padding-right: 200px;
 }
 
-.my-menu .social-links {
+.sociallist .social-links {
     margin-top: 0px;
-    position: absolute;
-    right: 0;
+    position: fixed;
+    right: 5px;
     top: 50%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -886,7 +887,7 @@ h2.heading span,
     background: #ffc600;
 }
 
-.my-menu .social-links a {
+.sociallist .social-links a {
     padding: 0;
     width: 40px;
     height: 40px;
@@ -898,11 +899,11 @@ h2.heading span,
     display: block;
 }
 
-.my-menu .social-links a+a {
+.sociallist .social-links a+a {
     margin-top: 5px;
 }
 
-.my-menu .social-links a i {
+.sociallist .social-links a {
     margin: 0;
     font-size: 20px;
     color: #fff;
@@ -945,8 +946,13 @@ h2.heading span,
 .margin-top {
     margin-top: -50px;
 }
+.my-menu-div .col-md-4:after{position: absolute; right: 40px; top: 50%; transform: translateY(-50%); height: 300%; width: 1px; background: #ffc600; content: '';} 
+.my-menu-div .col-md-4{padding-right: 50px} 
+
+
 
 @media (max-width: 991px) {
+    .my-menu{height: 100vh; overflow: scroll;  }
     .banner_home {
         padding-bottom: 0px;
         padding-top: 100px;
@@ -1011,6 +1017,14 @@ h2.heading span,
     .solutions-section .heading-block {
         margin-bottom: 15px;
     }
+    .services-listing{float: left; display: block;}
+    .services-listing li{display: block; margin-left: 0 !important;}
+    .our_services{overflow: hidden; width: 100%;}
+    .our_ser_h{ display: block;}
+    .our_ser_h h2{margin: 0; text-align: left; margin-bottom: 40px; width: 100%; height: auto; min-width: 100%; min-height: 100%; display: block;}
+    .our_ser_h h2 br{display: none;}
+    .services-listing{float: left; display: block;}
+    .services-listing li{display: block; margin-left: 0 !important;}
 }
 
 @media (max-width: 767px) {
@@ -1081,9 +1095,11 @@ h2.heading span,
         padding-bottom: 50px;
     }
     .my-menu .contact-us-section .contact-form {
-        margin-top: 30px;
         text-align: left;
     }
+    .my-menu ul{margin-bottom: 20px;}
+    .my-menu .heading-block{margin-bottom: 0}
+    .my-menu .contact-form{margin-bottom: 30px; margin-top: 0;}
 }
 
 @media (max-width: 575px) {
@@ -1102,9 +1118,10 @@ h2.heading span,
     }
     .logo {
         position: absolute;
-        left: auto;
-        right: 15px;
-        margin-left: 0px;
+    left: 60px;
+    margin-left: 0px;
+    width: 41px;
+    overflow: hidden;
     }
     .about-us,
     .team-section {
@@ -1150,12 +1167,13 @@ h2.heading span,
     .customers h2.heading {
         margin-bottom: 20px !important;
     }
+    .process .contetn-div-prcess .inner-content:after {
+        display: block;
+    }
     .process li {
-        padding: 0;
+        padding: 30px;
     }
-    .process li+li {
-        margin-top: 20px;
-    }
+    
     .process li,
     .process .contetn-div-prcess {
         width: 100%;
@@ -1190,4 +1208,6 @@ h2.heading span,
         margin-top: 0;
         margin-right: 5px
     }
+    .top-menu > a.btn{    padding: 10px;
+    font-size: 14px;}
 }

@@ -52,8 +52,10 @@ export default function MyApp(props) {
         setTimeout(() => {
             window.scrollTo({ top: 0 })
             setHasMounted(true);
-        }, 50)
-    
+        }, 100)
+
+        new WOW().init();// scroller animation
+
         window.addEventListener("mousemove", onMouseMove);
 
         // document.body.style.cursor = hovered
@@ -71,6 +73,9 @@ export default function MyApp(props) {
                 <meta name="description" content="" />
                 <meta name="keywords" content="" />
                 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;800&display=swap" rel="stylesheet" />
+                <script src="js/jquery.min.js" type="text/javascript"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/wow.min.js"></script>
             </Head>
             {/* <ThemeProvider > */}
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}

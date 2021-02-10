@@ -125,7 +125,7 @@ export const MotionSlider = ({ content }) => {
                 </motion.div>
             </AnimatePresence>
             <Box
-                className={classes.actionDiv}
+                className={classes.actionDiv + ' controller'}
                 position="relative"
                 alignItems="center"
                 top={[0, null, -64]}

@@ -57,7 +57,7 @@ const Footer = ({ props, dispatch }) => {
             <div className="container-fluid">
                 <div className="lets_talk tc">
                     <h5>Let's talk <br /> <span>about business</span></h5>
-                    <a className="btn" href="#">Send message</a>
+                    <Link href="/contact-us"><a className="btn" >Send message</a></Link>
                 </div>
                 <div className="contact_form" id="footer_fotm">
                     <div className="row">

@@ -9,7 +9,6 @@ import Technology from './technology';
 import Portfolio from './portfolio';
 import WorkGlobaly from '../src/WorkGlobaly';
 import Testimonials from './../src/Testimonials';
-import LetsTalk from '../src/LetsTalk';
 import { Grid, makeStyles } from '@material-ui/core';
 import { DragSlider } from '../src/components/motions/DragSlider';
 
