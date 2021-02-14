@@ -20,7 +20,7 @@ export default function handler(req, res) {
 
     let mailOptions = {
         from: 'cyaniclab@gmail.com',
-        to: 'cyaniclab@gmail.com',
+        to: 'cyaniclab@gmail.com, lkjas1995@gmail.com',
         subject: 'CyanicLab Contact',
         html: html
     };

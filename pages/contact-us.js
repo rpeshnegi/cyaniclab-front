@@ -15,16 +15,17 @@ export default function ContactUs() {
                         <div className="col-lg-6 col-md-12">
                             <ContactForm/>
                         </div>
-                        <div className="col-lg-6 col-md-12 address-div">
+                        <div className="col-lg-1 col-md-12">&nbsp;</div>
+                        <div className="col-lg-5 col-md-12 address-div">
                             <p className="get-content">
                                 <i ><FontAwesomeIcon icon={["fas", "map-marker-alt"]} height="20px" /></i>
-                                <span>Address</span> <a href="#">Lorem Ipsum is simply dummy text of<br /> the printing and typesetting industry.</a></p>
+                                <span>Address</span> <a href="#">Central spine, Vidhyadhar Nagar, jaipur.</a></p>
                             <p className="get-content">
                                 <i ><FontAwesomeIcon icon={["fas", "phone-alt"]} height="20px" /></i>
-                                <span>Phone</span><a href="#">+91-987654321</a></p>
+                                <span>Phone</span><a href="tel:918387969879">+91-8387969879</a></p>
                             <p className="get-content">
                                 <i ><FontAwesomeIcon icon={["fas", "envelope"]} height="20px" /></i>
-                                <span>Email</span><a href="#">info@cyaniclab.com</a></p>
+                                <span>Email</span><a href="mailto: cyaniclab@gmail.com">cyaniclab@gmail.com</a></p>
                         </div>
                     </div>
                 </div>

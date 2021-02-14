@@ -35,7 +35,7 @@ const Testimonials = ({ props, dispatch }) => {
     const classes = useStyles();
     const bull = <span className={classes.bullet}>•</span>;
     return <>
-        <section className="clients pb-5" >
+        <section className="p50 clients" >
             <div className="container-fluid">
                 <h2 className="heading mb-5 color_man tc wow fadeInUp animated" data-wow-duration="2s" data-wow-delay="0.6s">What our <span> client says</span></h2>
                 <div id="demo" className="carousel slide" data-ride="carousel">

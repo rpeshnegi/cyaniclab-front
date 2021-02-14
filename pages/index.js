@@ -32,7 +32,7 @@ export default function Index() {
             {/* <DragSlider/> */}
             <Service home={true} />
             <Technology />
-            <Portfolio />
+            {/* <Portfolio /> */}
             {/* <WorkGlobaly /> */}
             <Testimonials />
             <section className="customers p50" >
@@ -40,23 +40,17 @@ export default function Index() {
                     <h2 className="heading color_man mb-5 tc wow fadeInUp animated" data-wow-duration="2s" data-wow-delay="0.6s">Customers</h2>
                     <div className="row justify-content-center">
                         <div className="col-md-2 col-sm-3 col-6">
-                            <img className="img-fluid" src="img/customers.png" />
+                            <img className="img-fluid" src="img/Bostellogolg.png" />
                         </div>
                         <div className="col-md-2 col-sm-3 col-6">
                             <img className="img-fluid" src="img/customers2.png" />
                         </div>
-                        <div className="col-md-2 col-sm-3 col-6">
+                        {/* <div className="col-md-2 col-sm-3 col-6">
                             <img className="img-fluid" src="img/customers.png" />
                         </div>
                         <div className="col-md-2 col-sm-3 col-6">
                             <img className="img-fluid" src="img/customers2.png" />
-                        </div>
-                        <div className="col-md-2 col-sm-3 col-6">
-                            <img className="img-fluid" src="img/customers.png" />
-                        </div>
-                        <div className="col-md-2 col-sm-3 col-6">
-                            <img className="img-fluid" src="img/customers2.png" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>

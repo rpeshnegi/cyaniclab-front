@@ -13,32 +13,6 @@ const useStyles = makeStyles(style);
 
 const Service = ({ props, home }) => {
     const classes = useStyles();
-    const services = [
-        {
-            title: 'UX/UI Design',
-            img: 'img/uxui_design.png',
-            description: "Anything from a simple portfolio website to a fintech platform, you name it, we’ve done it. We can deliver what you need faster than you can say „Oachkatzalschwoaf“ (to save you the trouble of googling it:",
-            style: { display: 'block' }
-        },
-        {
-            title: 'Web Developmen',
-            img: 'img/web_evelopment.png',
-            description: "Anything from a simple portfolio website to a fintech platform, you name it, we’ve done it. We can deliver what you need faster than you can say „Oachkatzalschwoaf“ (to save you the trouble of googling it:",
-            style: { display: 'block' }
-        },
-        {
-            title: 'App Engineering',
-            img: 'img/app_engineering.png',
-            description: "Anything from a simple portfolio website to a fintech platform, you name it, we’ve done it. We can deliver what you need faster than you can say „Oachkatzalschwoaf“ (to save you the trouble of googling it:",
-            style: { display: 'block' }
-        },
-        {
-            title: 'Growth Marketing',
-            img: 'img/growth_marketing.png',
-            description: "Anything from a simple portfolio website to a fintech platform, you name it, we’ve done it. We can deliver what you need faster than you can say „Oachkatzalschwoaf“ (to save you the trouble of googling it:)",
-            style: { display: 'block' }
-        }
-    ]
 
     return <>
         {(home) && (
@@ -52,28 +26,44 @@ const Service = ({ props, home }) => {
                                     <span className="icon_img"><img src="img/uxui_design.png" /></span>
                                     <span>
                                         <h4>Web Design</h4>
-                                        <p>We design beautiful websites that convert your leads into customers. Our UI/UX designers use the latest tools and technologies to create clean and modern interfaces that don’t only look good but also keep you ahead of the competition.</p>
+                                        <p>We design beautiful websites that convert your leads into customers. Our
+                                        UI/UX designers use the latest tools and technologies to create clean
+                                        and modern interfaces that not only look good but also keep you ahead of
+the competition.</p>
                                     </span>
                                 </li>
                                 <li className="wow bounceInRight animated" data-wow-duration="1s" data-wow-delay="0.4s">
                                     <span className="icon_img"><img src="img/web_evelopment.png" /></span>
                                     <span>
                                         <h4>Web Development</h4>
-                                        <p>In the digital world if you don’t have a website then you are losing customers. It’s not about creating a website, it’s about selling. With a website, you can save time and increase more revenue with a great online reputation. Let us help you build your online presence.</p>
+                                        <p>In the digital world if you don’t have a website you're probably losing
+                                        customers. The website we create for you will be optimised to assist you
+                                        with selling your products and services. With one of our websites you
+                                        will save time, increase revenues and enhance your business reputation.
+Let us help you build your online presence.</p>
                                     </span>
                                 </li>
                                 <li className="wow bounceInRight animated" data-wow-duration="1s" data-wow-delay="0.6s">
                                     <span className="icon_img"><img src="img/app_engineering.png" /></span>
                                     <span>
                                         <h4>Mobile App</h4>
-                                        <p>Grow your business with custom mobile apps. A mobile app provides your customers with a better experience, increase engagement, boost sales, and keep your brand on your customers’ phones at all times. Let’s share your idea for an app we will help you convert your idea into a mobile app.</p>
+                                        <p>If you want to grow your business, you'll need a custom mobile app. A
+                                        mobile app provides your customers with an easily available experience,
+                                        increases engagement, boosts sales, and will keep your brand on your
+                                        customers’ phones at all times. Talk to us and share your idea for an
+                                        app that works for your business - we will convert your idea into an app
+that will fulfil both your company and your customers requirements.</p>
                                     </span>
                                 </li>
                                 <li className="wow bounceInRight animated" data-wow-duration="1s" data-wow-delay="0.8s">
                                     <span className="icon_img"><img src="img/growth_marketing.png" /></span>
                                     <span>
                                         <h4>Custom Software</h4>
-                                        <p>Bring value to your business via custom software. We design and build custom software solutions that fit the needs of your business and employees, also as your users and customers. Our software developers can help you turn your idea into a digital product and provide you quality code.</p>
+                                        <p>Bring value to your business via custom software. We design and build
+                                        custom software solutions that fit the needs of your business and
+                                        employees, as well as your users and customers. Our software developers
+                                        can help you turn your idea into a digital product and provide you with
+high quality code.</p>
                                     </span>
                                 </li>
                             </ul>
@@ -134,8 +124,9 @@ const Service = ({ props, home }) => {
                                 </li>
                                 <li>
                                     <h2>CRM</h2>
-                                    <p>A reliable Content Management System (CMS) is essential for every business today and we make more feasible and affordable for you. No matter what the size or nature of your business is, we give you a tailor-made platform that fulfills all your requirements in a seamless manner.</p>
+                                    <p>A Customer Relationship Management (CRM) system helps you manage the interactions of your clients. In the age of consumerism, this software is a boon to every business that caters directly to the customers. It helps you analyze, manage, and store the data in a very safe and efficient way.</p>
                                     <span>SuiteCRM</span>
+                                    <span>Vtiger</span>
                                 </li>
                             </ul>
                         </div>
@@ -211,6 +202,7 @@ Are you looking to build an online presence for your business? Let’s connect w
 
                 <section className="process-section">
                     <div className="container">
+                        <h2 className="heading mb-5 color_man tc wow fadeInUp"> Our <span>Process</span></h2>
                         <div className="process">
                             <ul>
                                 <li>

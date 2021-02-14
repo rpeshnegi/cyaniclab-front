@@ -57,7 +57,7 @@ class Layout extends React.Component {
                     </ListItem>
                 </List> */}
                 <Header />
-                <ul className="mt-0 sociallist">
+                {/* <ul className="mt-0 sociallist">
                     <li className="social-links">
                         <a target="_blank" href="https://www.facebook.com/CyanicLab-310488926246347/" className="social">
                             <FontAwesomeIcon icon={["fab", "facebook-f"]} height="22px" />
@@ -72,7 +72,7 @@ class Layout extends React.Component {
                             <FontAwesomeIcon icon={["fab", "linkedin-in"]} height="22px" />
                         </a>
                     </li>
-                </ul>
+                </ul> */}
                 {this.props.children}
                 <Footer />
             </>

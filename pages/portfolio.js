@@ -37,8 +37,8 @@ const Portfolio = ({ props, dispatch }) => {
                     </div>
                 </div>
                 <div className="row justify-content-md-center">
-                    <div class="col-md-5">
-                        <div class="row ">
+                    <div className="col-md-5">
+                        <div className="row ">
                             <div className="col-md-12  wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s" >
                                 <div className="work_box">
                                     <div className="wok-images-box">
@@ -65,8 +65,8 @@ const Portfolio = ({ props, dispatch }) => {
                     </div>
                     <div className="col-md-1"> </div>
 
-                    <div class="col-md-5">
-                        <div class="row">
+                    <div className="col-md-5">
+                        <div className="row">
                             <div className="col-md-12  wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.6s" >
                                 <div className="heading-block display-block">
                                     <h2> Our <span>Work</span></h2>
