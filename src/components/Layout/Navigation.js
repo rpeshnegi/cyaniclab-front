@@ -53,7 +53,7 @@ export const Navigation = ({ isOpen, toggle }) => {
                                 <div className="col-md-12 nav-contact-details">
                                     <p className="get-content  text-left">
                                         <i ><FontAwesomeIcon icon={["fas", "map-marker-alt"]} height="20px" /></i>
-                                        <span>Address</span> <a href="javascript:;" className="p-0">Central spine, Vidhyadhar Nagar, jaipur</a></p>
+                                        <span>Address</span> <a href="#" className="p-0">Central spine, Vidhyadhar Nagar, jaipur</a></p>
                                 </div>
                                 <div className="col-md-12 nav-contact-details">
                                     <p className="get-content  text-left">

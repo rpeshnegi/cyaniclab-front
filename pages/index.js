@@ -43,14 +43,11 @@ export default function Index() {
                             <img className="img-fluid" src="img/Bostellogolg.png" />
                         </div>
                         <div className="col-md-2 col-sm-3 col-6">
-                            <img className="img-fluid" src="img/customers2.png" />
-                        </div>
-                        {/* <div className="col-md-2 col-sm-3 col-6">
-                            <img className="img-fluid" src="img/customers.png" />
+                            <img className="img-fluid" src="img/newtron.jpeg" />
                         </div>
                         <div className="col-md-2 col-sm-3 col-6">
-                            <img className="img-fluid" src="img/customers2.png" />
-                        </div> */}
+                            <img className="img-fluid" src="img/qno.png" />
+                        </div>
                     </div>
                 </div>
             </section>
