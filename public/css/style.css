@@ -96,7 +96,7 @@ textarea:focus {
     overflow-x: hidden;
     -webkit-transition: .7s;
     transition: .7s;
-    padding-top: 70px
+    padding-top: 80px
 }
 
 .sidenav a {
@@ -769,6 +769,7 @@ h2.heading span,
 
 .process .contetn-div-prcess .inner-content p {
     margin-bottom: 60px;
+    min-height: 95px;
 }
 
 .process .contetn-div-prcess .inner-content .inner-text-div {
@@ -1278,4 +1279,23 @@ h2.heading span,
 
 .nav-contact-details {
     min-height: 100px;
+}
+
+.nav-logo {
+    position: absolute;
+    top: 0;
+    padding-left: 50px;
+    top: 20px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.customor-logo{
+    height: 90px;
+}
+
+.pt-80{
+    padding-top: 80px !important;
 }

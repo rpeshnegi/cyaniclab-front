@@ -27,7 +27,7 @@ export default function About() {
                     </div>
                 </div>
             </section>
-            <section className="team-section">
+            {/* <section className="team-section">
                 <div className="container">
                     <div className="row flex-row-reverse justify-content-center align-items-center">
                         <div className="col-lg-3 col-md-12">
@@ -55,7 +55,7 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
             <section className="our-values-section">
                 <div className="container text-left">
                     <div className="heading-block"><h2 className="text-left">Our <span>Values</span></h2></div>

@@ -56,7 +56,7 @@ that will fulfil both your company and your customers requirements.</p>
                                     </span>
                                 </li>
                                 <li className="wow bounceInRight animated" data-wow-duration="1s" data-wow-delay="0.8s">
-                                    <span className="icon_img"><img src="img/growth_marketing.png" /></span>
+                                    <span className="icon_img"><img src="img/web_evelopment.png" /></span>
                                     <span>
                                         <h4>Custom Software</h4>
                                         <p>Bring value to your business via custom software. We design and build
@@ -215,7 +215,7 @@ Are you looking to build an online presence for your business? Let’s connect w
                                             <div className="inner-text-div">
                                                 <h2>Idea</h2>
                                             </div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing </p>
+                                            <p>Understaning your idea idea, target audience, and the problem you want to solve.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -229,7 +229,7 @@ Are you looking to build an online presence for your business? Let’s connect w
                                             <div className="inner-text-div">
                                                 <h2>Design</h2>
                                             </div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing </p>
+                                            <p>Design wireframes and UIs accordingly to the idea</p>
                                         </div>
                                     </div>
                                 </li>
@@ -243,7 +243,7 @@ Are you looking to build an online presence for your business? Let’s connect w
                                             <div className="inner-text-div">
                                                 <h2>Development</h2>
                                             </div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing </p>
+                                            <p>Develop platform that achive your idea and fulfill you requirements</p>
                                         </div>
                                     </div>
                                 </li>
@@ -257,7 +257,7 @@ Are you looking to build an online presence for your business? Let’s connect w
                                             <div className="inner-text-div">
                                                 <h2>Launch</h2>
                                             </div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing </p>
+                                            <p>Lanuch your idea with a qaulity product</p>
                                         </div>
                                     </div>
                                 </li>
