@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import { motion, useCycle } from "framer-motion";
 //import Image from 'next/image'
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // nodejs library to set properties for components
@@ -48,8 +48,10 @@ const Header = ({ props, dispatch }) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
     const containerRef = useRef(null);
     const router = useRouter()
+    const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
+        setIsMobile(/iPhone|Android/i.test(navigator.userAgent));
         const handleRouteChange = (url) => {
             toggleOpen(0)
         }
@@ -79,7 +81,7 @@ const Header = ({ props, dispatch }) => {
                     <div className="top-menu text-center">
                         <span className="float-left menu_btn" onClick={toggleSideBar}><span></span><span></span><span></span></span>
                         <div className="logo"><Link href="/"><img src="img/logo.png" alt="logo" /></Link></div>
-                        <Link href="/contact-us"><a className="float-right btn">Grow your business</a></Link>
+                        {!isMobile && <Link href="/contact-us"><a className="float-right btn">Grow your business</a></Link>}
                     </div>
                 </div>
             </div>

@@ -229,7 +229,7 @@ Are you looking to build an online presence for your business? Let’s connect w
                                             <div className="inner-text-div">
                                                 <h2>Design</h2>
                                             </div>
-                                            <p>Design UI/Ux that engages your target audience.</p>
+                                            <p>Design UI/UX that engages your target audience.</p>
                                         </div>
                                     </div>
                                 </li>
