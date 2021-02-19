@@ -39,16 +39,16 @@ export default function Index() {
                 <div className="container-fluid">
                     <h2 className="heading color_man mb-5 tc wow fadeInUp animated" data-wow-duration="2s" data-wow-delay="0.6s">Customers</h2>
                     <div className="row justify-content-center">
-                        <div className="col-md-3 col-sm-3 col-6">
+                        <div className="col-md-3 col-sm-3 col-6 p-3">
                             <img className="img-fluid customor-logo" src="img/Bostellogolg.png" />
                         </div>
-                        <div className="col-md-3 col-sm-3 col-6">
+                        <div className="col-md-3 col-sm-3 col-6 p-3">
                             <img className="img-fluid customor-logo" src="img/newtron.jpeg" />
                         </div>
-                        <div className="col-md-3 col-sm-3 col-6">
+                        <div className="col-md-3 col-sm-3 col-6 p-3">
                             <img className="img-fluid customor-logo" src="img/qno.png" />
                         </div>
-                        <div className="col-md-3 col-sm-3 col-6">
+                        <div className="col-md-3 col-sm-3 col-6 pt-3 pb-3 pl-0">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="300px" height="90px" viewBox="0 0 300 90" enableBackground="new 0 0 300 90" >
                                 <g>
                                     <path fill="#FFFFFF" d="M20.505,73.903l-3.653,3.652H6.685l-3.653-3.652V34.935l3.653-3.653h10.167l3.653,3.653V73.903z

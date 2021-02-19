@@ -1097,9 +1097,6 @@ h2.heading span,
     .our_ser_h h2 {
         padding-top: 50px;
     }
-    .technologies {
-        padding-top: 0;
-    }
     .technologies .row {
         justify-content: center;
     }
@@ -1182,7 +1179,7 @@ h2.heading span,
     }
     .logo {
         position: absolute;
-        left: 60px;
+        left: 150px;
         margin-left: 0px;
         width: 41px;
         overflow: hidden;
@@ -1272,8 +1269,8 @@ h2.heading span,
         margin-right: 5px
     }
     .top-menu>a.btn {
-        padding: 10px;
-        font-size: 14px;
+        padding: 8px;
+        font-size: 12px;
     }
 }
 

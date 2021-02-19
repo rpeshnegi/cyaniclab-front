@@ -40,36 +40,38 @@ export const Navigation = ({ isOpen, toggle }) => {
                         </ul>
                     </div>
                     {!isMobile && (
-                        <div className="col-lg-5 col-md-6">
-                            <div className="contact-us-section">
-                                <div className="heading-block">
-                                    <p>Do you have a project you want to share and discuss with us? Let us help you figure out your digital strategy, web development project or creative ideas.</p>
+                        <>
+                            <div className="col-lg-5 col-md-6">
+                                <div className="contact-us-section">
+                                    <div className="heading-block">
+                                        <p>Do you have a project you want to share and discuss with us? Let us help you figure out your digital strategy, web development project or creative ideas.</p>
+                                    </div>
+                                    <ContactForm />
                                 </div>
-                                <ContactForm />
                             </div>
-                        </div>
+                            <div className="col-lg-3 col-md-12">
+                                <div className="contact-us-section mt-5 pt-80">
+                                    <div className="row">
+                                        <div className="col-md-12 nav-contact-details">
+                                            <p className="get-content  text-left">
+                                                <i ><FontAwesomeIcon icon={["fas", "map-marker-alt"]} height="20px" /></i>
+                                                <span>Address</span> <a href="#" className="p-0">Central spine, Vidhyadhar Nagar, jaipur</a></p>
+                                        </div>
+                                        <div className="col-md-12 nav-contact-details">
+                                            <p className="get-content  text-left">
+                                                <i ><FontAwesomeIcon icon={["fas", "phone-alt"]} height="20px" /></i>
+                                                <span>Phone</span><a href="tel:918387969879" className="p-0">+91-8387969879</a></p>
+                                        </div>
+                                        <div className="col-md-12 nav-contact-details">
+                                            <p className="get-content  text-left">
+                                                <i ><FontAwesomeIcon icon={["fas", "envelope"]} height="20px" /></i>
+                                                <span>Email</span><a href="mailto: cyaniclab@gmail.com" className="p-0">cyaniclab@gmail.com</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </>
                     )}
-                    <div className="col-lg-3 col-md-12">
-                        <div className="contact-us-section mt-5 pt-80">
-                            <div className="row">
-                                <div className="col-md-12 nav-contact-details">
-                                    <p className="get-content  text-left">
-                                        <i ><FontAwesomeIcon icon={["fas", "map-marker-alt"]} height="20px" /></i>
-                                        <span>Address</span> <a href="#" className="p-0">Central spine, Vidhyadhar Nagar, jaipur</a></p>
-                                </div>
-                                <div className="col-md-12 nav-contact-details">
-                                    <p className="get-content  text-left">
-                                        <i ><FontAwesomeIcon icon={["fas", "phone-alt"]} height="20px" /></i>
-                                        <span>Phone</span><a href="tel:918387969879" className="p-0">+91-8387969879</a></p>
-                                </div>
-                                <div className="col-md-12 nav-contact-details">
-                                    <p className="get-content  text-left">
-                                        <i ><FontAwesomeIcon icon={["fas", "envelope"]} height="20px" /></i>
-                                        <span>Email</span><a href="mailto: cyaniclab@gmail.com" className="p-0">cyaniclab@gmail.com</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div >

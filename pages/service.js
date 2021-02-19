@@ -76,7 +76,7 @@ high quality code.</p>
             <>
                 <section className="banner_home">
                     <div className="container">
-                        <h1 className="font-style" >Developing Websites<br /> That Develop Your<br /> Business</h1>
+                        <h1 className="font-style" >We solve business problems<br /></h1>
                     </div>
                 </section>
                 <section className="services-section">
@@ -215,7 +215,7 @@ Are you looking to build an online presence for your business? Let’s connect w
                                             <div className="inner-text-div">
                                                 <h2>Idea</h2>
                                             </div>
-                                            <p>Understaning your idea idea, target audience, and the problem you want to solve.</p>
+                                            <p>Understand your idea, target audience, and the problem you want to solve.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -229,7 +229,7 @@ Are you looking to build an online presence for your business? Let’s connect w
                                             <div className="inner-text-div">
                                                 <h2>Design</h2>
                                             </div>
-                                            <p>Design wireframes and UIs accordingly to the idea</p>
+                                            <p>Design UI/Ux that engages your target audience.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -243,7 +243,7 @@ Are you looking to build an online presence for your business? Let’s connect w
                                             <div className="inner-text-div">
                                                 <h2>Development</h2>
                                             </div>
-                                            <p>Develop platform that achive your idea and fulfill you requirements</p>
+                                            <p>Develop platform that achive your idea and develop your business.</p>
                                         </div>
                                     </div>
                                 </li>
@@ -257,7 +257,7 @@ Are you looking to build an online presence for your business? Let’s connect w
                                             <div className="inner-text-div">
                                                 <h2>Launch</h2>
                                             </div>
-                                            <p>Lanuch your idea with a qaulity product</p>
+                                            <p>Lanuch your idea with all quality assurance.</p>
                                         </div>
                                     </div>
                                 </li>

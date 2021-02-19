@@ -83,10 +83,11 @@ const Footer = ({ props, dispatch }) => {
                         </div>
                         <div className="col-md-5 col-xs-12 ">
                             <ul className="footer_link">
+                                <li><Link href="/"><a >Home </a></Link></li>
                                 <li><Link href="/about"><a >About </a></Link></li>
                                 <li><Link href="/service"><a >Services</a></Link></li>
                                 <li><a target="_blank" href="https://calendly.com/jaskhatri/15min">Consultation</a></li>
-                                <li><Link href="/contact-us"><a >Contacts</a></Link></li>
+                                <li><Link href="/contact-us"><a >Contact</a></Link></li>
                             </ul>
                             <ul className="footer_address">
                                 <li>Address:- Central spine, Vidhyadhar Nagar, jaipur.</li>
