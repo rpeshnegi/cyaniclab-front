@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Box, Grid } from '@material-ui/core';
 // import { useSelector } from 'react-redux';
 import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const style = {
     footer: {
@@ -102,7 +103,9 @@ const Footer = ({ props, dispatch }) => {
                             <div className="tr margin-top">
                                 <img className=" " src="img/clutch.png" alt="clutch" />
                                 <div>
-                                    
+                                    <i className="clutch-start" ><FontAwesomeIcon icon={["fas", "star"]} height="20px" /></i>
+                                    <i className="clutch-start" ><FontAwesomeIcon icon={["far", "star"]} height="20px" /></i>
+                                    <p  className="clutch-start">2 reviews</p>
                                 </div>
                             </div>
                         </div>
