@@ -1,3 +1,4 @@
+
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
@@ -166,19 +167,20 @@ textarea:focus {
 
 .our_ser_h {
     display: -moz-box;
-    display: flex
+    display: flex;
+    align-items: center;
+
 }
 
 .our_ser_h h2 {
     font-size: 50px;
     text-align: center;
     width: 350px;
-    height: 350px;
     min-width: 350px;
-    min-height: 350px;
     position: relative;
     z-index: 1;
-    margin: auto 0 auto 50px
+    padding-left: 50px;
+    margin: 0;
 }
 
 @media (min-width: 768px) {
@@ -749,6 +751,7 @@ h2.heading span,
     margin-top: 50px;
     color: #000;
     text-align: left;
+    min-height: 215px;
 }
 
 .process .contetn-div-prcess .inner-content span {
@@ -810,7 +813,7 @@ h2.heading span,
     border: 8px solid;
     border-color: #fff #fff transparent;
     float: left;
-    z-index: -1
+    z-index: 0;
 }
 
 .process ul li:nth-child(2) .contetn-div-prcess .inner-content:after,
@@ -1219,6 +1222,9 @@ h2.heading span,
 }
 
 @media (max-width: 480px) {
+    .process .contetn-div-prcess .inner-content{
+        min-height: auto;
+    }
     .our_services ul li {
         display: block;
     }
@@ -1230,10 +1236,10 @@ h2.heading span,
         margin-bottom: 20px !important;
     }
     .process .contetn-div-prcess .inner-content:after {
-        display: block;
+        display: none;
     }
     .process li {
-        padding: 30px;
+        padding: 15px;
     }
     .process li,
     .process .contetn-div-prcess {

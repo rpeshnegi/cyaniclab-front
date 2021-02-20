@@ -98,11 +98,14 @@ const Footer = ({ props, dispatch }) => {
                                 <span>© 2021 Cyaniclab </span>
                             </div>
                         </div>
-                        {/* <div className="col-md-7 col-xs-12 ">
+                        <div className="col-md-7 col-xs-12 ">
                             <div className="tr margin-top">
                                 <img className=" " src="img/clutch.png" alt="clutch" />
+                                <div>
+                                    
+                                </div>
                             </div>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </div>
