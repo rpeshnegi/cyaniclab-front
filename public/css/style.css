@@ -1,4 +1,3 @@
-
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
@@ -169,7 +168,6 @@ textarea:focus {
     display: -moz-box;
     display: flex;
     align-items: center;
-
 }
 
 .our_ser_h h2 {
@@ -356,7 +354,7 @@ textarea:focus {
 }
 
 footer {
-    padding: 100px 0 60px;
+    padding: 100px 0 20px;
     font-size: 16px;
 }
 
@@ -390,7 +388,7 @@ footer h4 {
 }
 
 .additional_links {
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 .color_man {
@@ -628,6 +626,7 @@ h2.heading span,
     background: transparent;
     color: #fff;
     border: 2px solid #ced4da;
+    box-shadow: none;
 }
 
 .contact-us-se .form-control {
@@ -961,7 +960,7 @@ h2.heading span,
 }
 
 .margin-top {
-    margin-top: -50px;
+    margin-top: 0px;
 }
 
 .my-menu-div .col-md-4:after {
@@ -977,6 +976,20 @@ h2.heading span,
 
 .my-menu-div .col-md-4 {
     padding-right: 50px
+}
+
+footer .tr.margin-top>div {
+    float: right;
+    text-align: center;
+}
+
+footer .tr.margin-top>div i.clutch-star {
+    color: #ffc600;
+}
+
+footer .tr.margin-top>div .clutch-reviews {
+    text-transform: uppercase;
+    color: white;
 }
 
 @media (max-width: 991px) {
@@ -1131,7 +1144,7 @@ h2.heading span,
         margin: 15px 0;
     }
     footer {
-        padding-bottom: 30px;
+        padding-bottom: 0px;
     }
     .logo {
         position: absolute;
@@ -1222,7 +1235,7 @@ h2.heading span,
 }
 
 @media (max-width: 480px) {
-    .process .contetn-div-prcess .inner-content{
+    .process .contetn-div-prcess .inner-content {
         min-height: auto;
     }
     .our_services ul li {

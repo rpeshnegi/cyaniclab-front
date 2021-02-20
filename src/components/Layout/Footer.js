@@ -99,15 +99,20 @@ const Footer = ({ props, dispatch }) => {
                                 <span>© 2021 Cyaniclab </span>
                             </div>
                         </div>
-                        <div className="col-md-7 col-xs-12 ">
-                            <div className="tr margin-top">
-                                <img className=" " src="img/clutch.png" alt="clutch" />
-                                <div>
-                                    <i className="clutch-start" ><FontAwesomeIcon icon={["fas", "star"]} height="20px" /></i>
-                                    <i className="clutch-start" ><FontAwesomeIcon icon={["far", "star"]} height="20px" /></i>
-                                    <p  className="clutch-start">2 reviews</p>
+                        <div className="col-md-7 col-xs-12 pr-4">
+                            <a target="_blank" href="https://clutch.co/profile/cyanic-lab">
+                                <div className="tr margin-top">
+                                    <img className="pr-2" src="img/clutch.png" alt="clutch" />
+                                    <div>
+                                        <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
+                                        <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
+                                        <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
+                                        <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
+                                        <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
+                                        <p className="clutch-reviews">2 reviews</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
