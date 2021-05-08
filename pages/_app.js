@@ -44,18 +44,15 @@ export default function MyApp(props) {
     const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), [])
 
     const [isMobile, setIsMobile] = useState(false)
-    const [isBot, setIsBot] = useState(false)
 
     const { scrollYProgress } = useViewportScroll();
     const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
 
     useEffect(() => {
         setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
-        setIsBot(/Googlebot/i.test(navigator.userAgent));
-        console.log('userAgent', navigator.userAgent);
         setTimeout(() => {
             window.scrollTo({ top: 0 })
-            // setHasMounted(true);
+            setHasMounted(true);
         }, 100)
 
         new WOW().init();// scroller animation
@@ -84,7 +81,7 @@ export default function MyApp(props) {
             {/* <ThemeProvider > */}
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             {/* <CssBaseline /> */}
-            {(hasMounted && !isBot) && (
+            {hasMounted && (
                 <Canvas
                     className="background-texture"
                     style={{ height: window.innerHeight }}
