@@ -55,7 +55,7 @@ export default function MyApp(props) {
         console.log('userAgent', navigator.userAgent);
         setTimeout(() => {
             window.scrollTo({ top: 0 })
-            setHasMounted(true);
+            // setHasMounted(true);
         }, 100)
 
         new WOW().init();// scroller animation
