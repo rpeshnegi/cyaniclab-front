@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Grid, Typography } from '@material-ui/core';
-// import { useSelector } from 'react-redux';
-import { motion, useCycle } from "framer-motion";
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const style = {
@@ -20,7 +18,9 @@ const Service = ({ props, home }) => {
                 <div className="container-fluid">
                     <div className="row align-items-center">
                         <div className="col-lg-12 our_ser_h">
-                            <h2 className="heading wow bounceInLeft animated" data-wow-duration="1s" data-wow-delay="0.2s">Our <br /><span>Services</span></h2>
+                            <h2 className="heading wow bounceInLeft animated" data-wow-duration="1s" data-wow-delay="0.2s">Our <br /><span>Services</span>
+                                <Link href="/contact-us"><a className="btn btn-sm" >view more</a></Link>
+                            </h2>
                             <ul className="services-listing">
                                 <li className="wow bounceInRight animated" data-wow-duration="1s" data-wow-delay="0.2s">
                                     <span className="icon_img"><img src="img/uxui_design.png" /></span>

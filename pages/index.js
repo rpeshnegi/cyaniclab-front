@@ -1,16 +1,8 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import ProTip from '../src/ProTip';
-import Link from '../src/Link';
 import Service from './service';
 import Technology from './technology';
-import Portfolio from './portfolio';
-import WorkGlobaly from '../src/WorkGlobaly';
 import Testimonials from './../src/Testimonials';
 import { Grid, makeStyles } from '@material-ui/core';
-import { DragSlider } from '../src/components/motions/DragSlider';
 
 const style = {
 
