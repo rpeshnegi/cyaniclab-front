@@ -15,7 +15,6 @@ export default function Cubes({ mouse, yRange }) {
     const aspect = size.width / viewport.width
 
     useEffect(() => {
-        console.log(window.innerWidth);
         // if (window.innerWidth <= 1100) {
         //     group.current.position.x = 35;
         //     group.current.position.y = -6.5

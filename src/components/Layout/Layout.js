@@ -31,7 +31,6 @@ class Layout extends React.Component {
         super(props);
         this.state = { path: '' };
 
-        console.log(this.props);
     }
     componentDidMount() {
         this.setState({ path: window.location.pathname });

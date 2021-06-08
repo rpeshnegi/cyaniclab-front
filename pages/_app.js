@@ -1,25 +1,20 @@
-import React, { Suspense, useState, useCallback, useEffect, useRef, useMemo, lazy } from 'react'
+import React, { Suspense, useState, useCallback, useEffect, useRef, lazy } from 'react'
 import PropTypes from 'prop-types';
 import Head from 'next/head';
-import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
 // import theme from '../src/theme';
 import Layout from '../src/components/Layout/Layout';
-import { Canvas, useFrame, useLoader } from "react-three-fiber"
+import { Canvas } from "react-three-fiber"
 import * as THREE from 'three'
 import Sparks from './../src/components/background/Sparks'
 import Particles from './../src/components/background/Particles'
 import Cubes from "./../src/components/Cubes";
-import Box from '@material-ui/core/Box';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
 import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import {
-    motion,
     useViewportScroll,
-    useSpring,
     useTransform
 } from "framer-motion";
 import './../public/css/bootstrap.css';
@@ -79,7 +74,7 @@ export default function MyApp(props) {
                 <link media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;800&display=swap" rel="stylesheet" />
                 <script defer src="js/jquery.min.js" type="text/javascript"></script>
                 <script defer src="js/bootstrap.min.js"></script>
-                <script defer src="js/wow.min.js"></script>
+                <script src="js/wow.min.js"></script>
             </Head>
             {/* <ThemeProvider > */}
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
