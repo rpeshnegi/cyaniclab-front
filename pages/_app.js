@@ -44,12 +44,14 @@ export default function MyApp(props) {
     const onMouseMove = useCallback(({ clientX: x, clientY: y }) => (mouse.current = [x - window.innerWidth / 2, y - window.innerHeight / 2]), [])
 
     const [isMobile, setIsMobile] = useState(false)
+    const [isBot, setIsBot] = useState(true)
 
     const { scrollYProgress } = useViewportScroll();
     const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
 
     useEffect(() => {
         setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
+        setIsBot(/Googlebot|Bingbot|Slurp|facebot/i.test(navigator.userAgent));
         setTimeout(() => {
             window.scrollTo({ top: 0 })
             setHasMounted(true);
@@ -71,17 +73,18 @@ export default function MyApp(props) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>Cyaniclab</title>
                 <link rel="shortcut icon" href="img/favicon.ico" type="image/ico" />
-                <meta name="description" content="" />
-                <meta name="keywords" content="" />
+                <meta name="description" content="Helping Businesses and Startups grow via Digital Solutions.
+                    Web Development | Mobile App Development | UX/UI | Custom Software Development." />
+                <meta name="keywords" content="Web Development, Mobile App Development, UX/UI, Custom Software Development" />
                 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;800&display=swap" rel="stylesheet" />
-                <script src="js/jquery.min.js" type="text/javascript"></script>
-                <script src="js/bootstrap.min.js"></script>
-                <script src="js/wow.min.js"></script>
+                <script defer src="js/jquery.min.js" type="text/javascript"></script>
+                <script defer src="js/bootstrap.min.js"></script>
+                <script defer src="js/wow.min.js"></script>
             </Head>
             {/* <ThemeProvider > */}
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             {/* <CssBaseline /> */}
-            {hasMounted && (
+            {hasMounted && !isBot && (
                 <Canvas
                     className="background-texture"
                     style={{ height: window.innerHeight }}
