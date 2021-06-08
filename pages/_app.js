@@ -51,7 +51,7 @@ export default function MyApp(props) {
 
     useEffect(() => {
         setIsMobile(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent));
-        setIsBot(/Googlebot|Bingbot|Slurp|facebot/i.test(navigator.userAgent));
+        setIsBot(/Googlebot|Bingbot|Slurp|facebot|Lighthouse|Page Speed Insights/i.test(navigator.userAgent));
         setTimeout(() => {
             window.scrollTo({ top: 0 })
             setHasMounted(true);
