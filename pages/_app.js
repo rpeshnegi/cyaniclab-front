@@ -76,7 +76,7 @@ export default function MyApp(props) {
                 <meta name="description" content="Helping Businesses and Startups grow via Digital Solutions.
                     Web Development | Mobile App Development | UX/UI | Custom Software Development." />
                 <meta name="keywords" content="Web Development, Mobile App Development, UX/UI, Custom Software Development" />
-                <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;800&display=swap" rel="stylesheet" />
+                <link media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;800&display=swap" rel="stylesheet" />
                 <script defer src="js/jquery.min.js" type="text/javascript"></script>
                 <script defer src="js/bootstrap.min.js"></script>
                 <script defer src="js/wow.min.js"></script>
