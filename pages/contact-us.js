@@ -25,7 +25,7 @@ export default function ContactUs() {
                                 <span>Phone</span><a href="tel:918387969879">+91-8387969879</a></p>
                             <p className="get-content">
                                 <i ><FontAwesomeIcon icon={["fas", "envelope"]} height="20px" /></i>
-                                <span>Email</span><a href="mailto: cyaniclab@gmail.com">cyaniclab@gmail.com</a></p>
+                                <span>Email</span><a href="mailto: jas@cyaniclab.com">jas@cyaniclab.com</a></p>
                         </div>
                     </div>
                 </div>

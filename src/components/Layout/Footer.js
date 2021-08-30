@@ -79,7 +79,7 @@ const Footer = ({ props, dispatch }) => {
                                 </li>
                             </ul>
                             <div className="additional_links display-block ">
-                                <span>© 2020 Cyaniclab </span>
+                                <span>© 2021 Cyaniclab </span>
                             </div>
                         </div>
                         <div className="col-md-5 col-xs-12 ">
@@ -92,7 +92,7 @@ const Footer = ({ props, dispatch }) => {
                             </ul>
                             <ul className="footer_address">
                                 <li>Address:- Central spine, Vidhyadhar Nagar, jaipur.</li>
-                                <li><a href="mailto: cyaniclab@gmail.com" >Email:- cyaniclab@gmail.com</a></li>
+                                <li><a href="mailto: jas@cyaniclab.com" >Email:- jas@cyaniclab.com</a></li>
                                 <li><a href="tel:918387969879">Call:- +91-8387969879</a></li>
                             </ul>
                             <div className="additional_links display-none ">
