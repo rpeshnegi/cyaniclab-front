@@ -65,7 +65,7 @@ export const Navigation = ({ isOpen, toggle }) => {
                                         <div className="col-md-12 nav-contact-details">
                                             <p className="get-content  text-left">
                                                 <i ><FontAwesomeIcon icon={["fas", "envelope"]} height="20px" /></i>
-                                                <span>Email</span><a href="mailto: jas@cyaniclab.com" className="p-0">jas@cyaniclab.com</a></p>
+                                                <span>Email</span><a href="mailto: jas@cyaniclab.com" className="p-0">jas@cyaniclab.com, cyaniclab@gmail.com</a></p>
                                         </div>
                                     </div>
                                 </div>
