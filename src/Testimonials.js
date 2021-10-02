@@ -16,13 +16,19 @@ const useStyles = makeStyles(style);
 const reviews = [
     {
         id: 0,
+        text: "After our first week, it's been easy to find trust in this company.",
+        name: "Martin Peet",
+        img: "img/ben.jpeg"
+    },
+    {
+        id: 1,
         text:
             "They were very professional, willing to listen, good command of English, and committed to completing the job.",
         name: "Martin Peet",
         img: "img/mpeet.jfif"
     },
     {
-        id: 1,
+        id: 2,
         text:
             "They are professional, good listeners, and offer good comments about requests, and committed to finishing the project.",
         name: "Robinson Nunez",
