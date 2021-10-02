@@ -17,7 +17,7 @@ const reviews = [
     {
         id: 0,
         text: "After our first week, it's been easy to find trust in this company.",
-        name: "Martin Peet",
+        name: "Benjamin Sernji",
         img: "img/ben.jpeg"
     },
     {
