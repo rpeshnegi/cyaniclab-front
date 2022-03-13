@@ -23,7 +23,7 @@ const reviews = [
     {
         id: 1,
         text: "Jas, Thank you for your work, you are very helpful and it was a pleasure to cooperate! I hope that we can collaborate again soon on something else :)",
-        name: "Sofia Rrighetti (Company owner)",
+        name: "Sofia Rrighetti (Company Owner)",
         img: "img/Risorsa-27.webp"
     },
     {
