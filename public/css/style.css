@@ -1311,6 +1311,8 @@ footer .tr.margin-top>div .clutch-reviews {
 
 .customor-logo {
     height: 90px;
+    display: block;
+    margin: auto;
 }
 
 .pt-80 {

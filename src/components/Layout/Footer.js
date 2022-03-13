@@ -79,7 +79,7 @@ const Footer = ({ props, dispatch }) => {
                                 </li>
                             </ul>
                             <div className="additional_links display-block ">
-                                <span>© 2021 Cyaniclab </span>
+                                <span>© 2022 Cyaniclab </span>
                             </div>
                         </div>
                         <div className="col-md-5 col-xs-12 ">
@@ -96,7 +96,7 @@ const Footer = ({ props, dispatch }) => {
                                 <li><a href="tel:918387969879">Call:- +91-8387969879</a></li>
                             </ul>
                             <div className="additional_links display-none ">
-                                <span>© 2021 Cyaniclab </span>
+                                <span>© 2022 Cyaniclab </span>
                             </div>
                         </div>
                         <div className="col-md-7 col-xs-12 pr-4">
@@ -109,7 +109,7 @@ const Footer = ({ props, dispatch }) => {
                                         <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
                                         <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
                                         <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
-                                        <p className="clutch-reviews">3 reviews</p>
+                                        <p className="clutch-reviews">4 reviews</p>
                                     </div>
                                 </div>
                             </a>

@@ -16,22 +16,34 @@ const useStyles = makeStyles(style);
 const reviews = [
     {
         id: 0,
-        text: "After our first week, it's been easy to find trust in this company.",
-        name: "Benjamin Sernji",
-        img: "img/ben.jpeg"
+        text: "Cyanic Lab handled to deliver the platform despite the nature of prototyping. The team communicated well and was flexible meetings. They were collaborative, and their decent code quality was impressive in the workflow.",
+        name: "Eric Heung (CTO, Chartipedia)",
+        img: "img/user-placeholder.png"
     },
     {
         id: 1,
-        text:
-            "They were very professional, willing to listen, good command of English, and committed to completing the job.",
-        name: "Martin Peet",
-        img: "img/mpeet.jfif"
+        text: "Jas, Thank you for your work, you are very helpful and it was a pleasure to cooperate! I hope that we can collaborate again soon on something else :)",
+        name: "Sofia Rrighetti (Company owner)",
+        img: "img/Risorsa-27.webp"
     },
     {
         id: 2,
+        text: "After our first week, it's been easy to find trust in this company.",
+        name: "Benjamin Sernji (CEO & CTO, Digital Generalist OÜ)",
+        img: "img/ben.jpeg"
+    },
+    {
+        id: 3,
+        text:
+            "They were very professional, willing to listen, good command of English, and committed to completing the job.",
+        name: "Martin Peet (Owner Business Fundamentals)",
+        img: "img/mpeet.jfif"
+    },
+    {
+        id: 4,
         text:
             "They are professional, good listeners, and offer good comments about requests, and committed to finishing the project.",
-        name: "Robinson Nunez",
+        name: "Robinson Nunez (VP of Product Development, Bostel Communication)",
         img: "img/rnunz.jfif"
     }
 ];
