@@ -1,51 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Grid } from '@material-ui/core';
 // import { useSelector } from 'react-redux';
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const style = {
-    footer: {
-        padding: '100px 0 60px',
-        fontSize: '13px',
-        position: 'relative',
-        zIndex: 5,
-        maxWidth: '1200px',
-        margin: '0 auto',
-        color: '#fff',
-        paddingTop: '100px',
-        paddingBottom: '60px',
-        '& li': {
-            '& a': {
-                color: '#fff'
-            }
-        },
-        '& .additional_links': {
-            marginTop: '35px'
-        },
-        '& .footer_link': {
-            marginBottom: '20px',
-            '& li': {
-                display: 'inline-block',
-                margin: '0 20px 10px 0'
-            }
-        },
-        '& .footer_address': {
-            '& li': {
-                display: 'block',
-                margin: '0 00px 10px 0'
-            }
-        },
-        '& .tr': {
-            textAlign: 'right'
-        }
-    },
-    social_linkLi: {
-        display: 'inlineBlock',
-        marginRight: '30px',
-        fontSize: '13px'
+    footerReviewBox: {
+        margin: 'auto',
+        width: '350px',
+        display: 'flex'
     }
 };
 
@@ -99,20 +63,25 @@ const Footer = ({ props, dispatch }) => {
                                 <span>© 2022 Cyaniclab </span>
                             </div>
                         </div>
-                        <div className="col-md-7 col-xs-12 pr-4">
-                            <a target="_blank" href="https://clutch.co/profile/cyanic-lab">
-                                <div className="tr margin-top">
-                                    <img className="pr-2" src="img/clutch.png" alt="clutch" />
-                                    <div>
-                                        <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
-                                        <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
-                                        <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
-                                        <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
-                                        <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
-                                        <p className="clutch-reviews">4 reviews</p>
+                        <div className="col-md-12 col-xs-12">
+                            <div className={classes.footerReviewBox}>
+                                <a target="_blank" href="https://www.designrush.com/agency/website-design-development/dental">
+                                    <img style={{ height: '60px' }} className="pr-4" src="img/image-design.jpg" alt="Designrush" />
+                                </a>
+                                <a target="_blank" href="https://clutch.co/profile/cyanic-lab">
+                                    <div className="tr margin-top">
+                                        <img className="pr-2" src="img/clutch.png" alt="clutch" />
+                                        <div>
+                                            <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
+                                            <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
+                                            <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
+                                            <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
+                                            <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
+                                            <p className="clutch-reviews">4 reviews</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
