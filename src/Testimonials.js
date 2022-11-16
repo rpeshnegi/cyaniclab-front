@@ -45,7 +45,23 @@ const reviews = [
             "They are professional, good listeners, and offer good comments about requests, and committed to finishing the project.",
         name: "Robinson Nunez (VP of Product Development, Bostel Communication)",
         img: "img/rnunz.jfif"
+    },
+    // ashok add
+    {
+        id: 5,
+        text:
+            "Review: Cyanic Lab is a very reliable partner — they've proven capable of providing the right solutions to problems in a timely manner. What's more, they've been proactive in coming up with their own ideas and asking for feedback. The team is also flexible, optimistic, and organized.",
+        name: "Robin Henriksson(Founder, Website)",
+        img: "img/user-placeholder.png"
+    },
+    {
+        id: 6,
+        text:
+            "Review: They demonstrate excellent communication and programming skills.",
+        name: " Ville Rontti(Chief, CEO) ",
+        img: "img/user-placeholder.png"
     }
+    //end  ashok add
 ];
 
 

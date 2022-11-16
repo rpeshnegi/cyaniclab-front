@@ -77,7 +77,7 @@ const Footer = ({ props, dispatch }) => {
                                             <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
                                             <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
                                             <i className="clutch-star" ><FontAwesomeIcon icon={["fas", "star"]} height="15px" /></i>
-                                            <p className="clutch-reviews">4 reviews</p>
+                                            <p className="clutch-reviews">6 reviews</p>
                                         </div>
                                     </div>
                                 </a>
