@@ -1,6 +1,5 @@
 import { useRef, useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { MotionSlider } from "./components/MotionSlider";
 
 const useStyles = makeStyles({});
 
