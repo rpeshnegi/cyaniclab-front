@@ -1,5 +1,8 @@
 import { useRef, useEffect, useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import { MotionSlider } from "./components/MotionSlider";
+
+const useStyles = makeStyles({});
 
 const reviews = [
   {
@@ -54,10 +57,14 @@ const reviews = [
   },
 ];
 
-export default function Testimonials() {
+export default function Testimonials({ props, dispatch }) {
+  const classes = useStyles();
+
   return (
-    <div className="p50 overflow-x-scroll !overflow-y-visible">
-      <div className="inline-flex min-w-full gap-8 mx-16 sm:mx-8 overflow-y-visible flex-row flex-nowrap justify-center">
+    <div className="p50 overflow-x-scroll">
+      <h2 className="heading mb-5 color_man tc wow fadeInUp">What Our <span> {" "}Clients Say</span></h2>
+
+      <div className="inline-flex min-w-full gap-8 mx-16 sm:mx-8 overflow-y-visible flex-row flex-nowrap justify-center row wow fadeInUp animated" data-wow-duration="2s" data-wow-delay="0.6s">
         {reviews
           .filter((review) => !review.img.includes("placeholder"))
           .map(({ text, name, img, id, jobTitle }) => (
@@ -94,7 +101,7 @@ function TestimonialCard({ text, name, jobTitle, img }) {
 
   return (
     <div
-      className="h-full w-56 h-96 rounded-xl relative mb-56 flex flex-col group transform hover:-rotate-6 transition duration-300 overflow-hidden testimonial"
+      className="h-full w-56 h-96 rounded-xl relative mb-56 flex flex-col group transform hover:-rotate-6 transition duration-300 overflow-hidden testimonial fadeInUp"
       ref={ref}
     >
       {hover ? (
