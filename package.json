@@ -18,6 +18,7 @@
         "lerp": "^1.0.3",
         "lethargy": "^1.0.9",
         "next": "9.5.3",
+        "nextjs": "link:",
         "nodemailer": "^6.4.17",
         "prop-types": "15.7.2",
         "react": "16.13.1",
@@ -37,5 +38,10 @@
         "build": "next build",
         "start": "next start",
         "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+    },
+    "devDependencies": {
+        "autoprefixer": "^9",
+        "postcss": "^7",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
     }
 }

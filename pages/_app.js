@@ -17,6 +17,7 @@ import {
     useViewportScroll,
     useTransform
 } from "framer-motion";
+import 'tailwindcss/tailwind.css'
 import './../public/css/bootstrap.css';
 import './../public/css/style.css';
 // import './../public/css/responsive.css';
