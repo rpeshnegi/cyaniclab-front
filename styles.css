@@ -22,6 +22,10 @@ body {
     background: transparent;
 } */
 
+
+.max-w-fit {
+  max-width: fit-content !important;
+}
 nav {
     /* position: absolute; */
     top: 0;
@@ -161,4 +165,37 @@ nav ul {
     display: inline-block;
     margin-right: 30px;
     font-size: 13px;
+}
+
+
+/* flip on hover */ 
+.testimonial-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+}
+
+.testimonial-card .testimonial-card-inner {
+    position: relative !important;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.testimonial-card .testimonial-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+@keyframes flip {
+  from {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+    transform: perspective(400px) rotateY(0deg);
+  }
+  to {
+    -webkit-transform: perspective(400px) rotateY(180deg);
+    transform: perspective(400px) rotateY(180deg);
+  }
 }

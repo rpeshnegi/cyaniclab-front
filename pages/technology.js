@@ -31,7 +31,7 @@ const Technology = ({ props, dispatch }) => {
                 <div className="row wow fadeInUp animated" data-wow-duration="2s" data-wow-delay="0.6s">
                     {technologies.map((row, i) => (
                         <div key={i} className="col-md-3 col-sm-4 col-6 ">
-                            <div className="technologies_box">
+                            <div className="flex flex-col gap-4 items-center text-center justiyfy-center mb-3">
                                 <FontAwesomeIcon icon={["fab", row.icon]} height="90px" />
                                 <h5>{row.name}</h5>
                             </div>

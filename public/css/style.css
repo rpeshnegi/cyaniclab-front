@@ -1323,3 +1323,7 @@ footer .tr.margin-top>div .clutch-reviews {
         padding-left: 15px;
     }
 }
+
+.max-w-fit {
+  max-width: fit-content;
+}
