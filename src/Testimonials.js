@@ -45,14 +45,31 @@ const reviews = [
     text: "Review: Cyanic Lab is a very reliable partner — they've proven capable of providing the right solutions to problems in a timely manner. What's more, they've been proactive in coming up with their own ideas and asking for feedback. The team is also flexible, optimistic, and organized.",
     name: "Robin Henriksson",
     jobTitle: "Founder, Website",
-    img: "img/user-placeholder.png",
+    img: "img/robin.jfif",
   },
   {
     id: 6,
     text: "Review: They demonstrate excellent communication and programming skills.",
     name: "Ville Rontt",
     jobTitle: "Chief, CEO",
-    img: "img/user-placeholder.png",
+    img: "img/ville.jfif",
+  },
+  {
+    id: 7,
+    text: "Cyanic Lab is not just the service delivery company. They actively participated in the brainstorming, and produced very creative and great solutions. They acted as they are part of the company and cared that we do things properly and in the most optimized way.",
+    name: "Mladen Sudar",
+    jobTitle: "CVO, Helioz Technologies",
+    img: "img/mladen.jfif",
+  },
+  {
+    id: 8,
+    text: `I highly recommend Cyanic Lab and their team, led by Jas Khatri to anyone in need of top-quality development services. 
+They are a group of dedicated developers who truly understand the needs of their clients and the industry. They are fast, reliable, and have excellent communication skills. The working atmosphere is great, and they consistently deliver fresh ideas and innovative solutions to problems. It has been an absolute pleasure to work with them. 
+Maybe one of the best collaborations in my career. ❤️😊
+`,
+    name: "Renato Nenadić",
+    jobTitle: "Product Owner, Helioz Technologies",
+    img: "img/renato.jfif",
   },
 ];
 
@@ -60,21 +77,29 @@ export default function Testimonials({ props, dispatch }) {
   const classes = useStyles();
 
   return (
-    <div className="p50 overflow-x-scroll">
-      <h2 className="heading mb-5 color_man tc wow fadeInUp">What Our <span> {" "}Clients Say</span></h2>
+    <div className="p50">
+      <h2 className="heading mb-5 color_man tc wow fadeInUp">
+        What Our <span> Clients Say</span>
+      </h2>
 
-      <div className="inline-flex min-w-full gap-8 mx-16 sm:mx-8 overflow-y-visible flex-row flex-nowrap justify-center row wow fadeInUp animated" data-wow-duration="2s" data-wow-delay="0.6s">
-        {reviews
-          .filter((review) => !review.img.includes("placeholder"))
-          .map(({ text, name, img, id, jobTitle }) => (
-            <TestimonialCard
-              key={id}
-              text={text}
-              name={name}
-              img={img}
-              jobTitle={jobTitle}
-            />
-          ))}
+      <div className="mx-28">
+        <div
+          className="flex gap-8 mt-8 sm:mx-8 overflow-x-auto overflow-y-visible flex-row flex-nowrap justify-center row wow fadeInUp animated"
+          data-wow-duration="2s"
+          data-wow-delay="0.6s"
+        >
+          {reviews
+            .filter((review) => !review.img.includes("placeholder"))
+            .map(({ text, name, img, id, jobTitle }) => (
+              <TestimonialCard
+                key={id}
+                text={text}
+                name={name}
+                img={img}
+                jobTitle={jobTitle}
+              />
+            ))}
+        </div>
       </div>
     </div>
   );
@@ -100,7 +125,7 @@ function TestimonialCard({ text, name, jobTitle, img }) {
 
   return (
     <div
-      className="h-full w-56 h-96 rounded-xl relative mb-56 flex flex-col group transform hover:-rotate-6 transition duration-300 overflow-hidden testimonial fadeInUp"
+      className="h-full flex-shrink-0 min-w-56 w-56 h-96 rounded-xl relative mb-56 flex flex-col group transform hover:-rotate-6 transition duration-300 overflow-hidden testimonial fadeInUp"
       ref={ref}
     >
       {hover ? (
