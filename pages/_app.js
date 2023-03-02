@@ -1,4 +1,5 @@
 import React, { Suspense, useState, useCallback, useEffect, useRef, lazy } from 'react'
+import { Analytics } from "@withbeacon/react";
 import PropTypes from 'prop-types';
 import Head from 'next/head';
 // import theme from '../src/theme';
@@ -63,6 +64,7 @@ export default function MyApp(props) {
     }, [hovered])
     return (
         <React.Fragment>
+            <Analytics />
             <Head>
                 <meta httpEquiv="Content-Type" content="text/html;charset=utf-8" />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

@@ -3358,6 +3358,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@withbeacon/core@npm:*":
+  version: 0.0.7
+  resolution: "@withbeacon/core@npm:0.0.7"
+  checksum: 3cd90e6bca34e6188e60e0ed26e4c092410ccdd0a3328f1c2f6969a082adb22371048d785ad7bbd76b4ba2088851d481ae0104a08e52ccf9d27387f2a19e3af4
+  languageName: node
+  linkType: hard
+
+"@withbeacon/react@npm:^0.0.1":
+  version: 0.0.1
+  resolution: "@withbeacon/react@npm:0.0.1"
+  dependencies:
+    "@withbeacon/core": "*"
+    react: ^18.2.0
+  peerDependencies:
+    react: ^16.8||^17||^18
+  checksum: aeb8a0e677e61d25809861f9eb1d7a18d0be84889145338b59d0a0a7bb75e870101f7564ca4ff3908f93b0f791e31bf46718cb966f07ab657d33ce7581d36218
+  languageName: node
+  linkType: hard
+
 "@xobotyi/scrollbar-width@npm:^1.9.5":
   version: 1.9.5
   resolution: "@xobotyi/scrollbar-width@npm:1.9.5"
@@ -11673,6 +11692,7 @@ __metadata:
     "@popmotion/popcorn": ^0.4.4
     "@react-spring/three": 9.0.0-rc.3
     "@react-spring/web": 9.0.0-rc.3
+    "@withbeacon/react": ^0.0.1
     autoprefixer: ^9
     clsx: 1.1.1
     fetch-intercept: ^2.3.1
@@ -14400,6 +14420,15 @@ __metadata:
     object-assign: ^4.1.1
     prop-types: ^15.6.2
   checksum: 4508f4207caca6bef55736284cbf2ce18d2edfee4c1457fc0bb2086b34ed5bcf9b44acdb71e27574e73a5b5d4d093720b5b4ec0bf92bb89394ee3a0a7c42c2d4
+  languageName: node
+  linkType: hard
+
+"react@npm:^18.2.0":
+  version: 18.2.0
+  resolution: "react@npm:18.2.0"
+  dependencies:
+    loose-envify: ^1.1.0
+  checksum: 88e38092da8839b830cda6feef2e8505dec8ace60579e46aa5490fc3dc9bba0bd50336507dc166f43e3afc1c42939c09fe33b25fae889d6f402721dcd78fca1b
   languageName: node
   linkType: hard
 
