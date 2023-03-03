@@ -9,6 +9,7 @@ module.exports = {
   },
   variants: {
     flex: ['group-hover', 'hover', 'responsive'],
+    sepia: ['hover', 'focus'],
   },
   plugins: [],
 }

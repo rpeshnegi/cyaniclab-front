@@ -1,9 +1,11 @@
-import { useRef, useEffect, useState } from "react";
+import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({});
 
-const reviews = [
+const data = [
   {
     id: 0,
     text: "Cyanic Lab handled to deliver the platform despite the nature of prototyping. The team communicated well and was flexible meetings. They were collaborative, and their decent code quality was impressive in the workflow.",
@@ -13,10 +15,13 @@ const reviews = [
   },
   {
     id: 1,
-    text: "Jas, Thank you for your work, you are very helpful and it was a pleasure to cooperate! I hope that we can collaborate again soon on something else :)",
-    name: "Sofia Rrighetti",
-    jobTitle: "Company Owner",
-    img: "img/Risorsa-27.webp",
+    text: `I highly recommend Cyanic Lab and their team, led by Jas Khatri to anyone in need of top-quality development services. 
+They are a group of dedicated developers who truly understand the needs of their clients and the industry. They are fast, reliable, and have excellent communication skills. The working atmosphere is great, and they consistently deliver fresh ideas and innovative solutions to problems. It has been an absolute pleasure to work with them. 
+Maybe one of the best collaborations in my career. ❤️😊
+`,
+    name: "Renato Nenadić",
+    img: "img/renato.jfif",
+    jobTitle: "Product Owner, Helioz Technologies",
   },
   {
     id: 2,
@@ -63,53 +68,87 @@ const reviews = [
   },
   {
     id: 8,
-    text: `I highly recommend Cyanic Lab and their team, led by Jas Khatri to anyone in need of top-quality development services. 
-They are a group of dedicated developers who truly understand the needs of their clients and the industry. They are fast, reliable, and have excellent communication skills. The working atmosphere is great, and they consistently deliver fresh ideas and innovative solutions to problems. It has been an absolute pleasure to work with them. 
-Maybe one of the best collaborations in my career. ❤️😊
-`,
-    name: "Renato Nenadić",
-    jobTitle: "Product Owner, Helioz Technologies",
-    img: "img/renato.jfif",
+    text: "Jas, Thank you for your work, you are very helpful and it was a pleasure to cooperate! I hope that we can collaborate again soon on something else :)",
+    name: "Sofia Rrighetti",
+    jobTitle: "Company Owner",
+    img: "img/Risorsa-27.webp",
   },
 ];
 
-export default function Testimonials({ props, dispatch }) {
+export default function Testimonial({ props, dispatch }) {
   const classes = useStyles();
+
+  const [selected, setSelected] = React.useState([]);
+  const [position, setPosition] = React.useState(0);
+
+  const isItemSelected = (id) => !!selected.find((el) => el === id);
+  const handleClick =
+    (id) =>
+    ({ getItemById, scrollToItem }) => {
+      const itemSelected = isItemSelected(id);
+
+      setSelected((currentSelected) =>
+        itemSelected
+          ? currentSelected.filter((el) => el !== id)
+          : currentSelected.concat(id)
+      );
+    };
+  const { isFirstItemVisible, scrollPrev, isLastItemVisible, scrollNext } =
+    React.useContext(VisibilityContext);
 
   return (
     <div className="p50">
       <h2 className="heading mb-5 color_man tc wow fadeInUp">
-        What Our <span> Clients Say</span>
+        What <span> Our Clients Say</span>
       </h2>
 
-      <div className="mx-28">
-        <div
-          className="flex gap-8 mt-8 sm:mx-8 overflow-x-auto overflow-y-visible flex-row flex-nowrap justify-center row wow fadeInUp animated"
-          data-wow-duration="2s"
-          data-wow-delay="0.6s"
-        >
-          {reviews
-            .filter((review) => !review.img.includes("placeholder"))
-            .map(({ text, name, img, id, jobTitle }) => (
-              <TestimonialCard
-                key={id}
-                text={text}
-                name={name}
-                img={img}
-                jobTitle={jobTitle}
-              />
-            ))}
-        </div>
-      </div>
+      <ScrollMenu
+        wrapperClassName="h-96 relative"
+        scrollContainerClassName="fadeInUp animated wow gap-4 m-auto max-w-fit"
+        itemClassName="h-full w-56 h-96 rounded-xl transform hover:-rotate-3 transition duration-300 overflow-hidden fadeInUp filter saturate-0 min-w-56 flex-shrink-0 max-h-min"
+        LeftArrow={
+          <FontAwesomeIcon
+            icon={["fas", "arrow-left"]}
+            className={`text-sm text-gray-100 ${
+              isFirstItemVisible ? "opacity-50" : "opacity-100"
+            }`}
+            onClick={scrollPrev}
+          />
+        }
+        RightArrow={
+          <FontAwesomeIcon
+            icon={["fas", "arrow-left"]}
+            className={`text-sm text-gray-100 ${
+              isLastItemVisible ? "opacity-50" : "opacity-100"
+            }`}
+            onClick={scrollNext}
+          />
+        }
+      >
+        {data
+          .filter((review) => !review.img.includes("placeholder"))
+          .map(({ name, img, jobTitle, id, text }) => (
+            <TestimonialCard
+              key={name}
+              text={text}
+              name={name}
+              img={img}
+              jobTitle={jobTitle}
+              itemId={id}
+              onClick={handleClick(id)}
+            />
+          ))}
+      </ScrollMenu>
     </div>
   );
 }
 
-function TestimonialCard({ text, name, jobTitle, img }) {
-  const [hover, setHover] = useState(false);
-  const ref = useRef(null);
+function TestimonialCard({ text, name, jobTitle, img, itemId, onClick }) {
+  const visibility = React.useContext(VisibilityContext);
+  const [hover, setHover] = React.useState(false);
+  const ref = React.useRef(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (ref === null) {
       return;
     }
@@ -125,8 +164,9 @@ function TestimonialCard({ text, name, jobTitle, img }) {
 
   return (
     <div
-      className="h-full flex-shrink-0 min-w-56 w-56 h-96 rounded-xl relative mb-56 flex flex-col group transform hover:-rotate-6 transition duration-300 overflow-hidden testimonial fadeInUp"
+      onClick={() => onClick(visibility)}
       ref={ref}
+      className="relative mb-4 flex flex-col group overflow-hidden rounded-xl m-1"
     >
       {hover ? (
         <div className="absolute inset-0 z-20 w-full p-4 bg-white h-64 flex flex-col text-gray-900 overflow-y-scroll testimonial-card-inner">
@@ -136,17 +176,17 @@ function TestimonialCard({ text, name, jobTitle, img }) {
         </div>
       ) : null}
 
-      <div className="flex flex-col z-10 w-full p-4 bg-gradient-to-t from-gray-900 to-black/10 h-64">
+      <div className="flex flex-col z-10 w-full p-4 bg-gradient-to-t from-gray-900 to-black/10 h-64 pointer-events-none">
         <h3 className="text-white text-base mt-auto mb-1">{name}</h3>
         <h4 className="text-sm text-gray-400">{jobTitle}</h4>
       </div>
 
-      <div className="absolute bottom-0 left-0 bg-gradient-to-t from-black to-black/0 w-full h-1/2 z-0" />
+      <div className="absolute bottom-0 left-0 bg-gradient-to-t from-black to-black/0 w-full h-1/2 z-0 pointer-events-none" />
 
       <img
         src={`/${img}`}
         alt={text}
-        className="absolute inset-0 min-w-full min-h-full object-fill rounded-lg z-0"
+        className="absolute inset-0 min-w-full min-h-full object-fill rounded-lg z-0 pointer-events-none"
       />
     </div>
   );

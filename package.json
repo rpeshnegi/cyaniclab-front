@@ -26,6 +26,7 @@
         "prop-types": "15.7.2",
         "react": "16.13.1",
         "react-dom": "16.13.1",
+        "react-horizontal-scrolling-menu": "^3.2.5",
         "react-reactive-form": "^1.0.32",
         "react-scripts": "^3.4.3",
         "react-three-fiber": "4.0.5",

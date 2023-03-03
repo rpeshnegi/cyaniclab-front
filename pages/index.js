@@ -44,7 +44,7 @@ export default function Index() {
             data-wow-duration="2s"
             data-wow-delay="0.6s"
           >
-            Customers
+            Trusted By
           </h2>
             <div
               className="grid mt-4 space-x-12 grid-cols-2 md:grid-cols-4 gap-y-0 auto-rows-auto items-center justify-center place-items-center max-w-fit min-w-fit mx-auto wow fadeInUp animated last:col-span-4"

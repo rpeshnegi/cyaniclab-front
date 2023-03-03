@@ -34,12 +34,12 @@ const Technology = ({ props, dispatch }) => {
             Our <span>Technologies</span>
           </h2>
           <div
-            className="row wow fadeInUp animated"
+            className="row wow fadeInUp animated grid grid-cols-4 sm:grid-cols-2 auto-rows-auto gap-4 justify-center"
             data-wow-duration="2s"
             data-wow-delay="0.6s"
           >
             {technologies.map((row, i) => (
-              <div key={i} className="col-md-3 col-sm-4 col-6 ">
+              <div key={i} className="col-md-3 col-sm-4 col-6">
                 <div className="flex flex-col gap-4 items-center text-center justiyfy-center mb-3">
                   <FontAwesomeIcon
                     icon={[row.type || "fab", row.icon]}
