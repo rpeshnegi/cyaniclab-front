@@ -75,8 +75,9 @@ export default function MyApp(props) {
                 <link media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;800&display=swap" rel="stylesheet" />
                 <script defer src="js/jquery.min.js" type="text/javascript"></script>
                 <script defer src="js/bootstrap.min.js"></script>
-                <script defer src="://withbeacon.vercel.app/track.js"></script>
                 <script src="js/wow.min.js"></script>
+
+                <script defer src="https://withbeacon.vercel.app/track.js"></script>
             </Head>
             {/* <ThemeProvider > */}
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}

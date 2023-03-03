@@ -16,14 +16,14 @@ const Service = ({ props, home }) => {
         {(home) && (
             <section className="p50 our_services">
                 <div className="container-fluid">
-                    <div className="row align-items-center">
+                    <div className="align-items-center">
                         <div className="col-lg-12 our_ser_h">
                             <h2 className="heading wow bounceInLeft animated" data-wow-duration="1s" data-wow-delay="0.2s">Our <br /><span>Services</span>
                                 <Link href="/contact-us"><a className="btn btn-sm" >view more</a></Link>
                             </h2>
                             <ul className="services-listing">
                                 <li className="wow bounceInRight animated" data-wow-duration="1s" data-wow-delay="0.2s">
-                                    <span className="icon_img"><img src="img/uxui_design.png" /></span>
+                                    <span className="max-h-fit"><img src="img/uxui_design.png" /></span>
                                     <span>
                                         <h4>Web Design</h4>
                                         <p>We design beautiful websites that convert your leads into customers. Our
@@ -33,7 +33,7 @@ the competition.</p>
                                     </span>
                                 </li>
                                 <li className="wow bounceInRight animated" data-wow-duration="1s" data-wow-delay="0.4s">
-                                    <span className="icon_img"><img src="img/web_evelopment.png" /></span>
+                                    <span className="icon_img"><img className="w-32" src="img/web_evelopment.png" /></span>
                                     <span>
                                         <h4>Web Development</h4>
                                         <p>In the digital world if you don’t have a website you're probably losing
@@ -44,7 +44,7 @@ Let us help you build your online presence.</p>
                                     </span>
                                 </li>
                                 <li className="wow bounceInRight animated" data-wow-duration="1s" data-wow-delay="0.6s">
-                                    <span className="icon_img"><img src="img/app_engineering.png" /></span>
+                                    <span className="icon_img"><img className="w-32" src="img/app_engineering.png" /></span>
                                     <span>
                                         <h4>Mobile App</h4>
                                         <p>If you want to grow your business, you'll need a custom mobile app. A
@@ -56,7 +56,7 @@ that will fulfil both your company and your customers requirements.</p>
                                     </span>
                                 </li>
                                 <li className="wow bounceInRight animated" data-wow-duration="1s" data-wow-delay="0.8s">
-                                    <span className="icon_img"><img src="img/web_evelopment.png" /></span>
+                                    <span className="icon_img"><img className="w-32" src="img/web_evelopment.png" /></span>
                                     <span>
                                         <h4>Custom Software</h4>
                                         <p>Bring value to your business via custom software. We design and build
@@ -135,7 +135,7 @@ high quality code.</p>
                 <section className="solutions-section">
                     <div className="container">
                         <div className="heading-block"><h2 className="text-left">Our <span>Solutions</span></h2></div>
-                        <div className="row align-items-center">
+                        <div className="align-items-center">
                             <div className="col-lg-5">
                                 <div className="solutions-media">
                                     <img className="w-100" src="img/sol-1.png" />

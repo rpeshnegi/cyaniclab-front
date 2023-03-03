@@ -34,7 +34,7 @@ const Technology = ({ props, dispatch }) => {
             Our <span>Technologies</span>
           </h2>
           <div
-            className="row wow fadeInUp animated grid grid-cols-4 sm:grid-cols-2 auto-rows-auto gap-4 justify-center"
+            className="wow fadeInUp animated grid md:grid-cols-4 grid-cols-2 auto-rows-auto gap-2 justify-center items-center place-items-center place-items-centei"
             data-wow-duration="2s"
             data-wow-delay="0.6s"
           >
