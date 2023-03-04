@@ -55,7 +55,7 @@ export default function Index() {
                 <img
                   src={customer}
                   alt="customer"
-                  className="w-40 h-28 aspect-[3/2] object-contain mix-blend-color-burn filter saturate-0"
+                  className="w-48 h-28 aspect-[3/2] object-contain mix-blend-color-burn filter saturate-0"
                   key={customer}
                 />
               ))}
