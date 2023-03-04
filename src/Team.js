@@ -47,79 +47,35 @@ const data = [
     name: "Sunny Verma",
     jobTitle: "Software Engineer",
     img: "img/team-7.jpeg",
-  }
+  },
 ];
 
 export default function Team({ props, dispatch }) {
   const classes = useStyles();
-
-  const [selected, setSelected] = React.useState([]);
-  const [position, setPosition] = React.useState(0);
-
-  const isItemSelected = (id) => !!selected.find((el) => el === id);
-  const handleClick =
-    (id) =>
-    ({ getItemById, scrollToItem }) => {
-      const itemSelected = isItemSelected(id);
-
-      setSelected((currentSelected) =>
-        itemSelected
-          ? currentSelected.filter((el) => el !== id)
-          : currentSelected.concat(id)
-      );
-    };
-  const { isFirstItemVisible, scrollPrev, isLastItemVisible, scrollNext } =
-    React.useContext(VisibilityContext);
-
   return (
     <div className="p50">
       <h2 className="heading mb-5 color_man tc wow fadeInUp">
         Meet <span> Our Team</span>
       </h2>
 
-        <ScrollMenu
-          wrapperClassName="h-96 relative"
-          scrollContainerClassName="fadeInUp animated wow gap-4 m-auto max-w-fit"
-          itemClassName="h-full w-56 h-96 rounded-xl transform hover:-rotate-3 transition duration-300 overflow-hidden fadeInUp filter saturate-0 min-w-56 flex-shrink-0 max-h-min"
-          LeftArrow={
-            <FontAwesomeIcon
-              icon={["fas", "arrow-left"]}
-              className={`text-sm text-gray-100 ${
-                isFirstItemVisible ? "opacity-50" : "opacity-100"
-              }`}
-              onClick={scrollPrev}
-            />
-          }
-          RightArrow={
-            <FontAwesomeIcon
-              icon={["fas", "arrow-left"]}
-              className={`text-sm text-gray-100 ${
-                isLastItemVisible ? "opacity-50" : "opacity-100"
-              }`}
-              onClick={scrollNext}
-            />
-          }
-        >
-          {data.map(({ name, img, jobTitle, id }) => (
-            <TeamCard
-              key={name}
-              name={name}
-              img={img}
-              jobTitle={jobTitle}
-              itemId={id}
-              onClick={handleClick(id)}
-            />
-          ))}
-        </ScrollMenu>
+      <div className="flex gap-8 flex-wrap items-center justify-center">
+        {data.map(({ name, img, jobTitle, id }) => (
+          <TeamCard
+            key={name}
+            name={name}
+            img={img}
+            jobTitle={jobTitle}
+            itemId={id}
+          />
+        ))}
+      </div>
     </div>
   );
 }
 
 function TeamCard({ text, name, jobTitle, img, itemId, onClick }) {
-  const visibility = React.useContext(VisibilityContext);
-
   return (
-    <div onClick={() => onClick(visibility)} className="relative mb-4 flex flex-col group overflow-hidden rounded-xl m-1">
+    <div className="relative mb-4 flex flex-col group overflow-hidden rounded-xl m-1 flex-shrink-0 w-56">
       <div className="flex flex-col z-10 w-full p-4 bg-gradient-to-t from-gray-900 to-black/10 h-64 pointer-events-none">
         <h3 className="text-white text-base mt-auto mb-1">{name}</h3>
         <h4 className="text-sm text-gray-400">{jobTitle}</h4>
