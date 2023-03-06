@@ -8,13 +8,42 @@ const useStyles = makeStyles({});
 const data = [
   {
     id: 0,
-    text: "Jas, Thank you for your work, you are very helpful and it was a pleasure to cooperate! I hope that we can collaborate again soon on something else :)",
-    name: "Sofia Rrighetti",
-    jobTitle: "Company Owner",
-    img: "img/Risorsa-27.webp",
+    text: "Cyanic Lab is not just the service delivery company. They actively participated in the brainstorming, and produced very creative and great solutions. They acted as they are part of the company and cared that we do things properly and in the most optimized way.",
+    name: "Mladen Sudar",
+    jobTitle: "CVO, Helioz Technologies",
+    img: "img/mladen.jfif",
   },
   {
     id: 1,
+    text: "Review: They demonstrate excellent communication and programming skills.",
+    name: "Ville Rontt",
+    jobTitle: "Chief, CEO",
+    img: "img/ville.jfif",
+  },
+  {
+    id: 2,
+    text: "They were very professional, willing to listen, good command of English, and committed to completing the job.",
+    name: "Martin Peet",
+    jobTitle: "Owner Business Fundamentals",
+    img: "img/mpeet.jfif",
+  },
+  {
+    id: 3,
+    text: "Review: Cyanic Lab is a very reliable partner — they've proven capable of providing the right solutions to problems in a timely manner. What's more, they've been proactive in coming up with their own ideas and asking for feedback. The team is also flexible, optimistic, and organized.",
+    name: "Robin Henriksson",
+    jobTitle: "Founder, Website",
+    img: "img/robin.jfif",
+  },
+  {
+    id: 4,
+    text: "After our first week, it's been easy to find trust in this company.",
+    name: "Benjamin Sernji",
+    jobTitle: "CEO & CTO, Digital Generalist OÜ",
+    img: "img/ben.jpeg",
+  },
+  // ashok add
+  {
+    id: 5,
     text: `I highly recommend Cyanic Lab and their team, led by Jas Khatri to anyone in need of top-quality development services. 
 They are a group of dedicated developers who truly understand the needs of their clients and the industry. They are fast, reliable, and have excellent communication skills. The working atmosphere is great, and they consistently deliver fresh ideas and innovative solutions to problems. It has been an absolute pleasure to work with them. 
 Maybe one of the best collaborations in my career. ❤️😊
@@ -24,54 +53,25 @@ Maybe one of the best collaborations in my career. ❤️😊
     jobTitle: "Product Owner, Helioz Technologies",
   },
   {
-    id: 2,
-    text: "Cyanic Lab is not just the service delivery company. They actively participated in the brainstorming, and produced very creative and great solutions. They acted as they are part of the company and cared that we do things properly and in the most optimized way.",
-    name: "Mladen Sudar",
-    jobTitle: "CVO, Helioz Technologies",
-    img: "img/mladen.jfif",
+    id: 6,
+    text: "Cyanic Lab handled to deliver the platform despite the nature of prototyping. The team communicated well and was flexible meetings. They were collaborative, and their decent code quality was impressive in the workflow.",
+    name: "Eric Heung",
+    jobTitle: "CTO, Chartipedia",
+    img: "img/user-placeholder.png",
   },
   {
-    id: 3,
-    text: "Review: They demonstrate excellent communication and programming skills.",
-    name: "Ville Rontt",
-    jobTitle: "Chief, CEO",
-    img: "img/ville.jfif",
-  },
-  {
-    id: 4,
+    id: 7,
     text: "They are professional, good listeners, and offer good comments about requests, and committed to finishing the project.",
     name: "Robinson Nunez",
     jobTitle: "VP of Product Development, Bostel Communication",
     img: "img/rnunz.jfif",
   },
-  // ashok add
-  {
-    id: 5,
-    text: "Review: Cyanic Lab is a very reliable partner — they've proven capable of providing the right solutions to problems in a timely manner. What's more, they've been proactive in coming up with their own ideas and asking for feedback. The team is also flexible, optimistic, and organized.",
-    name: "Robin Henriksson",
-    jobTitle: "Founder, Website",
-    img: "img/robin.jfif",
-  },
-  {
-    id: 6,
-    text: "They were very professional, willing to listen, good command of English, and committed to completing the job.",
-    name: "Martin Peet",
-    jobTitle: "Owner Business Fundamentals",
-    img: "img/mpeet.jfif",
-  },
-  {
-    id: 7,
-    text: "After our first week, it's been easy to find trust in this company.",
-    name: "Benjamin Sernji",
-    jobTitle: "CEO & CTO, Digital Generalist OÜ",
-    img: "img/ben.jpeg",
-  },
   {
     id: 8,
-    text: "Cyanic Lab handled to deliver the platform despite the nature of prototyping. The team communicated well and was flexible meetings. They were collaborative, and their decent code quality was impressive in the workflow.",
-    name: "Eric Heung",
-    jobTitle: "CTO, Chartipedia",
-    img: "img/user-placeholder.png",
+    text: "Jas, Thank you for your work, you are very helpful and it was a pleasure to cooperate! I hope that we can collaborate again soon on something else :)",
+    name: "Sofia Rrighetti",
+    jobTitle: "Company Owner",
+    img: "img/Risorsa-27.webp",
   },
 ];
 
