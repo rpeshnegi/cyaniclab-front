@@ -53,7 +53,7 @@ const data = [
 export default function Team({ props, dispatch }) {
   const classes = useStyles();
   return (
-    <div className="p50">
+    <div className="-mt-20 mb-16">
       <h2 className="heading mb-5 color_man tc wow fadeInUp">
         Meet <span> Our Team</span>
       </h2>
@@ -75,7 +75,7 @@ export default function Team({ props, dispatch }) {
 
 function TeamCard({ text, name, jobTitle, img, itemId, onClick }) {
   return (
-    <div className="relative mb-4 flex flex-col group overflow-hidden rounded-xl m-1 flex-shrink-0 w-56">
+    <div className="relative mb-4 flex flex-col group overflow-hidden rounded-xl m-1 flex-shrink-0 w-56 transform hover:-rotate-3 transition-all duration-200">
       <div className="flex flex-col z-10 w-full p-4 bg-gradient-to-t from-gray-900 to-black/10 h-64 pointer-events-none">
         <h3 className="text-white text-base mt-auto mb-1">{name}</h3>
         <h4 className="text-sm text-gray-400">{jobTitle}</h4>
@@ -86,7 +86,7 @@ function TeamCard({ text, name, jobTitle, img, itemId, onClick }) {
       <img
         src={`/${img}`}
         alt={text}
-        className="absolute inset-0 min-w-full min-h-full object-fill rounded-lg z-0 pointer-events-none"
+        className="absolute inset-0 min-w-full min-h-full object-fill rounded-lg z-0 pointer-events-none filter saturate-0"
       />
     </div>
   );
