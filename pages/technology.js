@@ -24,6 +24,10 @@ const Technology = ({ props, dispatch }) => {
     { name: "Html", icon: "html5" },
     { name: "VueJS", icon: "vuejs" },
     { name: "Flutter", icon: "mobile", type: "fa" },
+    { name: "NextJS", icon: "bolt", type: "fa" },
+    { name: "NuxtJS", icon: "vuejs" },
+    { name: "TypeScript", icon: "js" },
+    { name: "Kotlin", icon: "java" },
   ];
   return (
     <>
@@ -44,6 +48,7 @@ const Technology = ({ props, dispatch }) => {
                   <FontAwesomeIcon
                     icon={[row.type || "fab", row.icon]}
                     height="90px"
+                    width="90px"
                   />
                   <h5>{row.name}</h5>
                 </div>
