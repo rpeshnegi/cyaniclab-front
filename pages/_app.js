@@ -82,31 +82,6 @@ export default function MyApp(props) {
             {/* <ThemeProvider > */}
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             {/* <CssBaseline /> */}
-            {hasMounted && !isBot && (
-                <Canvas
-                    className="background-texture"
-                    style={{ height: window.innerHeight }}
-                    pixelRatio={Math.min(2, isMobile ? window.devicePixelRatio : 1)}
-                    camera={{ fov: 100, position: [0, 0, 30] }}
-                    onMouseMove={onMouseMove}
-                    onMouseUp={() => set(false)}
-                    onMouseDown={() => set(true)}
-                    onCreated={({ gl }) => {
-                        gl.toneMapping = THREE.Uncharted2ToneMapping
-                        // gl.setClearColor(new THREE.Color('#020207'))
-                        gl.setClearColor(new THREE.Color('black'))
-                    }}>
-                    {/* <fog attach="fog" args={['blue', 10, 190]} /> */}
-                    {/* <pointLight distance={100} intensity={4} color="white" /> */}
-                    <ambientLight intensity={0.5} />
-                    <Particles count={isMobile ? 200 : 500} mouse={mouse} />
-                    {(!isMobile && YOffset < 500 && location.pathname != '/contact-us') && <Sparks yRange={yRange} count={50} mouse={mouse} colors={['#FFC600', 'black', 'white']} />}
-                    <Suspense fallback={null}>
-                        <Effects down={down} />
-                    </Suspense>
-                    {(!isMobile && YOffset < 500 && location.pathname != '/contact-us') && <Cubes yRange={yRange} mouse={mouse} />}
-                </Canvas>
-            )}
             {/* <div className="background-texture" style={{
                     height: '100%',
                     width: '100%',
