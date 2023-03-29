@@ -18,13 +18,13 @@ export default function ContactUs() {
                         <div className="col-lg-1 col-md-12">&nbsp;</div>
                         <div className="col-lg-5 col-md-12 address-div">
                             <p className="get-content">
-                                <i ><FontAwesomeIcon icon={["fas", "map-marker-alt"]} height="20px" /></i>
+                                <i><FontAwesomeIcon icon={["fas", "map-marker-alt"]} height="20px"  className="mx-auto -ml-1 mt-2.5 h-auto" /></i>
                                 <span>Address</span> <a href="#">Central spine, Vidhyadhar Nagar, jaipur.</a></p>
                             <p className="get-content">
-                                <i ><FontAwesomeIcon icon={["fas", "phone-alt"]} height="20px" /></i>
+                                <i ><FontAwesomeIcon icon={["fas", "phone-alt"]} height="20px" className="mx-auto -ml-1 mt-2.5 h-auto"  /></i>
                                 <span>Phone</span><a href="tel:918387969879">+91-8387969879</a></p>
                             <p className="get-content">
-                                <i ><FontAwesomeIcon icon={["fas", "envelope"]} height="20px" /></i>
+                                <i ><FontAwesomeIcon icon={["fas", "envelope"]} height="20px" className="mx-auto -ml-1 mt-2.5 h-auto"  /></i>
                                 <span>Email</span><a href="mailto: jas@cyaniclab.com">jas@cyaniclab.com, cyaniclab@gmail.com</a></p>
                         </div>
                     </div>
