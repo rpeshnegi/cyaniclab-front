@@ -96,11 +96,6 @@ export default function Testimonial({ props, dispatch }) {
   const { isFirstItemVisible, scrollPrev, isLastItemVisible, scrollNext } =
     React.useContext(VisibilityContext);
 
-  console.log({
-    isFirstItemVisible,
-    isLastItemVisible,
-  });
-
   return (
     <div className="p50">
       <h2 className="heading mb-5 color_man tc wow fadeInUp mx-4">

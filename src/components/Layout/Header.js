@@ -80,7 +80,7 @@ const Header = ({ props, dispatch }) => {
                 <div className="container-fluid">
                     <div className="top-menu text-center">
                         <span className="float-left menu_btn" onClick={toggleSideBar}><span></span><span></span><span></span></span>
-                        <div className="logo"><Link href="/"><img src="img/logo.png" alt="logo" /></Link></div>
+                        <div className="logo block sm:hidden"><Link href="/"><img src="img/logo.png" alt="logo" /></Link></div>
                         {!isMobile && <Link href="/contact-us"><a className="float-right btn">Grow your business</a></Link>}
                     </div>
                 </div>
