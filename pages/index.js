@@ -47,7 +47,7 @@ export default function Index() {
             Trusted By
           </h2>
             <div
-              className="grid mt-4 space-x-12 grid-cols-2 md:grid-cols-4 gap-y-0 auto-rows-auto items-center justify-center place-items-center max-w-fit min-w-fit mx-auto wow fadeInUp animated last:col-span-4"
+              className="grid my-4 space-x-12 grid-cols-2 md:grid-cols-4 gap-y-0 auto-rows-auto items-center justify-center place-items-center max-w-fit min-w-fit mx-auto wow fadeInUp animated last:col-span-4"
               data-wow-duration="2s"
               data-wow-delay="0.6s"
             >
@@ -55,7 +55,7 @@ export default function Index() {
                 <img
                   src={customer}
                   alt="customer"
-                  className="w-48 h-28 aspect-[3/2] object-contain mix-blend-color-burn filter saturate-0"
+                  className="w-36 md:w-48 h-28 aspect-[3/2] object-contain mix-blend-color-burn filter saturate-0"
                   key={customer}
                 />
               ))}
